@@ -1,5 +1,7 @@
 # Javascript程序设计
 
+![](http://progressed.io/bar/1?title=Progress) [详情](#)
+
 |章节|课题|状态|时间戳|
 |----|----|----|------|
 |JS介绍|JS介绍|||
@@ -27,6 +29,8 @@
 |面向对象|JS面向对象|||
 
 # 页面制作
+
+![](http://progressed.io/bar/5?title=Progress) [详情](WebCreation.md)
 
 |章节|课题|状态|时间戳|
 |----|----|----|------|
