@@ -30,12 +30,12 @@
 
 # 页面制作
 
-![](http://progressed.io/bar/5?title=Progress) [详情](WebCreation.md)
+![](http://progressed.io/bar/10?title=Progress) [详情](WebCreation.md)
 
 |章节|课题|状态|时间戳|
 |----|----|----|------|
-|Photoshop|工具, 面板, 视图|||
-|Photoshop|测量, 取色|||
+|Photoshop|工具, 面板, 视图|★|1505251953|
+|Photoshop|测量, 取色|★|1505251953|
 |Photoshop|切图|||
 |Photoshop|保存||
 |Photoshop|修改维护|||
