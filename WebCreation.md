@@ -38,7 +38,7 @@ Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 
 **切图** 从设计稿中切除网页的素材并在代码中引入图片 (复杂的图片或者解决兼容问题)
 
-```
+```html
 // 设计稿 (*.psd) -> 产出物 (*png, *.jpg)
 
 <img src="img/avatar.jpg" alt="desc">
@@ -177,7 +177,34 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
 ![](img/crop-canvas.gif)
 
-**注意事项**：为了可维护性的考虑因适当的留出适当的空白区域以便修改所用。`PNG8`需更改图片颜色模式为 RGB 颜色（默认为索引颜色模式，颜色信息会被丢失）。
+**注意事项**：为了可维护性的考虑因适当的留出适当的空白区域以便修改所用和提高容错性。`PNG8`需更改图片颜色模式为 RGB 颜色（默认为索引颜色模式，颜色信息会被丢失）。
+
+![](img/png8-color-mode.gif)
+
+### 图片优化与合并
+
+在 HTML 中使用背景图片的方法如下：
+
+```html
+<button type="button" class="btn-default">Click Me</button>
+
+<style type="text/css" media="screen">
+  .btn-default {
+    background: url(image/btn.png) no-repeat 0 0;
+  }
+  .btn-default-alt {
+    background: url(image/sprite.png) no-repeat 0 -50px;
+  }
+</style>
+```
+
+图片的**合并**就如同上面提到的切图后保存的过程。拼好的图称之为 **Sprite** 它能减少网络请求次数提高速度。图片压缩工具分为无损（ImageOptim 等工具也可结合 Grunt 等自动化框架使用）与有损压缩工具（TinyPng）。
+
+合并的图片可以以横向或纵向的排列，分类可将同属于一个模块（功能模块），大小相近（充分利用画布空间），颜色相近（减少文件大小）。
+
+#### 图片的兼容
+
+IE6 不支持 PNG24 半透明所以需要保存两份（sprite.png - png24 和 sprite-ie.png - 8）。在使用 CSS3 是让高级浏览器使用 CSS3 低级浏览器则使用切图。优雅降级指的是让低级浏览器不显示高级浏览器中的界面细节。
 
 ## 开发及调试工具
 
