@@ -212,3 +212,41 @@ IE6 不支持 PNG24 半透明所以需要保存两份（sprite.png - png24 和 s
 - Google Chrome, Firefox Firebug, Safari Developer Tool
 
 NOTE: [Google Chrome DevTools Doc](https://developer.chrome.com/devtools)
+
+## HTML
+
+### HTML 历史
+
+HTML (Hyper Text Markup Language)，用于标记页面中的内容。
+
+![](img/html/Screen%20Shot%202015-05-26%20at%2010.29.09%20PM.png)
+
+### HTML 简介
+
+![](img/html/Screen%20Shot%202015-05-26%20at%2010.31.24%20PM.png)
+
+注意事项：
+
+- `<!DOCTYPE html>` 必须首行定格
+- `<title>` 为文档标题
+- `<meta charset="utf-8">` 文档解码格式
+- `<meta name="keywords" content="...">` 和 `<meta name="description" content="...">` 提供给搜索引擎使用
+- `<meta name="viewport" content="width=device-width, initial-scale=1.0">` 移动端浏览器的宽高与缩放
+- `<link>` 标签可以引入 favicon 和样式表 CSS 文件
+
+### HTML 语法
+
+![](img/html/Screen%20Shot%202015-05-26%20at%2010.37.19%20PM.png)
+
+**书写规范**：
+
+- 小写标签和属性
+- 属性值双引号
+- 代码因嵌套缩进
+
+#### 全局属性
+
+- id, `<div id='unique-element'></div>`，页面中唯一
+- class，`<button class='btn'>Click Me</button>`，页面中课重复出现
+- style，尽量避免
+- title，对于元素的描述类似于 Tool Tip 的效果。
