@@ -30,7 +30,7 @@
 
 # 页面制作
 
-![](http://progressed.io/bar/17?title=Progress) [详情](WebCreation.md)
+![](http://progressed.io/bar/20?title=Progress) [详情](WebCreation.md)
 
 |章节|课题|状态|时间戳|
 |----|----|----|------|
@@ -39,7 +39,7 @@
 |Photoshop|切图|★| 1505252051|
 |Photoshop|保存|★| 1505262108|
 |Photoshop|修改维护|★| 1505262117|
-|Photoshop|图片优化与合并|||
+|Photoshop|图片优化与合并|★|1505262225|
 |开发调试|开发工具|★| 1505251248|
 |开发调试|调试工具|★| 1505251248|
 |HTML|概念|||
