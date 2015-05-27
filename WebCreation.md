@@ -1,12 +1,34 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [网页制作](#%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C)
+  - [概述](#%E6%A6%82%E8%BF%B0)
+  - [Photoshop](#photoshop)
+    - [工具, 面板, 视图](#%E5%B7%A5%E5%85%B7-%E9%9D%A2%E6%9D%BF-%E8%A7%86%E5%9B%BE)
+    - [测量及取色](#%E6%B5%8B%E9%87%8F%E5%8F%8A%E5%8F%96%E8%89%B2)
+    - [切图](#%E5%88%87%E5%9B%BE)
+    - [保存](#%E4%BF%9D%E5%AD%98)
+      - [保存格式的选择](#%E4%BF%9D%E5%AD%98%E6%A0%BC%E5%BC%8F%E7%9A%84%E9%80%89%E6%8B%A9)
+    - [图片修改与维护](#%E5%9B%BE%E7%89%87%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BB%B4%E6%8A%A4)
+    - [图片优化与合并](#%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96%E4%B8%8E%E5%90%88%E5%B9%B6)
+      - [图片的兼容](#%E5%9B%BE%E7%89%87%E7%9A%84%E5%85%BC%E5%AE%B9)
+  - [开发及调试工具](#%E5%BC%80%E5%8F%91%E5%8F%8A%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7)
+  - [HTML](#html)
+    - [HTML 历史](#html-%E5%8E%86%E5%8F%B2)
+    - [HTML 简介](#html-%E7%AE%80%E4%BB%8B)
+    - [HTML 语法](#html-%E8%AF%AD%E6%B3%95)
+      - [全局属性](#%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7)
+    - [HTML 标签](#html-%E6%A0%87%E7%AD%BE)
+    - [文本标签](#%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE)
+    - [组合内容标签](#%E7%BB%84%E5%90%88%E5%86%85%E5%AE%B9%E6%A0%87%E7%AD%BE)
+    - [表单](#%E8%A1%A8%E5%8D%95)
+      - [input 类型支持值列表](#input-%E7%B1%BB%E5%9E%8B%E6%94%AF%E6%8C%81%E5%80%BC%E5%88%97%E8%A1%A8)
+    - [语义化](#%E8%AF%AD%E4%B9%89%E5%8C%96)
+    - [实体字符](#%E5%AE%9E%E4%BD%93%E5%AD%97%E7%AC%A6)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # 网页制作
-
-## 目录
-
-- [概述](#概述)
-- [Photoshop](#photoshop)
-- [工具, 面板, 视图](#工具-面板-视图)
-- [测量及取色](#测量及取色)
-- [切图](#切图)
 
 ## 概述
 
