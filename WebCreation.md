@@ -3,8 +3,8 @@
 ## 目录
 
 - [概述](#概述)
-- [Photoshop](#Photoshop)
-    - [工具, 面板, 视图](#工具, 面板, 视图)
+- [Photoshop](#photoshop)
+    - [工具, 面板, 视图](#工具-面板-视图)
     - [测量及取色](#测量及取色)
     - [切图](#切图)
 
@@ -198,7 +198,7 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 </style>
 ```
 
-图片的**合并**就如同上面提到的切图后保存的过程。拼好的图称之为 **Sprite** 它能减少网络请求次数提高速度。图片压缩工具分为无损（ImageOptim 等工具也可结合 Grunt 等自动化框架使用）与有损压缩工具（TinyPng）。
+图片的**合并**就如同上面提到的切图后保存的过程。拼好的图称之为 **Sprite** 它能减少网络请求次数提高速度。图片压缩工具分为无损（ImageOptim 等工具，也可结合 Grunt 自动化构建工具一同使用）与有损压缩工具（TinyPng）。
 
 合并的图片可以以横向或纵向的排列，分类可将同属于一个模块（功能模块），大小相近（充分利用画布空间），颜色相近（减少文件大小）。
 
@@ -250,3 +250,67 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 - class，`<button class='btn'>Click Me</button>`，页面中课重复出现
 - style，尽量避免
 - title，对于元素的描述类似于 Tool Tip 的效果。
+
+### HTML 标签
+
+**HTML5 标签集合**
+
+![](img/html/html-elements.jpg)
+
+### 文本标签
+
+```html
+<!-- 默认超链接  -->
+<a href="http://sample-link.com" title="Sample Link">Sample</a>
+<!-- 当前窗口显示 -->
+<a href="http://sample-link.com" title="Sample Link" target="_self">Sample</a>
+<!-- 新窗口显示 -->
+<a href="http://sample-link.com" title="Sample Link" target="_blacnk">Sample</a>
+<!-- iframe 中打开链接 -->
+<a href="http://sample-link.com" title="Sample Link" target="iframe-name">Sample</a>
+<iframe name="iframe-name" frameborder="0"></iframe>
+
+<!-- 页面中的锚点 -->
+<a href="#achor">Achor Point</a>
+<section id="achor">Achor Content</section>
+
+<!-- 邮箱及电话需系统支持 -->
+<a href="mailto:sample-address@me.com" title="Email">Contact Us</a>
+<!-- 多个邮箱地址 -->
+<a href="mailto:sample-address@me.com, sample-address0@me.com" title="Email">Contact Us</a>
+<!-- 添加抄送，主题和内容 -->
+<a href="mailto:sample-address@me.com?cc=admin@me.com&subject=Help&body=sample-body-text" title="Email">Contact Us</a>
+
+<!-- 电话示例 -->
+<a href="tel:99999999" title="Phone">Ring Us</a>
+```
+
+### 组合内容标签
+
+`<div>`、`<p>`、`<ol>`、`<ul>`、`<dl>`、`<pre>`、`<blockquote>`。
+
+`<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个或多个 `<dd>` 。
+
+`<pre>` 会保留换行和空格，通常与 `<code>` 一同使用。
+
+```html
+<pre>
+  <code>
+    int main(void) {
+      printf('Hello, world!');
+      return 0;
+    }
+  </code>
+</pre>
+```
+
+`<blockquote>` 拥有 `cite` 属性，它包含引用文本的出处。
+
+```html
+<blockquote cite="http://example.com/facts">
+  <p></p>
+</blockquote>
+```
+
+
+

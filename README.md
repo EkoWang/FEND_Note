@@ -30,7 +30,7 @@
 
 # 页面制作
 
-![](http://progressed.io/bar/27?title=Progress) [详情](WebCreation.md)
+![](http://progressed.io/bar/35?title=Progress) [详情](WebCreation.md)
 
 |章节|课题|状态|时间戳|
 |----|----|----|------|
@@ -45,9 +45,9 @@
 |HTML|概念|★|1505262243|
 |HTML|HTML 文档|★|1505262243|
 |HTML|语法|★|1505262243|
-|HTML|章节标签|||
-|HTML|文本标签|||
-|HTML|组标签|||
+|HTML|章节标签|★|1505271407|
+|HTML|文本标签|★|1505271428|
+|HTML|组标签|★|1505271435|
 |HTML|资源标签|||
 |HTML|表格标签|||
 |HTML|表单标签|||
