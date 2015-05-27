@@ -1,11 +1,18 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Javascript 程序设计](#javascript-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
   - [Javascript 介绍](#javascript-%E4%BB%8B%E7%BB%8D)
   - [调试器](#%E8%B0%83%E8%AF%95%E5%99%A8)
   - [基本语法](#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95)
+    - [变量标示符](#%E5%8F%98%E9%87%8F%E6%A0%87%E7%A4%BA%E7%AC%A6)
+    - [关键字与保留字](#%E5%85%B3%E9%94%AE%E5%AD%97%E4%B8%8E%E4%BF%9D%E7%95%99%E5%AD%97)
+    - [字符敏感](#%E5%AD%97%E7%AC%A6%E6%95%8F%E6%84%9F)
+    - [严格模式](#%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F)
+    - [注释](#%E6%B3%A8%E9%87%8A)
   - [类型系统](#%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F)
+    - [标准类型](#%E6%A0%87%E5%87%86%E7%B1%BB%E5%9E%8B)
   - [内置对象](#%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1)
   - [表达式与运算符](#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6)
   - [语句](#%E8%AF%AD%E5%8F%A5)
