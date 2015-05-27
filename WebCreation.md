@@ -278,7 +278,7 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 **HTML5 标签集合**
 
 ![](img/html/html-elements.jpg)
-
+[HTML5标签集合图](http://www.html5star.com/manual/html5label-meaning)
 ### 文本标签
 
 ```html
