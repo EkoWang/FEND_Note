@@ -1,13 +1,13 @@
 # Javascript程序设计
 
-![](http://progressed.io/bar/1?title=Progress) [详情](JavascriptDesignPattern.md)
+![](http://progressed.io/bar/18?title=Progress) [详情](JavascriptDesignPattern.md)
 
 |章节|课题|状态|时间戳|
 |----|----|----|------|
-|JS介绍|JS介绍|||
-|调试器|调试器|||
-|基本语法|基本语法|||
-|类型系统|基本类型|||
+|JS介绍|JS介绍|★|1505272223|
+|调试器|调试器|★|1505272223|
+|基本语法|基本语法|★|1505272223|
+|类型系统|基本类型|★|1505272223|
 |类型系统|类型识别|||
 |内置对象|简介|||
 |内置对象|Object|||
