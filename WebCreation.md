@@ -250,3 +250,7 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 - class，`<button class='btn'>Click Me</button>`，页面中课重复出现
 - style，尽量避免
 - title，对于元素的描述类似于 Tool Tip 的效果。
+
+### HTML 章节标签
+
+![](img/html/html-elements.jpg)
