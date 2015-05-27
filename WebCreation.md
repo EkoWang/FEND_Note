@@ -4,9 +4,9 @@
 
 - [概述](#概述)
 - [Photoshop](#photoshop)
-    - [工具, 面板, 视图](#工具-面板-视图)
-    - [测量及取色](#测量及取色)
-    - [切图](#切图)
+- [工具, 面板, 视图](#工具-面板-视图)
+- [测量及取色](#测量及取色)
+- [切图](#切图)
 
 ## 概述
 
@@ -190,11 +190,11 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
 <style type="text/css" media="screen">
   .btn-default {
-    background: url(image/btn.png) no-repeat 0 0;
-  }
-  .btn-default-alt {
-    background: url(image/sprite.png) no-repeat 0 -50px;
-  }
+  background: url(image/btn.png) no-repeat 0 0;
+}
+.btn-default-alt {
+background: url(image/sprite.png) no-repeat 0 -50px;
+}
 </style>
 ```
 
@@ -287,30 +287,172 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
 ### 组合内容标签
 
-`<div>`、`<p>`、`<ol>`、`<ul>`、`<dl>`、`<pre>`、`<blockquote>`。
+- `<div>`
+- `<p>`
+- `<ol>`
+- `<ul>`
+- `<dl>`
+- `<pre>`
+- `<blockquote>`。
 
-`<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个或多个 `<dd>` 。
-
-`<pre>` 会保留换行和空格，通常与 `<code>` 一同使用。
+NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个或多个 `<dd>` 。`<pre>` 会保留换行和空格，通常与 `<code>` 一同使用。
 
 ```html
 <pre>
   <code>
     int main(void) {
-      printf('Hello, world!');
-      return 0;
-    }
-  </code>
+    printf('Hello, world!');
+    return 0;
+  }
+</code>
 </pre>
 ```
 
-`<blockquote>` 拥有 `cite` 属性，它包含引用文本的出处。
+`<blockquote>` 拥有 `cite` 属性，它包含引用文本的出处，示例如下所示：
 
 ```html
 <blockquote cite="http://example.com/facts">
-  <p></p>
+  <p>Sample Quote...</p>
 </blockquote>
 ```
 
+### 表单
 
+```html
+<form action="WebCreation_submit" method="get" accept-charset="utf-8">
+  <fieldset>
+    <legend>title or explanatory caption</legend>
+    <!-- 第一种添加标签的方法 -->
+    <label><input type="text/submit/hidden/button/etc" name="" value=""></label>
+    <!-- 第二种添加标签的方法 -->
+    <label for="input-id">Sample Label</label>
+    <input type="text" id="input-id">
+  </fieldset>
+  <fieldset>
+    <legend>title or explanatory caption</legend>
+    <!-- 只读文本框 -->
+    <input type="text" readonly>
+    <!-- 隐藏文本框，可提交影藏数据 -->
+    <input type="text" name="hidden-info" value="hiden-info-value" hidden>
+  </fieldset>
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</form>
+```
 
+#### input 类型支持值列表
+
+<table class="reference notranslate">
+  <tbody><tr>
+    <th style="width:22%">Value</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>button</td>
+    <td>Defines a clickable button (mostly used with a JavaScript to activate a script)</td>
+  </tr>
+  <tr>
+    <td>checkbox</td>
+    <td>Defines a checkbox</td>
+  </tr>
+  <tr>
+  <td class="html5badge"><img src="img/html/html5_badge20.png">color</td>
+    <td>Defines a color picker</td>
+  </tr>
+  <tr>
+  <td class="html5badge"><img src="img/html/html5_badge20.png">date</td>
+    <td>Defines a date control (year, month and day (no time))</td>
+  </tr>
+  <tr>
+  <td class="html5badge"><img src="img/html/html5_badge20.png">datetime</td>
+    <td>The input type datetime has been removed from the HTML standard. Use datetime-local instead.</td>
+    </tr>
+    <tr>
+    <td class="html5badge"><img src="img/html/html5_badge20.png">datetime-local</td>
+      <td>Defines a date and time control (year, month, day, hour, minute, second, and fraction of a second (no time zone)</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/html/html5_badge20.png">email</td>
+        <td>Defines a field for an e-mail address</td>
+      </tr>
+      <tr>
+        <td>file</td>
+        <td>Defines a file-select field and a "Browse..." button (for file uploads)</td>
+      </tr>
+      <tr>
+        <td>hidden</td>
+        <td>Defines a hidden input field</td>
+      </tr>
+      <tr>
+        <td>image</td>
+        <td>Defines an image as the submit button</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/html/html5_badge20.png">month</td>
+        <td>Defines a month and year control (no time zone)</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/html/html5_badge20.png">number</td>
+        <td>Defines a field for entering a number</td>
+      </tr>
+      <tr>
+        <td>password</td>
+        <td>Defines a password field (characters are masked)</td>
+      </tr>
+      <tr>
+        <td>radio</td>
+        <td>Defines a radio button</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/html/html5_badge20.png">range</td>
+        <td>Defines a control for entering a number whose exact value is not important (like a slider control)</td>
+      </tr>
+      <tr>
+        <td>reset</td>
+        <td>Defines a reset button (resets all form values to default values)</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/html/html5_badge20.png">search</td>
+        <td>Defines a text field for entering a search string</td>
+      </tr>
+      <tr>
+        <td>submit</td>
+        <td>Defines a submit button</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/html/html5_badge20.png">tel</td>
+        <td>Defines a field for entering a telephone number</td>
+      </tr>
+      <tr>
+        <td>text</td>
+        <td>Default. Defines a single-line text field (default width is 20 characters)</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/html/html5_badge20.png">time</td>
+        <td>Defines a control for entering a time (no time zone)</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/html/html5_badge20.png">url</td>
+        <td>Defines a field for entering a URL</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/html/html5_badge20.png">week</td>
+        <td>Defines a week and year control (no time zone)</td>
+      </tr>
+    </tbody>
+  </table>
+
+**其他控制器**
+
+- `textarea`
+- `select` 与 `option`
+
+### 语义化
+
+用合适的标签标识适当的内容，它可以起到搜索引擎优化，提高可访问性（例如盲人使用的屏幕阅读器），与此同时还可以提高代码的可读性。
+
+### 实体字符
+
+实体字符的两种表示方式，第一种为 `&` 外加实体字符名称，例如 `&nbsp;`，第二种为 `&` 加实体字符序号，例如 `&#160;`。
+
+NOTE：具体所需可在使用时查询，无需记忆。
