@@ -315,7 +315,7 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 - `<ul>`
 - `<dl>`
 - `<pre>`
-- `<blockquote>`。
+- `<blockquote>`
 
 NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个或多个 `<dd>` 。`<pre>` 会保留换行和空格，通常与 `<code>` 一同使用。
 
@@ -464,7 +464,7 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
     </tbody>
   </table>
 
-**其他控制器**
+**其他页面控件**
 
 - `textarea`
 - `select` 与 `option`
