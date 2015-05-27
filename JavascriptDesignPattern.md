@@ -181,8 +181,8 @@ var obj0 = new Object();
 
 - `var obj = {name: 'Xinyang'};`
 
-|值|Boolean|Number|String|
-|--|-------|------|------|
+|Value|Boolean|Number|String|
+|-----|-------|------|------|
 |undefined|false|NaN|"undefined"|
 |null|false|0|"null"|
 |true|true|1|"null"|
@@ -194,7 +194,7 @@ var obj0 = new Object();
 |1|true|1|"1"|
 |Infinity|true|Infinity|"Infinity"|
 |NaN|false|NaN|'NaN'|
-|{}|true|NaN|"[object Object]"|
+|object|true|NaN|"[object Object]"|
 
 
 ## 内置对象
