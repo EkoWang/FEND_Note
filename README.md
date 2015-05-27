@@ -30,7 +30,7 @@
 
 # 页面制作
 
-![](http://progressed.io/bar/27?title=Progress) [详情](WebCreation.md)
+![](http://progressed.io/bar/35?title=Progress) [详情](WebCreation.md)
 
 |章节|课题|状态|时间戳|
 |----|----|----|------|
