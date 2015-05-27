@@ -1,6 +1,6 @@
 # Javascript程序设计
 
-![](http://progressed.io/bar/1?title=Progress) [详情](#)
+![](http://progressed.io/bar/1?title=Progress) [详情](JavascriptDesignPattern.md)
 
 |章节|课题|状态|时间戳|
 |----|----|----|------|
