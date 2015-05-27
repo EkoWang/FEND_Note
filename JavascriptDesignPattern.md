@@ -194,7 +194,7 @@ var obj0 = new Object();
 |1|true|1|"1"|
 |Infinity|true|Infinity|"Infinity"|
 |NaN|false|NaN|'NaN'|
-|object|true|NaN|"[object Object]"|
+|{}|true|NaN|"[object Object]"|
 
 
 ## 内置对象
