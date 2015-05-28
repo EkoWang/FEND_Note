@@ -44,20 +44,20 @@
 
   <!-- 以上代码忽略 -->
 
-  <!-- 需将 javascript 代码防止在 body 标签的最末端 -->
+  <!-- 需将 javascript 代码放置在 body 标签的最末端 -->
   <!-- 外联文件 -->
   <script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer></script>
   <!-- 内嵌代码 -->
-  <style type="text/css">
+  <script>
     console.log('>>> Hello, world!');
-  </style>
+  </script>
 </body>
 </html>
 ```
 
 ## 调试器
 
-调试工具都内置与主流浏览器中（Firefox 中需独立下载 Firebug）。更多关于 Google Chrome DevTools 的信息可以在[这里](https://developer.chrome.com/devtools)找到。
+调试工具都内置于主流浏览器中（Firefox 中需独立下载 Firebug）。更多关于 Google Chrome DevTools 的信息可以在[这里](https://developer.chrome.com/devtools)找到。
 
 ## 基本语法
 
@@ -73,7 +73,7 @@ var name0 = null;
 
 ### 关键字与保留字
 
-JavaScript 在语言定义中保留的字段，这些字段在语言使用中存在特殊意义或功能，在程序编写的过程中不可以当做变量或函数名称使用。无需记忆，报错修改既可。
+JavaScript 在语言定义中保留的字段，这些字段在语言使用中存在特殊意义或功能，在程序编写的过程中不可以当做变量或函数名称使用。无需记忆，报错修改即可。
 
 ### 字符敏感
 
@@ -164,7 +164,7 @@ var obj0 = new Object();
 
 **Boolean** 值：true, false 出现场景：
 
-- 条件语句导致的系统执行的隐试类型转换 `if(隐式转换){}`
+- 条件语句导致的系统执行的隐式类型转换 `if(隐式转换){}`
 - 字面量或变量定义 `var bool = true;`
 
 **String** 值：字符串 出现场景：
@@ -205,7 +205,7 @@ var obj0 = new Object();
 - `instanceof`
 
 **typeof**：
-- 可以是吧标准类型（Null 除外）
+- 可以是标准类型（Null 除外）
 - 不可识别具体的对象类型（Function 除外）
 
 **Object.prototype.toString**：
