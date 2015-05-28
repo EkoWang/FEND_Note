@@ -83,7 +83,7 @@ Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 |------|:----:|----|
 |移动工具| ![](img/H/hwa_03.png)||
 |矩形选框工具| ![](img/H/hwa_01.png)||
-|魔棒工具|![](img/H/hwa_05.png)|（容差 Tolerance 越小学则的范围就越小）|
+|魔棒工具|![](img/H/hwa_05.png)|（容差 Tolerance 越小选择的范围就越小）|
 |剪裁工具| ![](img/H/hwa_06.png) ||
 |切片工具| ![](img/H/hwa_07.png)||
 |缩放工具| ![](img/H/hwa_34.png)||
