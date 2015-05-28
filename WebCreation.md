@@ -38,7 +38,7 @@ Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 
 **协作流程**
 
-![](img/development-flow.png)
+![](img/D/development-flow.png)
 
 **前端职责**
 
@@ -75,19 +75,19 @@ Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 
 在全局设置下将单位修改为像素，因其在 CSS 中运用最广。设置工作区布局为切图及图片编辑做准备。
 
-![](img/Screen%20Shot%202015-05-25%20at%201.15.45%20PM.png)
+![](img/P/photoshop-mainWindow.png)
 
 **切图常用工具**
 
 |工具名|示意图|注释|
 |------|:----:|----|
-|移动工具| ![](img/hwa_03.png)||
-|矩形选框工具| ![](img/hwa_01.png)||
-|魔棒工具|![](img/hwa_05.png)|（容差 Tolerance 越小学则的范围就越小）|
-|剪裁工具| ![](img/hwa_06.png) ||
-|切片工具| ![](img/hwa_07.png)||
-|缩放工具| ![](img/hwa_34.png)||
-|取色器| ![](img/hwa_31.png)||
+|移动工具| ![](img/H/hwa_03.png)||
+|矩形选框工具| ![](img/H/hwa_01.png)||
+|魔棒工具|![](img/H/hwa_05.png)|（容差 Tolerance 越小学则的范围就越小）|
+|剪裁工具| ![](img/H/hwa_06.png) ||
+|切片工具| ![](img/H/hwa_07.png)||
+|缩放工具| ![](img/H/hwa_34.png)||
+|取色器| ![](img/H/hwa_31.png)||
 
 图层（单层元素）与组（类似于文件夹）的区别。
 
@@ -97,11 +97,11 @@ Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 - 标尺，<kbd>Command</kbd> + <kbd>R</kbd>
 - 参考线，<kbd>Command</kbd> + <kbd>;</kbd>
 
-![](img/Screen%20Shot%202015-05-25%20at%205.25.41%20PM.png)
+![](img/P/photoshop-menu.png)
 
 NOTE: 所有工具及快捷键如下。
 
-![](img/v2_Tools%20panel_PS_update1.png)
+![](img/T/ToolsPanelOverview.png)
 
 ### 测量及取色
 
@@ -117,11 +117,11 @@ NOTE: 所有工具及快捷键如下。
 
 NOTE: 测量时尽可能放大画布以减少误差。量取文字是为了减少误差尽量选取尺寸大的文字进行测量。
 
-![](img/Screen%20Shot%202015-05-25%20at%207.16.43%20PM.png)
+![](img/P/photoshop-measure&colorSelection.png)
 
 **选框工具的多用途**，增（Shift）减（Alt）以及交叉选择（Shift + Alt）。左右（或上下）使用分离选框选择可以得到整两个分离边框的距离总值。
 
-![](img/rect-selection-tool.gif)
+![](img/T/rect-selection-tool.gif)
 
 所有能接受颜色的属性都需要取色。
 
@@ -137,7 +137,7 @@ NOTE: 使用魔棒工具可以迅速识别背景色是否没*线性*渐变的方
 
 **隐藏文字**，方法一，之间在图层中隐藏文字图层。方法二（两种，分别应对于纯色和有背景需要隐藏文本的情况）如下图所示。
 
-![](img/btn-remove-text.gif)
+![](img/B/btn-remove-text.gif)
 
 **PNG24**切图方法
 - 移动工具选中所需图层（Ctrl 多选）
@@ -170,7 +170,7 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
 **图片与背景合并**的切图方法如下
 
-![](img/save-image.gif)
+![](img/S/save-image.gif)
 
 #### 保存格式的选择
 
@@ -178,7 +178,7 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
 保存类型二：图片色彩不丰富，不伦透明与否一律保存为 `PNG8` 格式（256颜色，需特殊设置如下图）。
 
-![](img/Screen%20Shot%202015-05-26%20at%209.12.24%20PM.png)
+![](img/P/photoshop-saveFormat.png)
 
 保存类型三：图片有半透明的要求，保存为 `PNG24` 格式（不对图片进行压缩）。
 
@@ -188,19 +188,19 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
 维护与修改之一：**更改画布**大小以便增加新素材。
 
-![](img/resize-canvas.gif)
+![](img/R/resize-canvas.gif)
 
 维护与修改之二：移动图标分两种，独立图层（移动工具拖动），于非独立图层（选取工具选中分离后移动工具拖动）。
 
-![](img/move-layer.gif)
+![](img/M/move-layer.gif)
 
 维护与修改之三：**裁剪画布**的方法有两种，(1)用选取工具选取后图片裁取，(2)直接用裁剪工具裁剪画布。
 
-![](img/crop-canvas.gif)
+![](img/C/crop-canvas.gif)
 
 **注意事项**：为了可维护性的考虑因适当的留出适当的空白区域以便修改所用和提高容错性。`PNG8`需更改图片颜色模式为 RGB 颜色（默认为索引颜色模式，颜色信息会被丢失）。
 
-![](img/png8-color-mode.gif)
+![](img/P/png8-color-mode.gif)
 
 ### 图片优化与合并
 
@@ -240,11 +240,11 @@ NOTE: [Google Chrome DevTools Doc](https://developer.chrome.com/devtools)
 
 HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
-![](img/html/Screen%20Shot%202015-05-26%20at%2010.29.09%20PM.png)
+![](img/H/html-history.png)
 
 ### HTML 简介
 
-![](img/html/Screen%20Shot%202015-05-26%20at%2010.31.24%20PM.png)
+![](img/H/html-overview.png)
 
 注意事项：
 
@@ -257,7 +257,7 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
 ### HTML 语法
 
-![](img/html/Screen%20Shot%202015-05-26%20at%2010.37.19%20PM.png)
+![](img/H/html-syntax.png)
 
 **书写规范**：
 
@@ -276,7 +276,7 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
 **[HTML5 标签集合](http://www.html5star.com/manual/html5label-meaning)**
 
-![](img/html/html-elements.jpg)
+![](img/H/html-elements.jpg)
 
 ### 文本标签
 
@@ -377,23 +377,23 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
     <td>Defines a checkbox</td>
   </tr>
   <tr>
-  <td class="html5badge"><img src="img/html/html5_badge20.png">color</td>
+  <td class="html5badge"><img src="img/H/html5_badge20.png">color</td>
     <td>Defines a color picker</td>
   </tr>
   <tr>
-  <td class="html5badge"><img src="img/html/html5_badge20.png">date</td>
+  <td class="html5badge"><img src="img/H/html5_badge20.png">date</td>
     <td>Defines a date control (year, month and day (no time))</td>
   </tr>
   <tr>
-  <td class="html5badge"><img src="img/html/html5_badge20.png">datetime</td>
+  <td class="html5badge"><img src="img/H/html5_badge20.png">datetime</td>
     <td>The input type datetime has been removed from the HTML standard. Use datetime-local instead.</td>
     </tr>
     <tr>
-    <td class="html5badge"><img src="img/html/html5_badge20.png">datetime-local</td>
+    <td class="html5badge"><img src="img/H/html5_badge20.png">datetime-local</td>
       <td>Defines a date and time control (year, month, day, hour, minute, second, and fraction of a second (no time zone)</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/html/html5_badge20.png">email</td>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">email</td>
         <td>Defines a field for an e-mail address</td>
       </tr>
       <tr>
@@ -409,11 +409,11 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
         <td>Defines an image as the submit button</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/html/html5_badge20.png">month</td>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">month</td>
         <td>Defines a month and year control (no time zone)</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/html/html5_badge20.png">number</td>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">number</td>
         <td>Defines a field for entering a number</td>
       </tr>
       <tr>
@@ -425,7 +425,7 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
         <td>Defines a radio button</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/html/html5_badge20.png">range</td>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">range</td>
         <td>Defines a control for entering a number whose exact value is not important (like a slider control)</td>
       </tr>
       <tr>
@@ -433,7 +433,7 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
         <td>Defines a reset button (resets all form values to default values)</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/html/html5_badge20.png">search</td>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">search</td>
         <td>Defines a text field for entering a search string</td>
       </tr>
       <tr>
@@ -441,7 +441,7 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
         <td>Defines a submit button</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/html/html5_badge20.png">tel</td>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">tel</td>
         <td>Defines a field for entering a telephone number</td>
       </tr>
       <tr>
@@ -449,15 +449,15 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
         <td>Default. Defines a single-line text field (default width is 20 characters)</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/html/html5_badge20.png">time</td>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">time</td>
         <td>Defines a control for entering a time (no time zone)</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/html/html5_badge20.png">url</td>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">url</td>
         <td>Defines a field for entering a URL</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/html/html5_badge20.png">week</td>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">week</td>
         <td>Defines a week and year control (no time zone)</td>
       </tr>
     </tbody>
