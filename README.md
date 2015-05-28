@@ -1,5 +1,7 @@
 # NetEase Front-end Nanodegree Note
 
+![](img/README/Screen-Shot-2015-05-28-at-4.12.12-PM.jpg)
+
 ## 知识体系内容记录
 
 ### Javascript 程序设计
