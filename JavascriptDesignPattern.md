@@ -196,6 +196,37 @@ var obj0 = new Object();
 |NaN|false|NaN|'NaN'|
 |{}|true|NaN|"[object Object]"|
 
+### 类型识别
+
+- `typeof`
+- `Object.prototype.toString`
+- `constructor`
+- `instanceof`
+
+**typeof**：
+- 可以是吧标准类型（Null 除外）
+- 不可识别具体的对象类型（Function 除外）
+
+**Object.prototype.toString**：
+- 可是识别标准类型及内置对象类型（例如，Object, Date, Array）
+- 不能识别自定义对象类型
+
+**constructor**：
+- 可以识别标准类型（Undefined/Null 除外）
+- 可识别内置对象类型
+- 可识别自定义对象类型
+
+```javascript
+function getConstructiorName(obj) {
+  return obj && obj.constructor && obj.constructor.toString().match(/function\s*([^(]*)/)[1];
+}
+getConstructiorName([]) === "Array"; // true
+```
+
+**instanceof**：
+- 不可判别原始类型
+- 可判别内置对象类型
+- 可判别自定义对象类型
 
 ## 内置对象
 
