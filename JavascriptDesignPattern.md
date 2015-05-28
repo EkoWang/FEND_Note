@@ -28,9 +28,9 @@
 
 前端开发三要素，`HTML`（描述网页内容），`CSS`（描述样式），`JavaScript`（控制网页行为）。JavaScript 为解释型编程语言，运行环境也很广泛。
 
-![](img/javascript/Screen%20Shot%202015-05-27%20at%209.07.00%20PM.png)
+![](img/J/javascript-history.png)
 
-![](img/javascript/Screen%20Shot%202015-05-27%20at%209.08.14%20PM.png)
+![](img/J/javascript-env.png)
 
 **JavaScript**的引入方法如下：
 
@@ -122,7 +122,7 @@ JavaScript 在语言定义中保留的字段，这些字段在语言使用中存
 
 ## 类型系统
 
-![](img/javascript/Screen-Shot-2015-05-27-at-9.30.58-PM.jpg)
+![](img/J/javascript-variable-type.jpg)
 
 ### 标准类型
 
