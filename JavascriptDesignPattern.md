@@ -1,8 +1,8 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Javascript 程序设计](#javascript-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
-  - [Javascript 介绍](#javascript-%E4%BB%8B%E7%BB%8D)
+- [JavaScript 程序设计](#javascript-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
+  - [JavaScript 介绍](#javascript-%E4%BB%8B%E7%BB%8D)
   - [调试器](#%E8%B0%83%E8%AF%95%E5%99%A8)
   - [基本语法](#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95)
     - [变量标示符](#%E5%8F%98%E9%87%8F%E6%A0%87%E7%A4%BA%E7%AC%A6)
@@ -22,17 +22,17 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Javascript 程序设计
+# JavaScript 程序设计
 
-## Javascript 介绍
+## JavaScript 介绍
 
-前端开发三要素，`HTML`（描述网页内容），`CSS`（描述样式），`Javascript`（控制网页行为）。Javascript 为解释型编程语言，运行环境也很广泛。
+前端开发三要素，`HTML`（描述网页内容），`CSS`（描述样式），`JavaScript`（控制网页行为）。JavaScript 为解释型编程语言，运行环境也很广泛。
 
 ![](img/javascript/Screen%20Shot%202015-05-27%20at%209.07.00%20PM.png)
 
 ![](img/javascript/Screen%20Shot%202015-05-27%20at%209.08.14%20PM.png)
 
-**Javascript**的引入方法如下：
+**JavaScript**的引入方法如下：
 
 ```javascript
 <!DOCTYPE html>
@@ -73,7 +73,7 @@ var name0 = null;
 
 ### 关键字与保留字
 
-Javascript 在语言定义中保留的字段，这些字段在语言使用中存在特殊意义或功能，在程序编写的过程中不可以当做变量或函数名称使用。无需记忆，报错修改既可。
+JavaScript 在语言定义中保留的字段，这些字段在语言使用中存在特殊意义或功能，在程序编写的过程中不可以当做变量或函数名称使用。无需记忆，报错修改既可。
 
 ### 字符敏感
 
