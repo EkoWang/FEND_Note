@@ -1,3 +1,9 @@
+<link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/default.min.css">
+<script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
+<script>
+hljs.tabReplace = ' ';
+hljs.initHighlightingOnLoad();
+</script>
 # 网页制作
 
 ## 目录
@@ -41,12 +47,12 @@ Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 ```html
 // 设计稿 (*.psd) -> 产出物 (*png, *.jpg)
 
-<img src="img/avatar.jpg" alt="desc">
+    <img src="img/avatar.jpg" alt="desc">
 
-<style type="text/css" media="screen">
-  background-image: url(../img/sprite.png);
-  background-position: 0 0;
-</style>
+    <style type="text/css" media="screen">
+    background-image: url(../img/sprite.png);
+    background-position: 0 0;
+    </style>
 ```
 
 ### 工具, 面板, 视图
@@ -185,18 +191,16 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
 在 HTML 中使用背景图片的方法如下：
 
-```html
-<button type="button" class="btn-default">Click Me</button>
+    <button type="button" class="btn-default">Click Me</button>
 
-<style type="text/css" media="screen">
-  .btn-default {
+	<style type="text/css" media="screen">
+	.btn-default {
     background: url(image/btn.png) no-repeat 0 0;
-  }
-  .btn-default-alt {
+    }
+	.btn-default-alt {
     background: url(image/sprite.png) no-repeat 0 -50px;
-  }
-</style>
-```
+	}
+	</style>
 
 图片的**合并**就如同上面提到的切图后保存的过程。拼好的图称之为 **Sprite** 它能减少网络请求次数提高速度。图片压缩工具分为无损（ImageOptim 等工具，也可结合 Grunt 自动化构建工具一同使用）与有损压缩工具（TinyPng）。
 
