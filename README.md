@@ -6,7 +6,7 @@
 
 ### Javascript 程序设计
 
-![](http://progressed.io/bar/23?title=Progress) [详情](JavascriptDesignPattern.md)
+![](http://progressed.io/bar/42?title=Progress) [详情](JavascriptDesignPattern.md)
 
 ### 页面制作
 
