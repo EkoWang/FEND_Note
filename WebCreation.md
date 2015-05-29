@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <link rel="stylesheet" href="http://yandex.st/highlightjs/6.1/styles/default.min.css">
 <script src="http://yandex.st/highlightjs/6.1/highlight.min.js"></script>
 <script>
@@ -7,12 +8,39 @@ hljs.initHighlightingOnLoad();
 # 网页制作
 
 ## 目录
+=======
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [概述](#概述)
-- [Photoshop](#photoshop)
-    - [工具, 面板, 视图](#工具-面板-视图)
-    - [测量及取色](#测量及取色)
-    - [切图](#切图)
+- [网页制作](#%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C)
+  - [概述](#%E6%A6%82%E8%BF%B0)
+  - [Photoshop](#photoshop)
+    - [工具, 面板, 视图](#%E5%B7%A5%E5%85%B7-%E9%9D%A2%E6%9D%BF-%E8%A7%86%E5%9B%BE)
+    - [测量及取色](#%E6%B5%8B%E9%87%8F%E5%8F%8A%E5%8F%96%E8%89%B2)
+    - [切图](#%E5%88%87%E5%9B%BE)
+    - [保存](#%E4%BF%9D%E5%AD%98)
+      - [保存格式的选择](#%E4%BF%9D%E5%AD%98%E6%A0%BC%E5%BC%8F%E7%9A%84%E9%80%89%E6%8B%A9)
+    - [图片修改与维护](#%E5%9B%BE%E7%89%87%E4%BF%AE%E6%94%B9%E4%B8%8E%E7%BB%B4%E6%8A%A4)
+    - [图片优化与合并](#%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96%E4%B8%8E%E5%90%88%E5%B9%B6)
+      - [图片的兼容](#%E5%9B%BE%E7%89%87%E7%9A%84%E5%85%BC%E5%AE%B9)
+  - [开发及调试工具](#%E5%BC%80%E5%8F%91%E5%8F%8A%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7)
+  - [HTML](#html)
+    - [HTML 历史](#html-%E5%8E%86%E5%8F%B2)
+    - [HTML 简介](#html-%E7%AE%80%E4%BB%8B)
+    - [HTML 语法](#html-%E8%AF%AD%E6%B3%95)
+      - [全局属性](#%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7)
+    - [HTML 标签](#html-%E6%A0%87%E7%AD%BE)
+    - [文本标签](#%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE)
+    - [组合内容标签](#%E7%BB%84%E5%90%88%E5%86%85%E5%AE%B9%E6%A0%87%E7%AD%BE)
+    - [表单](#%E8%A1%A8%E5%8D%95)
+      - [input 类型支持值列表](#input-%E7%B1%BB%E5%9E%8B%E6%94%AF%E6%8C%81%E5%80%BC%E5%88%97%E8%A1%A8)
+    - [语义化](#%E8%AF%AD%E4%B9%89%E5%8C%96)
+    - [实体字符](#%E5%AE%9E%E4%BD%93%E5%AD%97%E7%AC%A6)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+>>>>>>> li-xinyang/master
+
+# 网页制作
 
 ## 概述
 
@@ -22,7 +50,7 @@ Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 
 **协作流程**
 
-![](img/development-flow.png)
+![](img/D/development-flow.png)
 
 **前端职责**
 
@@ -59,19 +87,19 @@ Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 
 在全局设置下将单位修改为像素，因其在 CSS 中运用最广。设置工作区布局为切图及图片编辑做准备。
 
-![](img/Screen%20Shot%202015-05-25%20at%201.15.45%20PM.png)
+![](img/P/photoshop-mainWindow.png)
 
 **切图常用工具**
 
 |工具名|示意图|注释|
 |------|:----:|----|
-|移动工具| ![](img/hwa_03.png)||
-|矩形选框工具| ![](img/hwa_01.png)||
-|魔棒工具|![](img/hwa_05.png)|（容差 Tolerance 越小学则的范围就越小）|
-|剪裁工具| ![](img/hwa_06.png) ||
-|切片工具| ![](img/hwa_07.png)||
-|缩放工具| ![](img/hwa_34.png)||
-|取色器| ![](img/hwa_31.png)||
+|移动工具| ![](img/H/hwa_03.png)||
+|矩形选框工具| ![](img/H/hwa_01.png)||
+|魔棒工具|![](img/H/hwa_05.png)|（容差 Tolerance 越小选择的范围就越小）|
+|剪裁工具| ![](img/H/hwa_06.png) ||
+|切片工具| ![](img/H/hwa_07.png)||
+|缩放工具| ![](img/H/hwa_34.png)||
+|取色器| ![](img/H/hwa_31.png)||
 
 图层（单层元素）与组（类似于文件夹）的区别。
 
@@ -81,11 +109,11 @@ Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 - 标尺，<kbd>Command</kbd> + <kbd>R</kbd>
 - 参考线，<kbd>Command</kbd> + <kbd>;</kbd>
 
-![](img/Screen%20Shot%202015-05-25%20at%205.25.41%20PM.png)
+![](img/P/photoshop-menu.png)
 
 NOTE: 所有工具及快捷键如下。
 
-![](img/v2_Tools%20panel_PS_update1.png)
+![](img/T/ToolsPanelOverview.png)
 
 ### 测量及取色
 
@@ -101,11 +129,11 @@ NOTE: 所有工具及快捷键如下。
 
 NOTE: 测量时尽可能放大画布以减少误差。量取文字是为了减少误差尽量选取尺寸大的文字进行测量。
 
-![](img/Screen%20Shot%202015-05-25%20at%207.16.43%20PM.png)
+![](img/P/photoshop-measure&colorSelection.png)
 
 **选框工具的多用途**，增（Shift）减（Alt）以及交叉选择（Shift + Alt）。左右（或上下）使用分离选框选择可以得到整两个分离边框的距离总值。
 
-![](img/rect-selection-tool.gif)
+![](img/T/rect-selection-tool.gif)
 
 所有能接受颜色的属性都需要取色。
 
@@ -121,8 +149,7 @@ NOTE: 使用魔棒工具可以迅速识别背景色是否没*线性*渐变的方
 
 **隐藏文字**，方法一，之间在图层中隐藏文字图层。方法二（两种，分别应对于纯色和有背景需要隐藏文本的情况）如下图所示。
 
-![](img/crop-image-0.gif)
-![](img/crop-image-1.gif)
+![](img/B/btn-remove-text.gif)
 
 **PNG24**切图方法
 - 移动工具选中所需图层（Ctrl 多选）
@@ -155,7 +182,7 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
 **图片与背景合并**的切图方法如下
 
-![](img/save-image.gif)
+![](img/S/save-image.gif)
 
 #### 保存格式的选择
 
@@ -163,7 +190,7 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
 保存类型二：图片色彩不丰富，不伦透明与否一律保存为 `PNG8` 格式（256颜色，需特殊设置如下图）。
 
-![](img/Screen%20Shot%202015-05-26%20at%209.12.24%20PM.png)
+![](img/P/photoshop-saveFormat.png)
 
 保存类型三：图片有半透明的要求，保存为 `PNG24` 格式（不对图片进行压缩）。
 
@@ -173,19 +200,19 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
 维护与修改之一：**更改画布**大小以便增加新素材。
 
-![](img/resize-canvas.gif)
+![](img/R/resize-canvas.gif)
 
 维护与修改之二：移动图标分两种，独立图层（移动工具拖动），于非独立图层（选取工具选中分离后移动工具拖动）。
 
-![](img/move-layer.gif)
+![](img/M/move-layer.gif)
 
 维护与修改之三：**裁剪画布**的方法有两种，(1)用选取工具选取后图片裁取，(2)直接用裁剪工具裁剪画布。
 
-![](img/crop-canvas.gif)
+![](img/C/crop-canvas.gif)
 
 **注意事项**：为了可维护性的考虑因适当的留出适当的空白区域以便修改所用和提高容错性。`PNG8`需更改图片颜色模式为 RGB 颜色（默认为索引颜色模式，颜色信息会被丢失）。
 
-![](img/png8-color-mode.gif)
+![](img/P/png8-color-mode.gif)
 
 ### 图片优化与合并
 
@@ -193,6 +220,7 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
     <button type="button" class="btn-default">Click Me</button>
 
+<<<<<<< HEAD
 	<style type="text/css" media="screen">
 	.btn-default {
     background: url(image/btn.png) no-repeat 0 0;
@@ -201,6 +229,17 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
     background: url(image/sprite.png) no-repeat 0 -50px;
 	}
 	</style>
+=======
+<style type="text/css" media="screen">
+  .btn-default {
+  background: url(image/btn.png) no-repeat 0 0;
+}
+.btn-default-alt {
+background: url(image/sprite.png) no-repeat 0 -50px;
+}
+</style>
+```
+>>>>>>> li-xinyang/master
 
 图片的**合并**就如同上面提到的切图后保存的过程。拼好的图称之为 **Sprite** 它能减少网络请求次数提高速度。图片压缩工具分为无损（ImageOptim 等工具，也可结合 Grunt 自动化构建工具一同使用）与有损压缩工具（TinyPng）。
 
@@ -223,11 +262,11 @@ NOTE: [Google Chrome DevTools Doc](https://developer.chrome.com/devtools)
 
 HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
-![](img/html/Screen%20Shot%202015-05-26%20at%2010.29.09%20PM.png)
+![](img/H/html-history.png)
 
 ### HTML 简介
 
-![](img/html/Screen%20Shot%202015-05-26%20at%2010.31.24%20PM.png)
+![](img/H/html-overview.png)
 
 注意事项：
 
@@ -240,7 +279,7 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
 ### HTML 语法
 
-![](img/html/Screen%20Shot%202015-05-26%20at%2010.37.19%20PM.png)
+![](img/H/html-syntax.png)
 
 **书写规范**：
 
@@ -257,9 +296,9 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
 ### HTML 标签
 
-**HTML5 标签集合**
+**[HTML5 标签集合](http://www.html5star.com/manual/html5label-meaning)**
 
-![](img/html/html-elements.jpg)
+![](img/H/html-elements.jpg)
 
 ### 文本标签
 
@@ -291,30 +330,172 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
 ### 组合内容标签
 
-`<div>`、`<p>`、`<ol>`、`<ul>`、`<dl>`、`<pre>`、`<blockquote>`。
+- `<div>`
+- `<p>`
+- `<ol>`
+- `<ul>`
+- `<dl>`
+- `<pre>`
+- `<blockquote>`
 
-`<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个或多个 `<dd>` 。
-
-`<pre>` 会保留换行和空格，通常与 `<code>` 一同使用。
+NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个或多个 `<dd>` 。`<pre>` 会保留换行和空格，通常与 `<code>` 一同使用。
 
 ```html
 <pre>
   <code>
     int main(void) {
-      printf('Hello, world!');
-      return 0;
-    }
-  </code>
+    printf('Hello, world!');
+    return 0;
+  }
+</code>
 </pre>
 ```
 
-`<blockquote>` 拥有 `cite` 属性，它包含引用文本的出处。
+`<blockquote>` 拥有 `cite` 属性，它包含引用文本的出处，示例如下所示：
 
 ```html
 <blockquote cite="http://example.com/facts">
-  <p></p>
+  <p>Sample Quote...</p>
 </blockquote>
 ```
 
+### 表单
 
+```html
+<form action="WebCreation_submit" method="get" accept-charset="utf-8">
+  <fieldset>
+    <legend>title or explanatory caption</legend>
+    <!-- 第一种添加标签的方法 -->
+    <label><input type="text/submit/hidden/button/etc" name="" value=""></label>
+    <!-- 第二种添加标签的方法 -->
+    <label for="input-id">Sample Label</label>
+    <input type="text" id="input-id">
+  </fieldset>
+  <fieldset>
+    <legend>title or explanatory caption</legend>
+    <!-- 只读文本框 -->
+    <input type="text" readonly>
+    <!-- 隐藏文本框，可提交影藏数据 -->
+    <input type="text" name="hidden-info" value="hiden-info-value" hidden>
+  </fieldset>
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</form>
+```
 
+#### input 类型支持值列表
+
+<table class="reference notranslate">
+  <tbody><tr>
+    <th style="width:22%">Value</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>button</td>
+    <td>Defines a clickable button (mostly used with a JavaScript to activate a script)</td>
+  </tr>
+  <tr>
+    <td>checkbox</td>
+    <td>Defines a checkbox</td>
+  </tr>
+  <tr>
+  <td class="html5badge"><img src="img/H/html5_badge20.png">color</td>
+    <td>Defines a color picker</td>
+  </tr>
+  <tr>
+  <td class="html5badge"><img src="img/H/html5_badge20.png">date</td>
+    <td>Defines a date control (year, month and day (no time))</td>
+  </tr>
+  <tr>
+  <td class="html5badge"><img src="img/H/html5_badge20.png">datetime</td>
+    <td>The input type datetime has been removed from the HTML standard. Use datetime-local instead.</td>
+    </tr>
+    <tr>
+    <td class="html5badge"><img src="img/H/html5_badge20.png">datetime-local</td>
+      <td>Defines a date and time control (year, month, day, hour, minute, second, and fraction of a second (no time zone)</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">email</td>
+        <td>Defines a field for an e-mail address</td>
+      </tr>
+      <tr>
+        <td>file</td>
+        <td>Defines a file-select field and a "Browse..." button (for file uploads)</td>
+      </tr>
+      <tr>
+        <td>hidden</td>
+        <td>Defines a hidden input field</td>
+      </tr>
+      <tr>
+        <td>image</td>
+        <td>Defines an image as the submit button</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">month</td>
+        <td>Defines a month and year control (no time zone)</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">number</td>
+        <td>Defines a field for entering a number</td>
+      </tr>
+      <tr>
+        <td>password</td>
+        <td>Defines a password field (characters are masked)</td>
+      </tr>
+      <tr>
+        <td>radio</td>
+        <td>Defines a radio button</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">range</td>
+        <td>Defines a control for entering a number whose exact value is not important (like a slider control)</td>
+      </tr>
+      <tr>
+        <td>reset</td>
+        <td>Defines a reset button (resets all form values to default values)</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">search</td>
+        <td>Defines a text field for entering a search string</td>
+      </tr>
+      <tr>
+        <td>submit</td>
+        <td>Defines a submit button</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">tel</td>
+        <td>Defines a field for entering a telephone number</td>
+      </tr>
+      <tr>
+        <td>text</td>
+        <td>Default. Defines a single-line text field (default width is 20 characters)</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">time</td>
+        <td>Defines a control for entering a time (no time zone)</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">url</td>
+        <td>Defines a field for entering a URL</td>
+      </tr>
+      <tr>
+      <td class="html5badge"><img src="img/H/html5_badge20.png">week</td>
+        <td>Defines a week and year control (no time zone)</td>
+      </tr>
+    </tbody>
+  </table>
+
+**其他页面控件**
+
+- `textarea`
+- `select` 与 `option`
+
+### 语义化
+
+语义化（Semantic Tag）是指用合适的标签标识适当的内容，它可以起到搜索引擎优化，提高可访问性（例如盲人使用的屏幕阅读器），与此同时还可以提高代码的可读性。
+
+### 实体字符
+
+实体字符（ASCII Encoding Reference）是用来在代码中区分代码表示和实际需要表达或显示的字符。它的两种表示方式，第一种为 `&` 外加实体字符名称，例如 `&nbsp;`，第二种为 `&` 加实体字符序号，例如 `&#160;`。
+
+NOTE：具体所需可在使用时查询，无需记忆。
