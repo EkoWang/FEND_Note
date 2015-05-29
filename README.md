@@ -26,4 +26,4 @@
 
 ## 相关资源
 
-- [Javascript 书单](Booklist.md)
+- [书单](Booklist.md)
