@@ -246,7 +246,7 @@ getConstructiorName([]) === "Array"; // true
 
 ## 内置对象
 
-通常情况下只有对象才存在方法，但 JavaScript 不同它具有12种内置对象。
+通常情况下只有对象才存在方法，但 JavaScript 不同它具有12种内置对象。内置对象又分为两类，普通对象（属性和方法）与构造器对象（可用于实例化普通对象，它还包含原型对象属性和方法，及实例对象属性和方法）。
 
 **JavaScript 对象原型链的简要说明**
 
@@ -271,6 +271,14 @@ p.move(2,2);
 1. 在调用属性或方法时，引擎会查找自身的属性如果没有则会继续沿着原型链逐级向上查找，直到找到该方法并调用。
 1. `__proto__` 跟浏览器引擎实现相关，不同的引擎中名字和实现不尽相同(chrome、firefox中名称是 `__proto__` ，并且可以被访问到，IE中无法访问)。基于代码兼容性、可读性等方面的考虑，不建议开发者显式访问 `__proto__` 属性或通过 `__proto__`更改原型链上的属性和方法，可以通过更改构造器` prototype` 对象来更改对象的 `__proto__` 属性。
 
+**构造器对象与普通对象的区别**
+
+![](img/O/object-with-constructor-and-regular-object.png)
+
+1. 构造器对象原型链中的 `__proto__` 是一个 `Function.prototype` 对象的引用，因此可以调用 `Function.prototype`的属性及方法
+1. 构造器对象本身有一个 `prototype` 属性，用该构造器实例化对象时该 `prototype` 会被实例对象的 `__proto__` 所引用
+1. 构造器对象本身是一个 `function` 对象，因此也会有自身属性
+
 ### 标准内置对象
 
 **构造器对象**
@@ -294,8 +302,11 @@ p.move(2,2);
 ### Object
 
 > 构造器的原型对象在对象实例化时将会被添加到实例对象的原型链当中。
-
 > `__proto__` 为原型链属性，编码时不可被显像调用。但是实例化对象可以调用原型链上的方法。
+
+用 String/Number 等构造器创建的对象原型链顶端对象始终是一个Object对象，因此这些对象可以调用Object的原型对象属性和方法。所以 String/Number 等构造器是 Object 的子类。
+
+更多关于 Object 的内容可以在[这里](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)找到。
 
 **构造器说明**：
 - Object 是属性和方法的集合
@@ -330,8 +341,8 @@ var obj1 = {name: 'Q', age: 14};
 功能：基于原型对象创造新对象
 
 ```javascript
-// Object.create(proto[, propertiesObject])
-var proto = {name: 'X', age: 13};
+// Object.create(prototype[, propertiesObject])
+var prototype = {name: 'X', age: 13};
 var obj = Object.create(proto);
 ```
 
@@ -430,7 +441,6 @@ str.split(/\d+/); // ["", " ", " ", " ", ""]
 
 **构造器说明**：整型直接量，八进制直接量（0-），十六进制直接量（0x-)，浮点型直接量
 
-
 **实例化方法**
 
 ```javascript
@@ -466,6 +476,61 @@ var num1 = 3.35;
 num1.toFixed(1); // 3.4
 ```
 
+### Array
+
+**构造器说明**：定义数组对象
+
+**实例化方法**
+
+```javascript
+var a0 = [1, 'abc', true, function(){}];
+var a1 = new Array();
+var a2 = new Array(1, 'abc', true);
+```
+
+**属性及方法**
+- prototype
+- isArray
+
+**原型对象属性及其方法**
+- constructor
+- splice
+- forEach
+- find
+- concat
+- pop
+- push
+- reverse
+- shift
+- slice
+- ...
+
+#### Array.prototype.splice
+
+功能：从数组中删除或添加元素，返回被删除的元素列表（作用域原有数组）
+
+```javascript
+// arrayObject.splice(start, deleteCount[, item1[, item2[, ...]]])
+var arr = ['1', '2', 'a', 'b', '6'];
+var ret = arr.splice(2, 2, '3', '4', '5'); // ['a', 'b']
+arr; // ['1', '2', '3', '4', 5', '6']
+```
+
+#### Array.prototype.forEach
+
+功能：遍历元素组并调用回调函数
+
+```javascript
+// arrayObject.forEach(callback[, thisArg])
+// 回调函数
+// function callback(value, index, arrayObject) {...}
+// value - 当前值 index - 当前索引 arrayObject - 数组本身
+function logArray(value, index, arrayObject) {
+  console.log(value);
+  console.log(value === array[index]);
+}
+[2, 5,  , 9].forEach(logArray);
+```
 ## 表达式与运算符
 
 ## 语句
