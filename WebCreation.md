@@ -719,9 +719,9 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 
 **类型**
 - 基本类型
-    - <length>
-    - <percentage>
-    - <color>
+    - `<length>`
+    - `<percentage>`
+    - `<color>`
     - ...
 - 其他类型
     - <'padding-width'>
