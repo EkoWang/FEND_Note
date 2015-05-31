@@ -421,7 +421,7 @@ var str1 = new String('Xinyang');
 - prototype
 - fromCharCode（转换 ASCII 代码为字符）
 
-**原型对象属性及其方法
+**原型对象属性及其方法**
 - constructor
 - indexOf
 - replace
