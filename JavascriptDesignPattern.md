@@ -12,8 +12,21 @@
     - [注释](#%E6%B3%A8%E9%87%8A)
   - [类型系统](#%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F)
     - [标准类型](#%E6%A0%87%E5%87%86%E7%B1%BB%E5%9E%8B)
+    - [变量转换表](#%E5%8F%98%E9%87%8F%E8%BD%AC%E6%8D%A2%E8%A1%A8)
     - [类型识别](#%E7%B1%BB%E5%9E%8B%E8%AF%86%E5%88%AB)
   - [内置对象](#%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1)
+    - [标准内置对象](#%E6%A0%87%E5%87%86%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1)
+    - [Object](#object)
+      - [Object.create](#objectcreate)
+      - [Object.prototype.toString](#objectprototypetostring)
+      - [Object.prototype.hasOwnProperty](#objectprototypehasownproperty)
+    - [Boolean](#boolean)
+    - [String](#string)
+      - [String.prototype.indexOf](#stringprototypeindexof)
+      - [String.prototype.replace](#stringprototypereplace)
+      - [String.prototype.split](#stringprototypesplit)
+    - [Number](#number)
+      - [Number.prototype.toFixed](#numberprototypetofixed)
   - [表达式与运算符](#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6)
   - [语句](#%E8%AF%AD%E5%8F%A5)
   - [变量作用域](#%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F)
@@ -182,6 +195,8 @@ var obj0 = new Object();
 
 - `var obj = {name: 'Xinyang'};`
 
+### 变量转换表
+
 |Value|Boolean|Number|String|
 |-----|-------|------|------|
 |undefined|false|NaN|"undefined"|
@@ -230,6 +245,208 @@ getConstructiorName([]) === "Array"; // true
 - 可判别自定义对象类型
 
 ## 内置对象
+
+通常情况下只有对象才存在方法，但 JavaScript 不同它具有13种内置对象。
+
+```javascript
+var str = 'a&b&c'.split('&');
+console.log(str); // ["a", "b", "c"]
+```
+
+### 标准内置对象
+
+**构造器对象**
+
+- Object
+- Boolean
+- String
+- Number
+- Function
+- Array
+- RegExp
+- Date
+- Error
+
+**其他对象**
+
+- Math
+- JSON
+- 全局对象
+
+### Object
+
+> 构造器的原型对象在对象实例化时将会被添加到实例对象的原型链当中。
+
+> `__proto__` 为原型链属性，编码时不可被显像调用。但是实例化对象可以调用原型链上的方法。
+
+**构造器说明**：
+- Object 是属性和方法的集合
+- String/Number/Boolean/Array/Date/Error 构造器均为 Object 的子类并集成 Object 原型对象的属性及方法。
+
+**实例化方法**
+```
+var obj0 = new Object({name: 'X', age: 13});
+// 常用方法
+var obj1 = {name: 'Q', age: 14};
+```
+
+**属性及方法**
+- prototype
+- create
+- keys
+- ...
+
+**原型对象属性及其方法
+- constructor
+- toString
+- valueOf
+- hasOwnProperty
+- ...
+
+**实例对象属性及方法**
+
+无
+
+#### Object.create
+
+功能：基于原型对象创造新对象
+
+```javascript
+// Object.create(proto[, propertiesObject])
+var proto = {name: 'X', age: 13};
+var obj = Object.create(proto);
+```
+
+#### Object.prototype.toString
+
+功能：获取方法调用者的标准类型
+
+```javascript
+// objectInstance.toString()
+var obj = {};
+obj.toString(); // Object
+```
+
+#### Object.prototype.hasOwnProperty
+
+功能：判断一个属性是否是一个对象的自身属性
+
+```javascript
+// objectInstance.hasOwnProperty("propertyName")
+var obj = Object.create({a: 1, b: 2});
+obj.c = 3;
+obj.hasOwnProperty('a'); // false
+obj.hasOwnProperty('c'); // true
+```
+
+### Boolean
+
+**构造器说明**：值为 true 与 false
+
+**属性及方法**
+- prototype
+
+**原型对象属性及其方法
+- constructor, toString, valueOf
+
+### String
+
+**构造器说明**：单双引号内的字符串
+
+**实例化方法**
+```javascript
+'Hello, world!'
+var str0 = 'Xinyang';
+var str1 = new String('Xinyang');
+```
+
+**属性及方法**
+- prototype
+- fromCharCode（转换 ASCII 代码为字符）
+
+**原型对象属性及其方法
+- constructor
+- indexOf
+- replace
+- slice
+- split
+- charCodeAt
+- toLowerCase
+- ...
+
+#### String.prototype.indexOf
+
+功能：获取子字符串在字符串中的索引
+
+```javascript
+// stringObject.indexOf(searchValue, fromIndex)
+var str = "I am X. From China!";
+var index = str.indexOf('a'); // 2
+str.indexOf('a', index + 1); // 16
+str.indexOf('Stupid'); // -1 字符串不存在
+```
+
+#### String.prototype.replace
+
+功能：查找字符串替换成目标文字
+
+```javascript
+// stringObject.replace(regexp/substr, replacement)
+var str = "apple is bad";
+str = str.replace('bad', 'awesome');
+```
+
+#### String.prototype.split
+
+功能：按分隔符将分隔符分成字符串数组
+
+```javascript
+// stringObject.split(separator, arrayLength)
+var str = '1 2 3 4';
+str.split(' '); // ['1', '2', '3', '4'];
+str.split(' ', 3); // ['1', '2', '3'];
+str.split(/\d+/); // ["", " ", " ", " ", ""]
+```
+
+### Number
+
+**构造器说明**：整型直接量，八进制直接量（0-），十六进制直接量（0x-)，浮点型直接量
+
+
+**实例化方法**
+
+```javascript
+10
+1.2e5
+var count = 0x10;
+var pi = new Number(3.1415);
+```
+
+**属性及方法**
+- prototype
+- MAX_VALUE
+- MIN_VALUE
+- NaN
+- NEGATIVE_INFINITY
+- POSITIVE_INFINITY
+
+**原型对象属性及其方法
+- constructor
+- toFixed
+- toExponential
+- ...
+
+#### Number.prototype.toFixed
+
+功能：四舍五入至指定小数位
+
+```javascript
+// numberObject.toFixed(num)
+var num0 = 3.14;
+num0.toFixed(1); // 3.1
+var num1 = 3.35;
+num1.toFixed(1); // 3.4
+```
 
 ## 表达式与运算符
 
