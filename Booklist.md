@@ -6,11 +6,11 @@ N/A
 
 ## CSS
 
-N/A
+- CSS Mastery: Advanced Web Standard Solutions
 
 ## JavaScript
 
-- DOM Scripting: Web Design with JavaScript and the Document Object Model
 - Professional JavaScript for Web Developers
+- DOM Scripting: Web Design with JavaScript and the Document Object Model
 - AdvancED DOM Scripting: Dynamic Web Design Techniques
 - JavaScript: The Definitive Guide
