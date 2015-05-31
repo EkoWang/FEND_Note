@@ -201,7 +201,7 @@ var obj0 = new Object();
 |-----|-------|------|------|
 |undefined|false|NaN|"undefined"|
 |null|false|0|"null"|
-|true|true|1|"null"|
+|true|true|1|"true"|
 |false|false|0|"false"|
 |''|false|0|''|
 |'123'|true|123|'123'|
@@ -246,12 +246,30 @@ getConstructiorName([]) === "Array"; // true
 
 ## 内置对象
 
-通常情况下只有对象才存在方法，但 JavaScript 不同它具有13种内置对象。
+通常情况下只有对象才存在方法，但 JavaScript 不同它具有12种内置对象。
 
-```javascript
-var str = 'a&b&c'.split('&');
-console.log(str); // ["a", "b", "c"]
+**JavaScript 对象原型链的简要说明**
+
 ```
+function Point(x, y) {
+  this.x = x;
+  this.y = y;
+}
+Point.prototype.move = function(x, y) {
+  this.x += x;
+  this.y += y;
+}
+var p = new Point(1, 1);
+p.move(2,2);
+```
+
+`__proto__` 称之为原型链，有如下特点：
+
+1. `__proto__` 为对象内部的隐藏属性
+1. `__proto__` 为实例化该对象的构造器的 `prototype` 对象的引用，因此可以直接方法 `prototype` 的所有属性和方法
+1. 除了 `Object` 每个对象都有一个 `__proto__` 属性且逐级增长形成一个链，原型链顶端是一个 `Object` 对象。
+1. 在调用属性或方法时，引擎会查找自身的属性如果没有则会继续沿着原型链逐级向上查找，直到找到该方法并调用。
+1. `__proto__` 跟浏览器引擎实现相关，不同的引擎中名字和实现不尽相同(chrome、firefox中名称是 `__proto__` ，并且可以被访问到，IE中无法访问)。基于代码兼容性、可读性等方面的考虑，不建议开发者显式访问 `__proto__` 属性或通过 `__proto__`更改原型链上的属性和方法，可以通过更改构造器` prototype` 对象来更改对象的 `__proto__` 属性。
 
 ### 标准内置对象
 
@@ -430,7 +448,7 @@ var pi = new Number(3.1415);
 - NEGATIVE_INFINITY
 - POSITIVE_INFINITY
 
-**原型对象属性及其方法
+**原型对象属性及其方法**
 - constructor
 - toFixed
 - toExponential
