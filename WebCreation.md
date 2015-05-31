@@ -636,7 +636,172 @@ NOTE：具体所需可在使用时查询，无需记忆。
 
 ### 简介
 
+CSS (Cascading Stylesheet) 它用于设置页面的表现。CSS3 并不是一个完整的独立版本而是将不同的功能拆分成独立模块（例如，选择器模块，盒模型模块），这有利于不同功能的及时更新与发布也利于浏览器厂商的实习。
+
+![](img/C/css3-history.png)
+
+**CSS 引入方法**
+```html
+// 外部样式表
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+// 内部样式表
+<head>
+  <style type="text/css">
+    p {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+// 内嵌样式(可在动态效果中同 JavaScript 一同使用)
+<p style="color: red">Sample Text</p>
+```
+
 ### 语法
+
+```css
+/* 选择器 */
+.m-userlist {
+  /* 属性声明 */
+  margin: 0 0 30px;
+  /* 属性名:属性值; */
+}
+.m-userlist .list {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+```
+
+#### 浏览器私有属性
+
+- Google Chrome, Safari (`-webkit`)
+- Firefox (`-moz-`)
+- IE (`-ms-`)
+- Opera (`-o-`)
+
+```css
+.pic {
+  -webkit-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+```
+
+NOTE: 使用 [http://pleeease.io/play/](http://pleeease.io/play/) ，CSS 预处理器（Sass，Less，Stylus）或编辑器插件可自动添加浏览器厂商的私有属性前缀。
+
+#### 属性值语法
+
+```css
+margin: [ <length> | <percentage> | auto ]{1,4}
+/* 基本元素：<length>, <percentage>, auto*/
+/* 组合符号：[], | */
+/* 数量符号：{1,4} */
+```
+
+##### 基本元素
+
+**关键字**
+- auto
+- solid
+- bold
+- ...
+
+**类型**
+- 基本类型
+    - <length>
+    - <percentage>
+    - <color>
+    - ...
+- 其他类型
+    - <'padding-width'>
+    - <'color-stop'>
+- 符号
+    - `/`
+    - ','
+- inherit, initial
+
+##### 组合符号
+
+- `<'font-size'> <'font-family'>` （` ` 两项必存，顺序毕遵）
+    - 合法：`12px arial`
+    - 不合法：`2em`
+    - 不合法：`arial 14px`
+- `<length>&&<color>` (`&&` 两项必存，顺序无碍)
+    - 合法：green 2px
+    - 合法：1em orange
+    - 不合法：blue
+- `underline || overline || line-through || blink` (`||` 至少选一，顺序无碍)
+    - 合法：underline
+    - 合法：overline underline
+- `<color> | transparent`（`|` 只可选一，不可共存）
+    - 合法：orange
+    - 合法：transparent
+    - 不合法：orange transparent
+- `bold [thin || <length>]`（`[]` 分组之用，视为整体）
+    - 合法：bold thin
+    - 合法：bold 2em
+
+##### 数量符号
+
+- `<length>`（无则表示仅可出现一次）
+    - 合法：1px
+    - 合法：10em
+    - 不合法：1px 2px
+- `<color-stop>[, <color-stop>]+` (`+` 可出现一次或多次)
+    - 合法：#fff, red
+    - 合法：blue, green 50%, gray
+    - 不合法：red
+- `inset?&&<color>` (`?` 表示可选)
+    - 合法：inset orange
+    - 合法：red
+- `<length>{2,4}` (`{2,4}` 可出现次数和最少最多出现次数)
+    - 合法：1px 2px
+    - 合法：1px 2px 3px
+    - 不合法: 1px
+    - 不合法：1px 2px 3px 4px 5px
+- `<time>[, <time>]*`（`*` 出现 0 次或多次）
+    - 合法：1s
+    - 合法：1s,4ms
+- `<time>#`（`#` 出现一次或者多次，用`,`分隔）
+    - 合法：2s, 4s
+    - 不合法：1s 2s
+
+![](img/C/css-value-rule.png)
+
+#### @规则语法
+
+```
+@import "subs.css";
+@charset "utf-8";
+@media print {
+  /* property: value */
+}
+@keyframes fadein {
+  /* property: value */
+}
+```
+
+- `@标示符 内容;`
+- `@标示符 内容{}`
+
+##### @规则
+
+**常用的规则**
+- `@media` （用于响应式布局）
+- `@keyframes` （CSS 动画的中间步骤）
+- `@font-face` （引入外部字体）
+
+**其他规则**（不常用）
+- `@import`
+- `@charset`
+- `@namespace`
+- `@page`
+- `@supports`
+- `@document`
 
 ### 选择器
 
