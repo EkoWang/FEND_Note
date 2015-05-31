@@ -761,6 +761,208 @@ define = function (name, deps, callback) {
 };
 ```
 
+### RegExp
+
+**构造器说明**：用于定义正则表达式，一个 RegExp 对象包含一个正则表达式和关联的标志
+
+**定义方法**
+- `/pattern/flags`
+- `new RegExp(pattern[, flags]);`
+
+**属性及方法**
+- prototype
+
+**原型对象属性及其方法**
+- constructor
+- test
+- exec
+- ...
+
+#### RegExp.prototype.test
+
+功能：使用正则表达式对字符串进行测试，并返回测试结果
+
+```javascript
+// regexObj.text(str)
+var reg = /^abc/i;
+reg.test('Abc123'); // true
+reg.test('1Abc1234'); // false
+```
+
+### Date
+
+**构造器说明**：用于定义日期对象
+
+**定义方法**
+```javascript
+var date0 = new Date();
+var date1 = new Date(2014, 3, 1, 7, 1, 1, 100);
+```
+
+**属性及方法**
+- prototype
+- parse
+- now
+- ...
+
+**原型对象属性及其方法**
+- constructor
+- Date
+- getDate
+- getHours
+- setDate
+- setHours
+- ...
+
+### 标准内置对象
+
+#### Math
+
+**对象说明**：拥有属性和方法的单一对象主要用于数字计算
+
+**对象属性**：
+- E
+- PI
+- SQRT2
+- ...
+
+**对象方法**：
+- floor
+- random
+- abs
+- max
+- cos
+- ceil
+
+##### Math.floor
+
+功能：向下取整
+
+```javascript
+// Math.floor(num)
+Math.floor(0.97); // 0
+Math.floor(5.1); // 5
+Math.floor(-5.1); //6
+```
+
+相似方法：`ceil`，`round`
+
+##### Math.random
+
+功能：返回 0~1 之间的浮点数
+
+```javascript
+// Math.random()
+Math.random(); // 0.14523562323461
+```
+
+#### JSON
+
+**对象说明**：用于存储和交换文本信息
+
+**对象方法**：
+- parse
+- stringify
+
+##### JSON.stringify
+
+功能：将 JSON 对象转换为字符转
+
+```javascript
+// JSON.stringify(value[, replacer[, space]])
+var json = {'name': 'X'};
+JSON.stringify(json); // "{"name":"X"}"
+```
+
+##### JSON.parse
+
+功能：将 JSON 字符转转换为对象
+
+```
+// JSON.parse(text[, reviver])
+var jsonStr = '{"name":"X"}';
+JSON.parse(jsonStr); // {name: 'X'}
+```
+
+#### 全局对象
+
+全局对象定义了一系列的属性和方法在编程过程中可以被之间调用。
+
+属性：NaN，Infinity，undefined
+
+方法：
+- parseInt
+- parseFloat
+- isNaN
+- isFinite
+- eval
+
+处理 URI 方法：
+- encodedURIComponent
+- decodeURIComponent
+- encodedURI
+- decodeURI
+
+构造器属性：
+- Boolean
+- String
+- Number
+- Object
+- Function
+- Array
+- Date
+- Error
+- ...
+
+对象属性：
+- Math
+- JSON
+
+##### NaA
+
+非数字值：表示错误或无意义的运算结果，NaN 参与运算仍会返回 NaA，且 NaN 不等于任何值，包括它本身。可以使用 `isNaN()` 判断运算结果的类型是否为 NaN。
+
+```javascript
+isNaN(NaN); // true
+isNaN(4 - '2a'); // flase;
+```
+
+##### parseInt
+
+功能：转换字符串成数字
+
+```javascript
+// parseInt(string[, radix])
+// radix - 为进制数
+parseInt('010'); // 10
+parseInt('010', 8) // 8
+parseInt('010', 15) // 16
+
+parseInt('0x1f'); // 31
+parseInt('0x1f', 16); // 31
+parseInt('1f'); // 1
+parseInt('1f', 16); // 32
+```
+
+##### eval
+
+功能：计算字符串并执行其中的 JavaScript 代码（会带来安全性和代码逻辑问题，通常不建议使用）
+
+```javascript
+// eval(string)
+var res = '{"error": "0", "msg": "OK"};
+var obj;
+if (!JSON) {
+  obj = eval('(' + res + ')');
+} else {
+  obj = JSON.parse(res);
+}
+```
+
+##### encodedURIComponent
+
+功能：将 URI 参数中的特殊字符，中文等作为 URI 的一部分进行编码
+
 ## 表达式与运算符
 
 ## 语句
