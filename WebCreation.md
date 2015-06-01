@@ -254,7 +254,7 @@ IE6 不支持 PNG24 半透明所以需要保存两份（sprite.png - png24 和 s
 
 ## 开发及调试工具
 
-- 文本编辑器 && IDE (集成开发环境)
+- 文本编辑器或 IDE (集成开发环境)
 - Google Chrome, Firefox Firebug, Safari Developer Tool
 
 NOTE: [Google Chrome DevTools Doc](https://developer.chrome.com/devtools)
