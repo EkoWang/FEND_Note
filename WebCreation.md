@@ -1170,20 +1170,20 @@ NOTE：当其他值为空时，均被设置为默认值。
 `color: <color>`
 
 ```css
-element { color: red }
-element { color: #f00 }
-element { color: #ff0000 }
-element { color: rgb(255,0,0) }
-element { color: rgb(100%, 0%, 0%) }
-element { color: hsl(0, 100%, 50%) }
+element { color: red; }
+element { color: #f00; }
+element { color: #ff0000; }
+element { color: rgb(255,0,0); }
+element { color: rgb(100%, 0%, 0%); }
+element { color: hsl(0, 100%, 50%); }
 
 /* 50% translucent */
-element { color: rgba(255, 0, 0, 0.5) }
-element { color: hsla(0, 100%, 50%, 0.5) }
+element { color: rgba(255, 0, 0, 0.5); }
+element { color: hsla(0, 100%, 50%, 0.5); }
 
 /* 全透明 */
-element { color: transparent }
-element { color: rgba(0, 0, 0, 0) }
+element { color: transparent' }
+element { color: rgba(0, 0, 0, 0); }
 ```
 
 #### 对齐方式
