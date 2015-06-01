@@ -10,7 +10,7 @@
 
 ### 页面制作
 
-![](http://progressed.io/bar/48?title=Progress) [详情](WebCreation.md)
+![](http://progressed.io/bar/60?title=Progress) [详情](WebCreation.md)
 
 ### DOM 编程
 
