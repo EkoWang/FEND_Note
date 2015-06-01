@@ -982,6 +982,36 @@ NOTE：请在使用时查找文档
 
 #### 其他选择器
 
+##### 伪元素选择器
+
+注意与伪类学则器的区分。
+
+- `::first-letter`
+- `::first-line`
+- `::before{content: "before"}` 需与 `content` 一同使用
+- `::after{content: "after"}` 需与 `content` 一同使用
+- `::selection` 被用户选中的内容（鼠标选择高亮属性）
+
+##### 组合选择器
+
+- 后代选择器 `.main h2 {...}`，使用` `表示
+- 子选择器 `.main>h2 {...}`，使用`>`表示
+- 兄弟学则器 `h2+p {...}`，使用`+`表示
+    - `h2~p {...}`，使用`~`表示（此标签无需紧邻）
+
+##### 选择器分组
+
+```html
+<style type="text/css">
+/* 下面两组样式声明效果一致 */
+h1 {color: red;}
+h2 {color: red;}
+h3 {color: red;}
+
+h1, h2, h3 {color: red;}
+</style>
+```
+
 #### 继承、优先、层级
 
 ### 文版
