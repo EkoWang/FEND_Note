@@ -1072,9 +1072,112 @@ value = a * 1000 + b * 100 + c * 10 + d
 
 层叠为相同属性根据优先级覆盖，如优先级相同则后面会覆盖前面的属性，而不同属性则会合并。
 
-### 文版
+### 文本
 
 #### 字体
+
+**改变字号**
+
+`font-size: <absolute-size> | <relative-size> | <length> | <percentage> | inherit`
+
+- `<absolute-size>` 有 small large medium
+- `<relative-size>` 有 smaller larger
+
+```stylus
+div
+  font-size 12px
+  p#sample0
+    font-size 16px
+  p#sample1
+    font-size 2em
+  p#sample2
+    font-size 200%
+```
+
+NOTE：以上两值在开发中并不常用。`2em` 与 `200%` 都为父元素默认大小的两倍（参照物为父元素的字体大小 `12px`）。
+
+**改变字体**
+
+`font-family: [ <family-name> | <generic-family> ]# `
+
+`<generic-family>` 可选选项，但具体使用字体由浏览器决定
+- serif
+- sans-serif
+- cursive
+- fantasy
+- monospace
+
+```css
+font-family: arial, Verdana, sans-serif;
+```
+
+NOTE：优先使用靠前的字体
+
+**加粗字体**
+
+`font-weight: normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900`
+
+```css
+font-weight: normal;
+font-weight: bold;
+```
+
+**倾斜字体**
+
+`font-style: normal | italic | oblique | inherit`
+
+`italic` 使用字体中的斜体，而 `oblique` 在没有斜体字体时强制倾斜字体。
+
+**更改行距**
+
+`line-height: normal | <number> | <length> | <percentage>`
+
+`normal` 值为浏览器决定，在1.1至1.2之间（通常设置值为1.14左右）
+
+```css
+/* length 类型 */
+line-height: 40px;
+line-height: 3em;
+/* percentage 类型 */
+line-height: 300%;
+/* number 类型 */
+line-height: 3;
+```
+
+NOTE：当`line-height`为 `number` 类型时，子类直接继承其数值（不计算直接继承）。而当为 `percentage` 类型时，子类则会先计算再显示（先计算后继承）。
+
+**font shorthand**
+
+`font: [ [ <‘font-style’> || <font-variant-css21> || <‘font-weight’> || <‘font-stretch’> ]? <‘font-size’> [ / <‘line-height’> ]? <‘font-family’> ] | caption | icon | menu | message-box | small-caption | status-bar`
+
+```css
+font: 30px/2 "Consolas", monospace;
+font: italic bold 20px/1.5 arial, serif;
+font: 20px arial, serif;
+```
+
+NOTE：当其他值为空时，均被设置为默认值。
+
+**改变文字颜色**
+
+`color: <color>`
+
+```css
+element { color: red }
+element { color: #f00 }
+element { color: #ff0000 }
+element { color: rgb(255,0,0) }
+element { color: rgb(100%, 0%, 0%) }
+element { color: hsl(0, 100%, 50%) }
+
+/* 50% translucent */
+element { color: rgba(255, 0, 0, 0.5) }
+element { color: hsla(0, 100%, 50%, 0.5) }
+
+/* 全透明 */
+element { color: transparent }
+element { color: rgba(0, 0, 0, 0) }
+```
 
 #### 对齐方式
 
