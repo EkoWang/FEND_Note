@@ -41,7 +41,6 @@
         - [类选择器](#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8)
         - [id 选择器](#id-%E9%80%89%E6%8B%A9%E5%99%A8)
         - [通配符选择器](#%E9%80%9A%E9%85%8D%E7%AC%A6%E9%80%89%E6%8B%A9%E5%99%A8)
-- [Sample Heading 1](#sample-heading-1)
         - [属性选择器](#%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8)
         - [伪类选择器](#%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8)
       - [其他选择器](#%E5%85%B6%E4%BB%96%E9%80%89%E6%8B%A9%E5%99%A8)
@@ -898,7 +897,7 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 
 ```html
 <div>
-  <h1>Sample Heading 1</h1>
+  <p>Sample Paragraph</p>
   <p>Sample Paragraph</p>
 </div>
 
