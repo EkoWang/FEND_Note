@@ -777,6 +777,8 @@ margin: [ <length> | <percentage> | auto ]{1,4}
     - 合法：2s, 4s
     - 不合法：1s 2s
 
+**CSS 规则示例**
+
 ![](img/C/css-value-rule.png)
 
 #### @规则语法
