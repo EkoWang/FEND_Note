@@ -840,13 +840,6 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 </style>
 ```
 
-**例子实现样式**
-<div style="border: 1px solid black; padding: 5px;">
-  <p style="color:blue;">Sample Paragraph</p>
-  <p style="color:blue;">Sample Paragraph</p>
-  <p style="color:blue;">Sample Paragraph</p>
-</div>
-
 ##### 类选择器
 
 `.className` 以 `.` 开头，名称可包含字母，数字，`-`，`_`，但必须以字母开头。它区分大小写并可出现多次。
@@ -871,13 +864,6 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 </style>
 ```
 
-**例子实现样式**
-<div style="border: 1px solid black; padding: 5px;">
-  <p style="color:blue;">Sample Paragraph</p>
-  <p style="color:orange; font-weight: bold;">Sample Paragraph</p>
-  <p style="color:blue;">Sample Paragraph</p>
-</div>
-
 ##### id 选择器
 
 `#idName` 以 `#` 开头且只可出现**一次**，其命名要求于 `.className` 相同。
@@ -894,11 +880,6 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 </style>
 ```
 
-**例子实现样式**
-<div style="border: 1px solid black; padding: 5px;">
-  <p style="color:red;">Sample Paragraph</p>
-</div>
-
 ##### 通配符选择器
 
 ```html
@@ -913,12 +894,6 @@ margin: [ <length> | <percentage> | auto ]{1,4}
   }
 </style>
 ```
-
-**例子实现样式**
-<div style="border: 1px solid black; padding: 5px;">
-  <h1 style="color: blue">Sample Heading 1</h1>
-  <p style="color:blue;">Sample Paragraph</p>
-</div>
 
 ##### 属性选择器
 
@@ -951,15 +926,6 @@ margin: [ <length> | <percentage> | auto ]{1,4}
   }
 </style>
 ```
-
-**例子实现样式**
-<div style="border: 1px solid black; padding: 5px;">
-  <form action="">
-    <input type="text" value="Xinyang" disabled style="background-color: orange;">
-    <input type="password" placeholder="Password">
-    <input type="button" value="Button" style="color: blue;">
-  </form>
-</div>
 
 ##### 伪类选择器
 
@@ -1013,10 +979,6 @@ NOTE：请在使用时查找文档
   }
 </style>
 ```
-**例子实现样式**
-<div style="border: 1px solid black; padding: 5px;">
-  <a href="#伪类选择器" title="Sample Site" onmouseover="this.style.color='green'" onmouseout="this.style.color='gray'" onmousedown="this.style.color='orange'" style="color:gray;">Sample Site</a>
-</div>
 
 #### 其他选择器
 
