@@ -1188,7 +1188,84 @@ element { color: rgba(0, 0, 0, 0); }
 
 #### 对齐方式
 
+##### 文字居中
+
+`text-align: start | end | left | right | center | justify | match-parent | start end`
+
+NOTE：默认为文本左对齐。
+
+##### 文本垂直对齐
+
+`vertical-align: baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | <length>`
+
+NOTE：`<percentage>`的参照物为`line-height`
+
+##### 文本缩进
+
+`text-indent: <length> | <percentage> && [ hanging || each-line ]`
+
+NOTE：缩进两个字可使用 `text-indent: 2em;`
+
 #### 格式处理
+
+##### 保留空格格式
+
+`white-space: normal | pre | nowrap | pre-wrap | pre-line`
+
+`pre` 行为同 `<pre>` 一致。
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th>&nbsp;</th>
+   <th>New lines</th>
+   <th>Spaces and tabs</th>
+   <th>Text wrapping</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th><code>normal</code></th>
+   <td>Collapse</td>
+   <td>Collapse</td>
+   <td>Wrap</td>
+  </tr>
+  <tr>
+   <th><code>nowrap</code></th>
+   <td>Collapse</td>
+   <td>Collapse</td>
+   <td>No wrap</td>
+  </tr>
+  <tr>
+   <th><code>pre</code></th>
+   <td>Preserve</td>
+   <td>Preserve</td>
+   <td>No wrap</td>
+  </tr>
+  <tr>
+   <th><code>pre-wrap</code></th>
+   <td>Preserve</td>
+   <td>Preserve</td>
+   <td>Wrap</td>
+  </tr>
+  <tr>
+   <th><code>pre-line</code></th>
+   <td>Preserve</td>
+   <td>Collapse</td>
+   <td>Wrap</td>
+  </tr>
+ </tbody>
+</table>
+
+##### 文字换行
+
+`word-wrap: normal | break-word`
+
+NOTE：允许长单词自动换行。
+
+`word-break: normal | break-all | keep-all`
+
+NOTE：`break-all` 单词中的任意字母间都可以换行。
 
 #### 文本装饰
 
