@@ -1,4 +1,4 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+ <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [网页制作](#%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C)
@@ -814,7 +814,209 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 
 ### 选择器
 
+选择器可被看做表达式，通过它可以选择相应的元素并应用不同的样式。
+
+- 简单选择器
+- 元素选择器
+- 组合选择器
+
 #### 简单选择器
+
+简单选择器可组合使用。
+
+##### 标签选择器
+
+```html
+<div>
+  <p>Sample Paragraph</p>
+  <p>Sample Paragraph</p>
+  <p>Sample Paragraph</p>
+</div>
+
+<style type="text/css">
+  p {
+    color: blue;
+  }
+</style>
+```
+
+**例子实现样式**
+<div style="border: 1px solid black; padding: 5px;">
+  <p style="color:blue;">Sample Paragraph</p>
+  <p style="color:blue;">Sample Paragraph</p>
+  <p style="color:blue;">Sample Paragraph</p>
+</div>
+
+##### 类选择器
+
+`.className` 以 `.` 开头，名称可包含字母，数字，`-`，`_`，但必须以字母开头。它区分大小写并可出现多次。
+
+```html
+<div>
+  <p>Sample Paragraph</p>
+  <p class="special bold">Sample Paragraph</p>
+  <p>Sample Paragraph</p>
+</div>
+
+<style type="text/css">
+  p {
+    color: blue
+  }
+  .special {
+    color: orange;
+  }
+  .bold {
+    font-weight: bold;
+  }
+</style>
+```
+
+**例子实现样式**
+<div style="border: 1px solid black; padding: 5px;">
+  <p style="color:blue;">Sample Paragraph</p>
+  <p style="color:orange; font-weight: bold;">Sample Paragraph</p>
+  <p style="color:blue;">Sample Paragraph</p>
+</div>
+
+##### id 选择器
+
+`#idName` 以 `#` 开头且只可出现**一次**，其命名要求于 `.className` 相同。
+
+```html
+<div>
+  <p id="special">Sample Paragraph</p>
+</div>
+
+<style type="text/css">
+  #special {
+    color: red;
+  }
+</style>
+```
+
+**例子实现样式**
+<div style="border: 1px solid black; padding: 5px;">
+  <p style="color:red;">Sample Paragraph</p>
+</div>
+
+##### 通配符选择器
+
+```html
+<div>
+  <h1>Sample Heading 1</h1>
+  <p>Sample Paragraph</p>
+</div>
+
+<style type="text/css">
+  * {
+    color: blue;
+  }
+</style>
+```
+
+**例子实现样式**
+<div style="border: 1px solid black; padding: 5px;">
+  <h1 style="color: blue">Sample Heading 1</h1>
+  <p style="color:blue;">Sample Paragraph</p>
+</div>
+
+##### 属性选择器
+
+`[attr]` 或 `[attr=val]` 来选择相应的元素。`#nav{...}` 既等同于 `[id=nav]{...}`。
+
+`[attr~=val]` 可选用与选择包含 `val` 属性值的元素，像`class="title sports"` 与 `class="sports"`。`.sports{...}` 既等同于 `[class~=sports]{...}`
+
+`[attr|=val]` 可以选择`val`开头及开头紧接`-`的属性值。
+
+`[attr^=val]` 可选择以`val`开头的属性值对应的元素，如果值为符号或空格则需要使用引号 `""`。
+
+`[attr$=val]` 可选择以`val`结尾的属性值对应的元素。
+
+`[attr$=val]` 可选择以包含`val`属性值对应的元素。
+
+```html
+<div>
+  <form action="">
+    <input type="text" value="Xinyang" disabled>
+    <input type="password" placeholder="Password">
+    <input type="button" value="Button">
+  </form>
+</div>
+<style type="text/css">
+  [disabled] {
+    background-color: orange;
+  }
+  [type=button] {
+    color: blue;
+  }
+</style>
+```
+
+**例子实现样式**
+<div style="border: 1px solid black; padding: 5px;">
+  <form action="">
+    <input type="text" value="Xinyang" disabled style="background-color: orange;">
+    <input type="password" placeholder="Password">
+    <input type="button" value="Button" style="color: blue;">
+  </form>
+</div>
+
+##### 伪类选择器
+
+**常用伪类选择器**：
+- `:link`
+- `:visited`
+- `:hover`
+- `:active`
+- `:enabled`
+- `:disabled`
+- `:checked`
+- `:first-child`
+- `:last-child`
+- `:nth-child(even)` 可为 `odd` `even` 或数字
+- `:nth-last-child(n)` `n`从 0 开始计算
+- `:only-child` 仅选择唯一的元素
+- `:only-of-type`
+- `:first-of-type`
+- `:last-of-type`
+- `:nth-of-type(even)`
+- `:nth-last-of-type(2n)`
+
+**不常用伪类选择器**：
+- `:empty` 选中页面中无子元素的标签
+- `:root` 选择 HTML 根标签
+- `:not()` 参数为一般选择器
+- `:target` 被锚点选中的目标元素
+- `:lang()` 选中语言值为某类特殊值的元素
+
+NOTE：请在使用时查找文档
+
+```html
+<div>
+  <a href="http://sample-site.com" title="Sample Site">Sample Site</a>
+</div>
+<style type="text/css">
+  /* 伪类属性定义有顺序要求！ */
+  a:link {
+    color: gray;
+  }
+  a:visited {
+    color:red;
+  }
+  a:hover {
+    color: green;
+    /* 鼠标悬停 */
+  }
+  a:active {
+    color: orange;
+    /* 鼠标点击 */
+  }
+</style>
+```
+**例子实现样式**
+<div style="border: 1px solid black; padding: 5px;">
+  <a href="#伪类选择器" title="Sample Site" onmouseover="this.style.color='green'" onmouseout="this.style.color='gray'" onmousedown="this.style.color='orange'" style="color:gray;">Sample Site</a>
+</div>
 
 #### 其他选择器
 
