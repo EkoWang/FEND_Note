@@ -52,8 +52,15 @@
         - [优先](#%E4%BC%98%E5%85%88)
           - [改变优先级](#%E6%94%B9%E5%8F%98%E4%BC%98%E5%85%88%E7%BA%A7)
         - [层叠](#%E5%B1%82%E5%8F%A0)
-    - [文版](#%E6%96%87%E7%89%88)
+    - [文本](#%E6%96%87%E6%9C%AC)
       - [字体](#%E5%AD%97%E4%BD%93)
+        - [改变字号](#%E6%94%B9%E5%8F%98%E5%AD%97%E5%8F%B7)
+        - [改变字体](#%E6%94%B9%E5%8F%98%E5%AD%97%E4%BD%93)
+        - [加粗字体](#%E5%8A%A0%E7%B2%97%E5%AD%97%E4%BD%93)
+        - [倾斜字体](#%E5%80%BE%E6%96%9C%E5%AD%97%E4%BD%93)
+        - [更改行距](#%E6%9B%B4%E6%94%B9%E8%A1%8C%E8%B7%9D)
+        - [font shorthand](#font-shorthand)
+        - [改变文字颜色](#%E6%94%B9%E5%8F%98%E6%96%87%E5%AD%97%E9%A2%9C%E8%89%B2)
       - [对齐方式](#%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F)
       - [格式处理](#%E6%A0%BC%E5%BC%8F%E5%A4%84%E7%90%86)
       - [文本装饰](#%E6%96%87%E6%9C%AC%E8%A3%85%E9%A5%B0)
@@ -1076,7 +1083,7 @@ value = a * 1000 + b * 100 + c * 10 + d
 
 #### 字体
 
-**改变字号**
+##### 改变字号
 
 `font-size: <absolute-size> | <relative-size> | <length> | <percentage> | inherit`
 
@@ -1096,7 +1103,7 @@ div
 
 NOTE：以上两值在开发中并不常用。`2em` 与 `200%` 都为父元素默认大小的两倍（参照物为父元素的字体大小 `12px`）。
 
-**改变字体**
+##### 改变字体
 
 `font-family: [ <family-name> | <generic-family> ]# `
 
@@ -1113,7 +1120,7 @@ font-family: arial, Verdana, sans-serif;
 
 NOTE：优先使用靠前的字体
 
-**加粗字体**
+##### 加粗字体
 
 `font-weight: normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900`
 
@@ -1122,13 +1129,13 @@ font-weight: normal;
 font-weight: bold;
 ```
 
-**倾斜字体**
+##### 倾斜字体
 
 `font-style: normal | italic | oblique | inherit`
 
 `italic` 使用字体中的斜体，而 `oblique` 在没有斜体字体时强制倾斜字体。
 
-**更改行距**
+##### 更改行距
 
 `line-height: normal | <number> | <length> | <percentage>`
 
@@ -1146,7 +1153,7 @@ line-height: 3;
 
 NOTE：当`line-height`为 `number` 类型时，子类直接继承其数值（不计算直接继承）。而当为 `percentage` 类型时，子类则会先计算再显示（先计算后继承）。
 
-**font shorthand**
+##### font shorthand
 
 `font: [ [ <‘font-style’> || <font-variant-css21> || <‘font-weight’> || <‘font-stretch’> ]? <‘font-size’> [ / <‘line-height’> ]? <‘font-family’> ] | caption | icon | menu | message-box | small-caption | status-bar`
 
@@ -1158,7 +1165,7 @@ font: 20px arial, serif;
 
 NOTE：当其他值为空时，均被设置为默认值。
 
-**改变文字颜色**
+##### 改变文字颜色
 
 `color: <color>`
 
