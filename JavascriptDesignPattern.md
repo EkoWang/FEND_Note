@@ -991,6 +991,14 @@ if (!JSON) {
 
 功能：将 URI 参数中的特殊字符，中文等作为 URI 的一部分进行编码
 
+```javascript
+var uri = "http://w3schools.com/my test.asp?name=ståle&car=saab";
+var res = encodeURIComponent(uri);
+
+// 结果
+// http%3A%2F%2Fw3schools.com%2Fmy%20test.asp%3Fname%3Dst%C3%A5le%26car%3Dsaab
+```
+
 ## 表达式与运算符
 
 ## 语句
