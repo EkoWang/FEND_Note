@@ -1031,6 +1031,8 @@ h1, h2, h3 {color: red;}
 
 子元素继承父元素的样式，但并不是所有属性都是默认继承的。通过文档中的 `inherited: yes` 来判断属性是否可以自动继承。
 
+![](img/C/css-inherit-doc.png)
+
 自动继承属性：
 - color
 - font
