@@ -13,7 +13,7 @@ hljs.initHighlightingOnLoad();
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [网页制作](#%E7%BD%91%E9%A1%B5%E5%88%B6%E4%BD%9C)
-  - [概述](#%E6%A6%82%E8%BF%B0)
+  - [前端工程师概述](#%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%A6%82%E8%BF%B0)
   - [Photoshop](#photoshop)
     - [工具, 面板, 视图](#%E5%B7%A5%E5%85%B7-%E9%9D%A2%E6%9D%BF-%E8%A7%86%E5%9B%BE)
     - [测量及取色](#%E6%B5%8B%E9%87%8F%E5%8F%8A%E5%8F%96%E8%89%B2)
@@ -48,10 +48,30 @@ hljs.initHighlightingOnLoad();
         - [@规则](#@%E8%A7%84%E5%88%99)
     - [选择器](#%E9%80%89%E6%8B%A9%E5%99%A8)
       - [简单选择器](#%E7%AE%80%E5%8D%95%E9%80%89%E6%8B%A9%E5%99%A8)
+        - [标签选择器](#%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8)
+        - [类选择器](#%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8)
+        - [id 选择器](#id-%E9%80%89%E6%8B%A9%E5%99%A8)
+        - [通配符选择器](#%E9%80%9A%E9%85%8D%E7%AC%A6%E9%80%89%E6%8B%A9%E5%99%A8)
+        - [属性选择器](#%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8)
+        - [伪类选择器](#%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8)
       - [其他选择器](#%E5%85%B6%E4%BB%96%E9%80%89%E6%8B%A9%E5%99%A8)
+        - [伪元素选择器](#%E4%BC%AA%E5%85%83%E7%B4%A0%E9%80%89%E6%8B%A9%E5%99%A8)
+        - [组合选择器](#%E7%BB%84%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8)
+        - [选择器分组](#%E9%80%89%E6%8B%A9%E5%99%A8%E5%88%86%E7%BB%84)
       - [继承、优先、层级](#%E7%BB%A7%E6%89%BF%E3%80%81%E4%BC%98%E5%85%88%E3%80%81%E5%B1%82%E7%BA%A7)
-    - [文版](#%E6%96%87%E7%89%88)
+        - [继承](#%E7%BB%A7%E6%89%BF)
+        - [优先](#%E4%BC%98%E5%85%88)
+          - [改变优先级](#%E6%94%B9%E5%8F%98%E4%BC%98%E5%85%88%E7%BA%A7)
+        - [层叠](#%E5%B1%82%E5%8F%A0)
+    - [文本](#%E6%96%87%E6%9C%AC)
       - [字体](#%E5%AD%97%E4%BD%93)
+        - [改变字号](#%E6%94%B9%E5%8F%98%E5%AD%97%E5%8F%B7)
+        - [改变字体](#%E6%94%B9%E5%8F%98%E5%AD%97%E4%BD%93)
+        - [加粗字体](#%E5%8A%A0%E7%B2%97%E5%AD%97%E4%BD%93)
+        - [倾斜字体](#%E5%80%BE%E6%96%9C%E5%AD%97%E4%BD%93)
+        - [更改行距](#%E6%9B%B4%E6%94%B9%E8%A1%8C%E8%B7%9D)
+        - [font shorthand](#font-shorthand)
+        - [改变文字颜色](#%E6%94%B9%E5%8F%98%E6%96%87%E5%AD%97%E9%A2%9C%E8%89%B2)
       - [对齐方式](#%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F)
       - [格式处理](#%E6%A0%BC%E5%BC%8F%E5%A4%84%E7%90%86)
       - [文本装饰](#%E6%96%87%E6%9C%AC%E8%A3%85%E9%A5%B0)
@@ -67,13 +87,13 @@ hljs.initHighlightingOnLoad();
 
 # 网页制作
 
-## 概述
+## 前端工程师概述
 
 **网页发展史**
 
 Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 
-**协作流程**
+**网站开发协作流程**
 
 ![](img/D/development-flow.png)
 
@@ -110,7 +130,7 @@ Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 
 ### 工具, 面板, 视图
 
-在全局设置下将单位修改为像素，因其在 CSS 中运用最广。设置工作区布局为切图及图片编辑做准备。
+在全局设置下将单位修改为像素，因其在 CSS 中运用最广。设置工作区布局为切图及图片编辑做准备（所需窗口为信息窗口，图层窗口以及历史记录窗口）。
 
 ![](img/P/photoshop-mainWindow.png)
 
@@ -276,7 +296,7 @@ IE6 不支持 PNG24 半透明所以需要保存两份（sprite.png - png24 和 s
 
 ## 开发及调试工具
 
-- 文本编辑器 && IDE (集成开发环境)
+- 文本编辑器或 IDE (集成开发环境)
 - Google Chrome, Firefox Firebug, Safari Developer Tool
 
 NOTE: [Google Chrome DevTools Doc](https://developer.chrome.com/devtools)
@@ -836,19 +856,438 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 
 ### 选择器
 
+选择器可被看做表达式，通过它可以选择相应的元素并应用不同的样式。
+
+- 简单选择器
+- 元素选择器
+- 组合选择器
+
 #### 简单选择器
+
+简单选择器可组合使用。
+
+##### 标签选择器
+
+```html
+<div>
+  <p>Sample Paragraph</p>
+  <p>Sample Paragraph</p>
+  <p>Sample Paragraph</p>
+</div>
+
+<style type="text/css">
+  p {
+    color: blue;
+  }
+</style>
+```
+
+##### 类选择器
+
+`.className` 以 `.` 开头，名称可包含字母，数字，`-`，`_`，但必须以字母开头。它区分大小写并可出现多次。
+
+```html
+<div>
+  <p>Sample Paragraph</p>
+  <p class="special bold">Sample Paragraph</p>
+  <p>Sample Paragraph</p>
+</div>
+
+<style type="text/css">
+  p {
+    color: blue
+  }
+  .special {
+    color: orange;
+  }
+  .bold {
+    font-weight: bold;
+  }
+</style>
+```
+
+##### id 选择器
+
+`#idName` 以 `#` 开头且只可出现**一次**，其命名要求于 `.className` 相同。
+
+```html
+<div>
+  <p id="special">Sample Paragraph</p>
+</div>
+
+<style type="text/css">
+  #special {
+    color: red;
+  }
+</style>
+```
+
+##### 通配符选择器
+
+```html
+<div>
+  <p>Sample Paragraph</p>
+  <p>Sample Paragraph</p>
+</div>
+
+<style type="text/css">
+  * {
+    color: blue;
+  }
+</style>
+```
+
+##### 属性选择器
+
+`[attr]` 或 `[attr=val]` 来选择相应的元素。`#nav{...}` 既等同于 `[id=nav]{...}`。
+
+`[attr~=val]` 可选用与选择包含 `val` 属性值的元素，像`class="title sports"` 与 `class="sports"`。`.sports{...}` 既等同于 `[class~=sports]{...}`
+
+`[attr|=val]` 可以选择`val`开头及开头紧接`-`的属性值。
+
+`[attr^=val]` 可选择以`val`开头的属性值对应的元素，如果值为符号或空格则需要使用引号 `""`。
+
+`[attr$=val]` 可选择以`val`结尾的属性值对应的元素。
+
+`[attr*=val]` 可选择以包含`val`属性值对应的元素。
+
+```html
+<div>
+  <form action="">
+    <input type="text" value="Xinyang" disabled>
+    <input type="password" placeholder="Password">
+    <input type="button" value="Button">
+  </form>
+</div>
+<style type="text/css">
+  [disabled] {
+    background-color: orange;
+  }
+  [type=button] {
+    color: blue;
+  }
+</style>
+```
+
+##### 伪类选择器
+
+**常用伪类选择器**：
+- `:link`
+- `:visited`
+- `:hover`
+- `:active`
+- `:enabled`
+- `:disabled`
+- `:checked`
+- `:first-child`
+- `:last-child`
+- `:nth-child(even)` 可为 `odd` `even` 或数字
+- `:nth-last-child(n)` `n`从 0 开始计算
+- `:only-child` 仅选择唯一的元素
+- `:only-of-type`
+- `:first-of-type`
+- `:last-of-type`
+- `:nth-of-type(even)`
+- `:nth-last-of-type(2n)`
+
+**不常用伪类选择器**：
+- `:empty` 选中页面中无子元素的标签
+- `:root` 选择 HTML 根标签
+- `:not()` 参数为一般选择器
+- `:target` 被锚点选中的目标元素
+- `:lang()` 选中语言值为某类特殊值的元素
+
+NOTE：请在使用时查找文档
+
+```html
+<div>
+  <a href="http://sample-site.com" title="Sample Site">Sample Site</a>
+</div>
+<style type="text/css">
+  /* 伪类属性定义有顺序要求！ */
+  a:link {
+    color: gray;
+  }
+  a:visited {
+    color:red;
+  }
+  a:hover {
+    color: green;
+    /* 鼠标悬停 */
+  }
+  a:active {
+    color: orange;
+    /* 鼠标点击 */
+  }
+</style>
+```
 
 #### 其他选择器
 
+##### 伪元素选择器
+
+注意与伪类学则器的区分。
+
+- `::first-letter`
+- `::first-line`
+- `::before{content: "before"}` 需与 `content` 一同使用
+- `::after{content: "after"}` 需与 `content` 一同使用
+- `::selection` 被用户选中的内容（鼠标选择高亮属性）
+
+##### 组合选择器
+
+- 后代选择器 `.main h2 {...}`，使用` `表示
+- 子选择器 `.main>h2 {...}`，使用`>`表示
+- 兄弟选择器 `h2+p {...}`，使用`+`表示
+    - `h2~p {...}`，使用`~`表示（此标签无需紧邻）
+
+##### 选择器分组
+
+```html
+<style type="text/css">
+/* 下面两组样式声明效果一致 */
+h1 {color: red;}
+h2 {color: red;}
+h3 {color: red;}
+
+h1, h2, h3 {color: red;}
+</style>
+```
+
 #### 继承、优先、层级
 
-### 文版
+##### 继承
+
+子元素继承父元素的样式，但并不是所有属性都是默认继承的。通过文档中的 `inherited: yes` 来判断属性是否可以自动继承。
+
+![](img/C/css-inherit-doc.png)
+
+自动继承属性：
+- color
+- font
+- text-align
+- list-style
+- ...
+
+非继承属性：
+- background
+- border
+- position
+- ...
+
+##### 优先
+
+CSS Specificity Calculator 可以在[这里](http://specificity.keegan.st/)找到。更多关于 CSS 优先级别的信息可以在[这里](https://css-tricks.com/specifics-on-css-specificity/)找到（英文）。
+
+计算方法：
+- a = 行内样式
+- b = id 选择器的数量
+- c = 类、伪类的属性选择器的数量
+- d = 标签选择器和伪元素选择器的数量
+
+NOTE：从上到下优先级一次降低，且优先级高的样式会将优先级低的样式覆盖。大致公式（并不准确）如下。
+
+```
+value = a * 1000 + b * 100 + c * 10 + d
+```
+
+###### 改变优先级
+
+- 改变样式声明先后顺序
+- 提升选择器优先级
+- `!important`（慎用）
+
+##### 层叠
+
+层叠为相同属性根据优先级覆盖，如优先级相同则后面会覆盖前面的属性，而不同属性则会合并。
+
+### 文本
 
 #### 字体
 
+##### 改变字号
+
+`font-size: <absolute-size> | <relative-size> | <length> | <percentage> | inherit`
+
+- `<absolute-size>` 有 small large medium
+- `<relative-size>` 有 smaller larger
+
+```stylus
+div
+  font-size 12px
+  p#sample0
+    font-size 16px
+  p#sample1
+    font-size 2em
+  p#sample2
+    font-size 200%
+```
+
+NOTE：以上两值在开发中并不常用。`2em` 与 `200%` 都为父元素默认大小的两倍（参照物为父元素的字体大小 `12px`）。
+
+##### 改变字体
+
+`font-family: [ <family-name> | <generic-family> ]# `
+
+`<generic-family>` 可选选项，但具体使用字体由浏览器决定
+- serif
+- sans-serif
+- cursive
+- fantasy
+- monospace
+
+```css
+font-family: arial, Verdana, sans-serif;
+```
+
+NOTE：优先使用靠前的字体
+
+##### 加粗字体
+
+`font-weight: normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900`
+
+```css
+font-weight: normal;
+font-weight: bold;
+```
+
+##### 倾斜字体
+
+`font-style: normal | italic | oblique | inherit`
+
+`italic` 使用字体中的斜体，而 `oblique` 在没有斜体字体时强制倾斜字体。
+
+##### 更改行距
+
+`line-height: normal | <number> | <length> | <percentage>`
+
+`normal` 值为浏览器决定，在1.1至1.2之间（通常设置值为1.14左右）
+
+```css
+/* length 类型 */
+line-height: 40px;
+line-height: 3em;
+/* percentage 类型 */
+line-height: 300%;
+/* number 类型 */
+line-height: 3;
+```
+
+NOTE：当`line-height`为 `number` 类型时，子类直接继承其数值（不计算直接继承）。而当为 `percentage` 类型时，子类则会先计算再显示（先计算后继承）。
+
+##### font shorthand
+
+`font: [ [ <‘font-style’> || <font-variant-css21> || <‘font-weight’> || <‘font-stretch’> ]? <‘font-size’> [ / <‘line-height’> ]? <‘font-family’> ] | caption | icon | menu | message-box | small-caption | status-bar`
+
+```css
+font: 30px/2 "Consolas", monospace;
+font: italic bold 20px/1.5 arial, serif;
+font: 20px arial, serif;
+```
+
+NOTE：当其他值为空时，均被设置为默认值。
+
+##### 改变文字颜色
+
+`color: <color>`
+
+```css
+element { color: red; }
+element { color: #f00; }
+element { color: #ff0000; }
+element { color: rgb(255,0,0); }
+element { color: rgb(100%, 0%, 0%); }
+element { color: hsl(0, 100%, 50%); }
+
+/* 50% translucent */
+element { color: rgba(255, 0, 0, 0.5); }
+element { color: hsla(0, 100%, 50%, 0.5); }
+
+/* 全透明 */
+element { color: transparent' }
+element { color: rgba(0, 0, 0, 0); }
+```
+
 #### 对齐方式
 
+##### 文字居中
+
+`text-align: start | end | left | right | center | justify | match-parent | start end`
+
+NOTE：默认为文本左对齐。
+
+##### 文本垂直对齐
+
+`vertical-align: baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | <length>`
+
+NOTE：`<percentage>`的参照物为`line-height`
+
+##### 文本缩进
+
+`text-indent: <length> | <percentage> && [ hanging || each-line ]`
+
+NOTE：缩进两个字可使用 `text-indent: 2em;`
+
 #### 格式处理
+
+##### 保留空格格式
+
+`white-space: normal | pre | nowrap | pre-wrap | pre-line`
+
+`pre` 行为同 `<pre>` 一致。
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th>&nbsp;</th>
+   <th>New lines</th>
+   <th>Spaces and tabs</th>
+   <th>Text wrapping</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th><code>normal</code></th>
+   <td>Collapse</td>
+   <td>Collapse</td>
+   <td>Wrap</td>
+  </tr>
+  <tr>
+   <th><code>nowrap</code></th>
+   <td>Collapse</td>
+   <td>Collapse</td>
+   <td>No wrap</td>
+  </tr>
+  <tr>
+   <th><code>pre</code></th>
+   <td>Preserve</td>
+   <td>Preserve</td>
+   <td>No wrap</td>
+  </tr>
+  <tr>
+   <th><code>pre-wrap</code></th>
+   <td>Preserve</td>
+   <td>Preserve</td>
+   <td>Wrap</td>
+  </tr>
+  <tr>
+   <th><code>pre-line</code></th>
+   <td>Preserve</td>
+   <td>Collapse</td>
+   <td>Wrap</td>
+  </tr>
+ </tbody>
+</table>
+
+##### 文字换行
+
+`word-wrap: normal | break-word`
+
+NOTE：允许长单词自动换行。
+
+`word-break: normal | break-all | keep-all`
+
+NOTE：`break-all` 单词中的任意字母间都可以换行。
 
 #### 文本装饰
 
@@ -859,6 +1298,10 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 ### 背景
 
 ### 布局
+
+**Gecko Reflow Visualisation**
+
+![](img/G/gecko-reflow-visualisation.gif)
 
 ### 变形
 

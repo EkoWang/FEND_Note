@@ -6,11 +6,11 @@
 
 ### Javascript 程序设计
 
-![](http://progressed.io/bar/68?title=Progress) [详情](JavascriptDesignPattern.md)
+![](http://progressed.io/bar/70?title=Progress) [详情](JavascriptDesignPattern.md)
 
 ### 页面制作
 
-![](http://progressed.io/bar/48?title=Progress) [详情](WebCreation.md)
+![](http://progressed.io/bar/61?title=Progress) [详情](WebCreation.md)
 
 ### DOM 编程
 
