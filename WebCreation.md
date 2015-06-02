@@ -1277,6 +1277,8 @@ NOTE：`break-all` 单词中的任意字母间都可以换行。
 
 ### 布局
 
+**Gecko Reflow Visualisation**
+
 ![](img/G/gecko-reflow-visualisation.gif)
 
 ### 变形
