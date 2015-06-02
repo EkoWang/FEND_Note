@@ -927,7 +927,7 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 
 `[attr$=val]` 可选择以`val`结尾的属性值对应的元素。
 
-`[attr$=val]` 可选择以包含`val`属性值对应的元素。
+`[attr*=val]` 可选择以包含`val`属性值对应的元素。
 
 ```html
 <div>
