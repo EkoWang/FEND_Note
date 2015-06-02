@@ -952,7 +952,7 @@ JSON.parse(jsonStr); // {name: 'X'}
 
 ```javascript
 isNaN(NaN); // true
-isNaN(4 - '2a'); // flase;
+isNaN(4 - '2a'); // true;
 ```
 
 ##### parseInt
@@ -964,12 +964,12 @@ isNaN(4 - '2a'); // flase;
 // radix - 为进制数
 parseInt('010'); // 10
 parseInt('010', 8) // 8
-parseInt('010', 15) // 16
+parseInt('010', 16) // 16
 
 parseInt('0x1f'); // 31
 parseInt('0x1f', 16); // 31
 parseInt('1f'); // 1
-parseInt('1f', 16); // 32
+parseInt('1f', 16); // 31
 ```
 
 ##### eval
