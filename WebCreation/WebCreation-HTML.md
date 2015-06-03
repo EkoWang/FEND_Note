@@ -57,7 +57,7 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 - id, `<div id='unique-element'></div>`，页面中唯一
 - class，`<button class='btn'>Click Me</button>`，页面中可重复出现
 - style，尽量避免
-- title，对于元素的描述类似于 Tool Tip 的效果。
+- title，对于元素的描述类似于 Tooltip 的效果。
 
 ### HTML 标签
 
@@ -65,12 +65,8 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
 ![](../img/H/html-elements.jpg)
 
-title的作用，还可以在用户鼠标移上去的时候，出现一朵云解释
-
-
 页面通常结构
-![Web Structure](/Users/Des/Documents/Coding/notes/WebPage-Notes/../img/S/structure.png)
-
+![Web Structure](../img/S/structure.png)
 
 ### 文本标签
 

@@ -20,7 +20,7 @@ Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 
 **网站开发协作流程**
 
-![](img/D/development-flow.png)
+![](../img/D/development-flow.png)
 
 **前端职责**
 
