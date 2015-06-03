@@ -279,6 +279,16 @@ IE6 不支持 PNG24 半透明所以需要保存两份（sprite.png - png24 和 s
 
 NOTE: [Google Chrome DevTools Doc](https://developer.chrome.com/devtools)
 
+####Sublime 快捷键
+command/control + P 进入查找命令,此时有三种选择：
+
+* ‘:’ 输入行数找到对应行 
+* ‘@’ 找到特定函数
+* ‘#’ 找到对应变量与块
+
+学会是用Emmet帮助进行前端编程
+
+
 ## HTML
 
 ### HTML 历史
@@ -313,7 +323,7 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 #### 全局属性
 
 - id, `<div id='unique-element'></div>`，页面中唯一
-- class，`<button class='btn'>Click Me</button>`，页面中课重复出现
+- class，`<button class='btn'>Click Me</button>`，页面中可重复出现
 - style，尽量避免
 - title，对于元素的描述类似于 Tool Tip 的效果。
 
@@ -322,6 +332,8 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 **[HTML5 标签集合](http://www.html5star.com/manual/html5label-meaning)**
 
 ![](img/H/html-elements.jpg)
+
+title的作用，还可以在用户鼠标移上去的时候，出现一朵云解释
 
 ### 文本标签
 
