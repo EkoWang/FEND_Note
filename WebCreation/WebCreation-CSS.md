@@ -365,7 +365,7 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 ##### 伪类选择器
 
 **常用伪类选择器**：
-- `:link`
+- `:link` IE6+
 - `:visited` IE7+
 - `:hover` IE6中仅可用于链接
 - `:active` IE6/7中仅可用于链接
@@ -384,11 +384,11 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 - `:nth-last-of-type(2n)`  IE9+
 
 **不常用伪类选择器**：
-- `:empty` 选中页面中无子元素的标签
-- `:root` 选择 HTML 根标签
+- `:empty` 选中页面中无子元素的标签  IE9+
+- `:root` 选择 HTML 根标签  IE9+
 - `:not()` 参数为一般选择器 IE9+
 - `:target` 被锚点选中的目标元素 IE9+
-- `:lang()` 选中语言值为某类特殊值的元素
+- `:lang()` 选中语言值为某类特殊值的元素 IE7+
 
 NOTE：请在使用时查找文档
 
@@ -421,15 +421,15 @@ NOTE：请在使用时查找文档
 
 注意与伪类学则器的区分。
 
-- `::first-letter`
-- `::first-line`
+- `::first-letter` IE6+
+- `::first-line` IE6+
 - `::before{content: "before"}` 需与 `content` 一同使用 IE8+
 - `::after{content: "after"}` 需与 `content` 一同使用 IE8+
 - `::selection` 被用户选中的内容（鼠标选择高亮属性）IE9+ Firefox需用 `-moz` 前缀
 
 ##### 组合选择器
 
-- 后代选择器 `.main h2 {...}`，使用` `表示 
+- 后代选择器 `.main h2 {...}`，使用` `表示 IE6+
 - 子选择器 `.main>h2 {...}`，使用`>`表示 IE7+
 - 兄弟选择器 `h2+p {...}`，使用`+`表示 IE7+
     - `h2~p {...}`，使用`~`表示（此标签无需紧邻）IE7+
