@@ -13,7 +13,7 @@
     - [图片优化与合并](#%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96%E4%B8%8E%E5%90%88%E5%B9%B6)
       - [图片的兼容](#%E5%9B%BE%E7%89%87%E7%9A%84%E5%85%BC%E5%AE%B9)
   - [开发及调试工具](#%E5%BC%80%E5%8F%91%E5%8F%8A%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7)
-      - [Sublime 快捷键](#sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE)
+    - [Sublime 快捷键](#sublime-%E5%BF%AB%E6%8D%B7%E9%94%AE)
   - [HTML](#html)
     - [HTML 历史](#html-%E5%8E%86%E5%8F%B2)
     - [HTML 简介](#html-%E7%AE%80%E4%BB%8B)
@@ -26,8 +26,7 @@
     - [嵌入资源](#%E5%B5%8C%E5%85%A5%E8%B5%84%E6%BA%90)
       - [图标签](#%E5%9B%BE%E6%A0%87%E7%AD%BE)
       - [热点区域标签](#%E7%83%AD%E7%82%B9%E5%8C%BA%E5%9F%9F%E6%A0%87%E7%AD%BE)
-      - [表格](#%E8%A1%A8%E6%A0%BC)
-    - [表格以及Input](#%E8%A1%A8%E6%A0%BC%E4%BB%A5%E5%8F%8Ainput)
+      - [表单](#%E8%A1%A8%E5%8D%95)
     - [语义化](#%E8%AF%AD%E4%B9%89%E5%8C%96)
     - [实体字符](#%E5%AE%9E%E4%BD%93%E5%AD%97%E7%AC%A6)
     - [浏览器兼容](#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9)
@@ -191,19 +190,19 @@ NOTE: 使用魔棒工具可以迅速识别背景色是否没*线性*渐变的方
 
 修饰性图标和内容性图片需要（在 HTML 的 `<img>` 之中，只需站位不需切图）切出。切出的内容性图片应保存为 `*.jpg` 格式，而修饰性图片因保存为 `png24`（IE6 不支持半透明） 或 `png8` 它们不支持全透明。
 
-**隐藏文字**，方法一，之间在图层中隐藏文字图层。方法二（两种，分别应对于纯色和有背景需要隐藏文本的情况）如下图所示，使用自由变换。
+**隐藏文字**，方法一，直接在图层中隐藏文字图层。方法二（两种，分别应对于纯色和有背景需要隐藏文本的情况）如下图所示，使用自由变换。
 
 ![](img/B/btn-remove-text.gif)
 
 **PNG24**切图方法
-- 移动工具选中所需图层（Ctrl 多选）
-- 右键合并图层（Ctrl + E）
+- 移动工具选中所需图层（<kbd>Ctrl</kbd> 多选）
+- 右键合并图层（<kbd>Ctrl</kbd> + <kbd>E</kbd>）
 - 复制到新图层
 
 **PNG8**带背景切图方法
-- 合并可见图层（Shift + Ctrl + E）
+- 合并可见图层（<kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>E</kbd>）
 - 矩形选框选择内容
-- 魔棒工具去除多余部分（Alt + 选取）
+- 魔棒工具去除多余部分（<kbd>Alt</kbd> + 选取）
 
 **可平铺**背景的切图方法
 - 用矩形选择一个区域
@@ -220,9 +219,9 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
 ### 保存
 
-将需要的内容保存在独立的文件里便于之后的导出。（存储于 Web 所用格式 Alt + Shift + Ctrl + S）
+将需要的内容保存在独立的文件里便于之后的导出。（存储于 Web 所用格式 <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Ctrl</kbd> + <kbd>S</kbd>）
 
-**独立图层** 把需要的图层拖到新建的透明背景的图层，或在图层上右键复制（Duplicate）图层选择地址为新文件即可。
+如需保存**独立图层**则要把需要的图层拖到新建的透明背景的图层，或在图层上右键复制（Duplicate）图层选择地址为新文件即可。
 
 **图片与背景合并**的切图方法如下
 
@@ -290,15 +289,15 @@ IE6 不支持 PNG24 半透明所以需要保存两份（sprite.png - png24 和 s
 
 NOTE: [Google Chrome DevTools Doc](https://developer.chrome.com/devtools)
 
-####Sublime 快捷键
-command/control + P 进入查找命令,此时有三种选择：
 
-* ‘:’ 输入行数找到对应行
-* ‘@’ 找到特定函数
+### Sublime 快捷键
+<kbd>command/control</kbd> + <kbd>P</kbd> 进入查找命令（Goto Anything）,此时有三种选择：
+
+* ‘:’ 输入行数找到对应行 （<kbd>control</kbd> + <kbd>G</kbd>）
+* ‘@’ 找到特定函数 （<kbd>command/control</kbd> + <kbd>R</kbd>）
 * ‘#’ 找到对应变量与块
 
-学会使用Emmet帮助进行前端编程
-
+学会使用[Emmet](http://emmet.io/)插件可有效的帮助进行前端编程。
 
 ## HTML
 
@@ -389,16 +388,16 @@ title的作用，还可以在用户鼠标移上去的时候，出现一朵云解
 - `<pre>`
 - `<blockquote>`
 
-NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个或多个 `<dd>`,并且dt dl列表会有缩进的效果，`<pre>` 会保留换行和空格，通常与 `<code>` 一同使用。
+NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个或多个 `<dd>`，并且`dt` 与 `dl`列表会有缩进的效果。`<pre>` 会保留换行和空格，通常与 `<code>` 一同使用。
 
 ```html
 <pre>
   <code>
     int main(void) {
-    printf('Hello, world!');
-    return 0;
-  }
-</code>
+      printf('Hello, world!');
+      return 0;
+    }
+  </code>
 </pre>
 ```
 
@@ -429,14 +428,12 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
 </video>
 ```
 ### 嵌入资源
-####图标签
-canvas 基于像素，性能要求比较高，实时数据展示
+#### 图标签
+`canvas` 基于像素，性能要求比较高，可用于实时数据展示。`svg` 为矢量图形图像。
 
-svg 矢量图形图像
+#### 热点区域标签
 
-####热点区域标签
-map与area
-img中套用map以及area可以实现点击某部分图片进入一个链接，另一部分进入另一个链接
+`img`中套用`map`以及`area`可以实现点击某部分图片触发一个链接，点击另一部分触发另一个链接
 
 ```html
 <img src="mama.jpg" width=100 height=100 usemap="#map" />
@@ -446,11 +443,39 @@ img中套用map以及area可以实现点击某部分图片进入一个链接，�
 </map>
 ```
 
-#### 表格
-学会使用*rowspan*来进行跨行显示
+#### 表单
+
 ```html
-<table class="reference notranslate">
-  <tbody><tr>
+<form action="WebCreation_submit" method="get" accept-charset="utf-8">
+  <fieldset>
+    <legend>title or explanatory caption</legend>
+    <!-- 第一种添加标签的方法 -->
+    <label><input type="text/submit/hidden/button/etc" name="" value=""></label>
+    <!-- 第二种添加标签的方法 -->
+    <label for="input-id">Sample Label</label>
+    <input type="text" id="input-id">
+  </fieldset>
+  <fieldset>
+    <legend>title or explanatory caption</legend>
+    <!-- 只读文本框 -->
+    <input type="text" readonly>
+    <!-- 隐藏文本框，可提交影藏数据 -->
+    <input type="text" name="hidden-info" value="hiden-info-value" hidden>
+  </fieldset>
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</form>
+```
+
+使用`fieldset`可用于对表单进行分区
+
+表单中的其他控件类型：
+- `textarea` （文本框）
+- `select` 与 `option` （下拉菜单可多选）
+
+<table>
+  <tbody>
+  <tr>
     <th style="width:22%">Value</th>
     <th>Description</th>
   </tr>
@@ -548,38 +573,6 @@ img中套用map以及area可以实现点击某部分图片进入一个链接，�
       </tr>
     </tbody>
 </table>
-```
-
-### 表格以及Input
-
-使用*fieldset*进行分区
-也有如下input type
-- `textarea`
-- `select` 与 `option`
-现在也有新的Input type类型
-比如email,url,number,tel,search,range,color,date picker(date,month,week,time)
-
-```html
-<form action="WebCreation_submit" method="get" accept-charset="utf-8">
-  <fieldset>
-    <legend>title or explanatory caption</legend>
-    <!-- 第一种添加标签的方法 -->
-    <label><input type="text/submit/hidden/button/etc" name="" value=""></label>
-    <!-- 第二种添加标签的方法 -->
-    <label for="input-id">Sample Label</label>
-    <input type="text" id="input-id">
-  </fieldset>
-  <fieldset>
-    <legend>title or explanatory caption</legend>
-    <!-- 只读文本框 -->
-    <input type="text" readonly>
-    <!-- 隐藏文本框，可提交影藏数据 -->
-    <input type="text" name="hidden-info" value="hiden-info-value" hidden>
-  </fieldset>
-  <button type="submit">Submit</button>
-  <button type="reset">Reset</button>
-</form>
-```
 
 ### 语义化
 
@@ -589,7 +582,6 @@ img中套用map以及area可以实现点击某部分图片进入一个链接，�
 
 实体字符（ASCII Encoding Reference）是用来在代码中以实体代替与HTML语法相同的字符，避免浏览解析错误。它的两种表示方式，第一种为 `&` 外加实体字符名称，例如 `&nbsp;`，第二种为 `&` 加实体字符序号，例如 `&#160;`。
 
-```html
 <table>
     <caption>常用HTML字符实体（建议使用实体）：</caption>
     <thead>
@@ -725,15 +717,17 @@ img中套用map以及area可以实现点击某部分图片进入一个链接，�
         </tr>
     </tbody>
 </table>
-```
+
 NOTE：具体所需可在使用时查询，无需记忆。
 
-###浏览器兼容
-主流浏览器都兼容HTML5的新标签，对于 IE8 及以下版本不认识 HTML5的新元素，可以使用 JavaScript 创建一个没用的元素来解决，例如：
+### 浏览器兼容
+
+主流浏览器都兼容 HTML5 的新标签，对于 IE8 及以下版本不认识 HTML5的新元素，可以使用 JavaScript 创建一个没用的元素来解决，例如：
+
 ```javascript
 <script>document.createElement("header");</script>
 ```
-也可以使用shiv来解决兼容性问题，详情可参考[HTML5 Shiv](https://github.com/afarkas/html5shiv)
+也可以使用 shiv 来解决兼容性问题，详情可参考 [HTML5 Shiv](https://github.com/afarkas/html5shiv)
 
 ## CSS
 
