@@ -180,7 +180,7 @@ NOTE: 使用魔棒工具可以迅速识别背景色是否没*线性*渐变的方
 
 修饰性图标和内容性图片需要（在 HTML 的 `<img>` 之中，只需站位不需切图）切出。切出的内容性图片应保存为 `*.jpg` 格式，而修饰性图片因保存为 `png24`（IE6 不支持半透明） 或 `png8` 它们不支持全透明。
 
-**隐藏文字**，方法一，之间在图层中隐藏文字图层。方法二（两种，分别应对于纯色和有背景需要隐藏文本的情况）如下图所示。
+**隐藏文字**，方法一，之间在图层中隐藏文字图层。方法二（两种，分别应对于纯色和有背景需要隐藏文本的情况）如下图所示，使用自由变换。
 
 ![](img/B/btn-remove-text.gif)
 
@@ -279,6 +279,16 @@ IE6 不支持 PNG24 半透明所以需要保存两份（sprite.png - png24 和 s
 
 NOTE: [Google Chrome DevTools Doc](https://developer.chrome.com/devtools)
 
+####Sublime 快捷键
+command/control + P 进入查找命令,此时有三种选择：
+
+* ‘:’ 输入行数找到对应行
+* ‘@’ 找到特定函数
+* ‘#’ 找到对应变量与块
+
+学会使用Emmet帮助进行前端编程
+
+
 ## HTML
 
 ### HTML 历史
@@ -313,7 +323,7 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 #### 全局属性
 
 - id, `<div id='unique-element'></div>`，页面中唯一
-- class，`<button class='btn'>Click Me</button>`，页面中课重复出现
+- class，`<button class='btn'>Click Me</button>`，页面中可重复出现
 - style，尽量避免
 - title，对于元素的描述类似于 Tool Tip 的效果。
 
@@ -322,6 +332,13 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 **[HTML5 标签集合](http://www.html5star.com/manual/html5label-meaning)**
 
 ![](img/H/html-elements.jpg)
+
+title的作用，还可以在用户鼠标移上去的时候，出现一朵云解释
+
+
+页面通常结构
+![Web Structure](/Users/Des/Documents/Coding/notes/WebPage-Notes/img/S/structure.png)
+
 
 ### 文本标签
 
@@ -361,7 +378,7 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 - `<pre>`
 - `<blockquote>`
 
-NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个或多个 `<dd>` 。`<pre>` 会保留换行和空格，通常与 `<code>` 一同使用。
+NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个或多个 `<dd>`,并且dt dl列表会有缩进的效果，`<pre>` 会保留换行和空格，通常与 `<code>` 一同使用。
 
 ```html
 <pre>
@@ -382,32 +399,45 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
 </blockquote>
 ```
 
-### 表单
+### 嵌入
 
 ```html
-<form action="WebCreation_submit" method="get" accept-charset="utf-8">
-  <fieldset>
-    <legend>title or explanatory caption</legend>
-    <!-- 第一种添加标签的方法 -->
-    <label><input type="text/submit/hidden/button/etc" name="" value=""></label>
-    <!-- 第二种添加标签的方法 -->
-    <label for="input-id">Sample Label</label>
-    <input type="text" id="input-id">
-  </fieldset>
-  <fieldset>
-    <legend>title or explanatory caption</legend>
-    <!-- 只读文本框 -->
-    <input type="text" readonly>
-    <!-- 隐藏文本框，可提交影藏数据 -->
-    <input type="text" name="hidden-info" value="hiden-info-value" hidden>
-  </fieldset>
-  <button type="submit">Submit</button>
-  <button type="reset">Reset</button>
-</form>
+<iframe src=""></iframe> 页面操作可以不影响到iframe的内容
+
+<!--object embed通常用来嵌入外部资源 -->
+<object type="application/x-shockwave-player">
+	<param name="movie" value="book.pdf">
+</object>
+
+<!--视频 track可以引入字幕 autoplay可以使视频加载后自动播放，loop可以使其循环播放 -->
+<video autoplay loop controls="controls" poster="poster.jpg">
+	<source src="movie.mp4" type="video/mp4">
+	<source src="movie.webm" type="video/webm">
+	<source src="movie.ogg" type="video/ogg">
+	<track kind="subtitles" src="video.vtt" srclang="cn" label="cn">
+</video>
+```
+### 嵌入资源
+####图标签
+canvas 基于像素，性能要求比较高，实时数据展示
+
+svg 矢量图形图像
+
+####热点区域标签
+map与area
+img中套用map以及area可以实现点击某部分图片进入一个链接，另一部分进入另一个链接
+
+```html
+<img src="mama.jpg" width=100 height=100 usemap="#map" />
+<map name="map">
+    <area shap="rect" coords="0,0,50,50" href="" alt="">
+    <area shap="circle" coords="75,75,25" href="" alt="">
+</map>
 ```
 
-#### input 类型支持值列表
-
+#### 表格
+学会使用*rowspan*来进行跨行显示
+```html
 <table class="reference notranslate">
   <tbody><tr>
     <th style="width:22%">Value</th>
@@ -507,20 +537,48 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
       </tr>
     </tbody>
 </table>
+```
 
-**其他页面控件**
+### 表格以及Input
 
+使用*fieldset*进行分区
+也有如下input type
 - `textarea`
 - `select` 与 `option`
+现在也有新的Input type类型
+比如email,url,number,tel,search,range,color,date picker(date,month,week,time)
+
+```html
+<form action="WebCreation_submit" method="get" accept-charset="utf-8">
+  <fieldset>
+    <legend>title or explanatory caption</legend>
+    <!-- 第一种添加标签的方法 -->
+    <label><input type="text/submit/hidden/button/etc" name="" value=""></label>
+    <!-- 第二种添加标签的方法 -->
+    <label for="input-id">Sample Label</label>
+    <input type="text" id="input-id">
+  </fieldset>
+  <fieldset>
+    <legend>title or explanatory caption</legend>
+    <!-- 只读文本框 -->
+    <input type="text" readonly>
+    <!-- 隐藏文本框，可提交影藏数据 -->
+    <input type="text" name="hidden-info" value="hiden-info-value" hidden>
+  </fieldset>
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</form>
+```
 
 ### 语义化
 
-语义化（Semantic Tag）是指用合适的标签标识适当的内容，它可以起到搜索引擎优化，提高可访问性（例如盲人使用的屏幕阅读器），与此同时还可以提高代码的可读性。
+语义化（Semantic Tag）是指用合适的标签标识适当的内容，它可以起到搜索引擎优化（Search Engine Optimization），提高可访问性（例如盲人使用的屏幕阅读器），与此同时还可以提高代码的可读性。
 
 ### 实体字符
 
 实体字符（ASCII Encoding Reference）是用来在代码中以实体代替与HTML语法相同的字符，避免浏览解析错误。它的两种表示方式，第一种为 `&` 外加实体字符名称，例如 `&nbsp;`，第二种为 `&` 加实体字符序号，例如 `&#160;`。
 
+```html
 <table>
     <caption>常用HTML字符实体（建议使用实体）：</caption>
     <thead>
@@ -656,8 +714,15 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
         </tr>
     </tbody>
 </table>
-
+```
 NOTE：具体所需可在使用时查询，无需记忆。
+
+###浏览器兼容
+主流浏览器都兼容HTML5的新标签，对于 IE8 及以下版本不认识 HTML5的新元素，可以使用 JavaScript 创建一个没用的元素来解决，例如：
+```javascript
+<script>document.createElement("header");</script>
+```
+也可以使用shiv来解决兼容性问题，详情可参考[HTML5 Shiv](https://github.com/afarkas/html5shiv)
 
 ## CSS
 
