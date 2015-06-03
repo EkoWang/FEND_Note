@@ -282,7 +282,7 @@ NOTE: [Google Chrome DevTools Doc](https://developer.chrome.com/devtools)
 ####Sublime 快捷键
 command/control + P 进入查找命令,此时有三种选择：
 
-* ‘:’ 输入行数找到对应行 
+* ‘:’ 输入行数找到对应行
 * ‘@’ 找到特定函数
 * ‘#’ 找到对应变量与块
 
@@ -335,6 +335,11 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
 title的作用，还可以在用户鼠标移上去的时候，出现一朵云解释
 
+
+页面通常结构
+![Web Structure](/Users/Des/Documents/Coding/notes/WebPage-Notes/img/S/structure.png)
+
+
 ### 文本标签
 
 ```html
@@ -373,7 +378,7 @@ title的作用，还可以在用户鼠标移上去的时候，出现一朵云解
 - `<pre>`
 - `<blockquote>`
 
-NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个或多个 `<dd>` 。`<pre>` 会保留换行和空格，通常与 `<code>` 一同使用。
+NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个或多个 `<dd>`,并且dt dl列表会有缩进的效果，`<pre>` 会保留换行和空格，通常与 `<code>` 一同使用。
 
 ```html
 <pre>
@@ -394,6 +399,41 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
 </blockquote>
 ```
 
+### 嵌入
+
+```html
+<iframe src=""></iframe> 页面操作可以不影响到iframe的内容
+
+<!--object embed通常用来嵌入外部资源 -->
+<object type="application/x-shockwave-player">
+	<param name="movie" value="book.pdf">
+</object>
+
+<!--视频 track可以引入字幕 autoplay可以使视频加载后自动播放，loop可以使其循环播放 -->
+<video autoplay loop controls="controls" poster="poster.jpg">
+	<source src="movie.mp4" type="video/mp4">
+	<source src="movie.webm" type="video/webm">
+	<source src="movie.ogg" type="video/ogg">
+	<track kind="subtitles" src="video.vtt" srclang="cn" label="cn">
+</video>
+```
+### 嵌入资源
+####图标签
+canvas 基于像素，性能要求比较高，实时数据展示
+
+svg 矢量图形图像
+
+####热点区域标签
+map与area
+img中套用map以及area可以实现点击某部分图片进入一个链接，另一部分进入另一个链接
+
+```html
+<img src="mama.jpg" width=100 height=100 usemap="#map" />
+<map name="map">
+    <area shap="rect" coords="0,0,50,50" href="" alt="">
+    <area shap="circle" coords="75,75,25" href="" alt="">
+</map>
+```
 ### 表单
 
 ```html
