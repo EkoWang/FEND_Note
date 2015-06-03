@@ -286,7 +286,7 @@ command/control + P 进入查找命令,此时有三种选择：
 * ‘@’ 找到特定函数
 * ‘#’ 找到对应变量与块
 
-学会是用Emmet帮助进行前端编程
+学会使用Emmet帮助进行前端编程
 
 
 ## HTML
@@ -434,33 +434,10 @@ img中套用map以及area可以实现点击某部分图片进入一个链接，�
     <area shap="circle" coords="75,75,25" href="" alt="">
 </map>
 ```
-### 表格以及Input
-
-```html
-<form action="WebCreation_submit" method="get" accept-charset="utf-8">
-  <fieldset>
-    <legend>title or explanatory caption</legend>
-    <!-- 第一种添加标签的方法 -->
-    <label><input type="text/submit/hidden/button/etc" name="" value=""></label>
-    <!-- 第二种添加标签的方法 -->
-    <label for="input-id">Sample Label</label>
-    <input type="text" id="input-id">
-  </fieldset>
-  <fieldset>
-    <legend>title or explanatory caption</legend>
-    <!-- 只读文本框 -->
-    <input type="text" readonly>
-    <!-- 隐藏文本框，可提交影藏数据 -->
-    <input type="text" name="hidden-info" value="hiden-info-value" hidden>
-  </fieldset>
-  <button type="submit">Submit</button>
-  <button type="reset">Reset</button>
-</form>
-```
 
 #### 表格
 学会使用*rowspan*来进行跨行显示
-
+```html
 <table class="reference notranslate">
   <tbody><tr>
     <th style="width:22%">Value</th>
@@ -560,11 +537,38 @@ img中套用map以及area可以实现点击某部分图片进入一个链接，�
       </tr>
     </tbody>
 </table>
+```
 
-**其他页面控件**
+### 表格以及Input
 
+使用*fieldset*进行分区
+也有如下input type
 - `textarea`
 - `select` 与 `option`
+现在也有新的Input type类型
+比如email,url,number,tel,search,range,color,date picker(date,month,week,time)
+
+```html
+<form action="WebCreation_submit" method="get" accept-charset="utf-8">
+  <fieldset>
+    <legend>title or explanatory caption</legend>
+    <!-- 第一种添加标签的方法 -->
+    <label><input type="text/submit/hidden/button/etc" name="" value=""></label>
+    <!-- 第二种添加标签的方法 -->
+    <label for="input-id">Sample Label</label>
+    <input type="text" id="input-id">
+  </fieldset>
+  <fieldset>
+    <legend>title or explanatory caption</legend>
+    <!-- 只读文本框 -->
+    <input type="text" readonly>
+    <!-- 隐藏文本框，可提交影藏数据 -->
+    <input type="text" name="hidden-info" value="hiden-info-value" hidden>
+  </fieldset>
+  <button type="submit">Submit</button>
+  <button type="reset">Reset</button>
+</form>
+```
 
 ### 语义化
 
