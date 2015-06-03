@@ -332,17 +332,17 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 
 ##### 属性选择器
 
-`[attr]` 或 `[attr=val]` 来选择相应的元素。`#nav{...}` 既等同于 `[id=nav]{...}`。
+`[attr]` 或 `[attr=val]` 来选择相应的元素。`#nav{...}` 既等同于 `[id=nav]{...}`。 IE7+
 
-`[attr~=val]` 可选用与选择包含 `val` 属性值的元素，像`class="title sports"` 与 `class="sports"`。`.sports{...}` 既等同于 `[class~=sports]{...}`
+`[attr~=val]` 可选用与选择包含 `val` 属性值的元素，像`class="title sports"` 与 `class="sports"`。`.sports{...}` 既等同于 `[class~=sports]{...}`  IE7+
 
-`[attr|=val]` 可以选择`val`开头及开头紧接`-`的属性值。
+`[attr|=val]` 可以选择`val`开头及开头紧接`-`的属性值。  IE7+
 
-`[attr^=val]` 可选择以`val`开头的属性值对应的元素，如果值为符号或空格则需要使用引号 `""`。
+`[attr^=val]` 可选择以`val`开头的属性值对应的元素，如果值为符号或空格则需要使用引号 `""`。  IE7+
 
-`[attr$=val]` 可选择以`val`结尾的属性值对应的元素。
+`[attr$=val]` 可选择以`val`结尾的属性值对应的元素。 IE7+
 
-`[attr*=val]` 可选择以包含`val`属性值对应的元素。
+`[attr*=val]` 可选择以包含`val`属性值对应的元素。  IE7+
 
 ```html
 <div>
@@ -365,30 +365,30 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 ##### 伪类选择器
 
 **常用伪类选择器**：
-- `:link`
-- `:visited`
-- `:hover`
-- `:active`
-- `:enabled`
-- `:disabled`
-- `:checked`
-- `:first-child`
-- `:last-child`
-- `:nth-child(even)` 可为 `odd` `even` 或数字
-- `:nth-last-child(n)` `n`从 0 开始计算
-- `:only-child` 仅选择唯一的元素
-- `:only-of-type`
-- `:first-of-type`
-- `:last-of-type`
-- `:nth-of-type(even)`
-- `:nth-last-of-type(2n)`
+- `:link` IE6+
+- `:visited` IE7+
+- `:hover` IE6中仅可用于链接
+- `:active` IE6/7中仅可用于链接
+- `:enabled` IE9+
+- `:disabled` IE9+
+- `:checked` IE9+
+- `:first-child`  IE8+
+- `:last-child`  IE9+
+- `:nth-child(even)` 可为 `odd` `even` 或数字  IE9+
+- `:nth-last-child(n)` `n`从 0 开始计算  IE9+
+- `:only-child` 仅选择唯一的元素  IE9+
+- `:only-of-type`  IE9+
+- `:first-of-type` IE9+
+- `:last-of-type` IE9+
+- `:nth-of-type(even)`  IE9+
+- `:nth-last-of-type(2n)`  IE9+
 
 **不常用伪类选择器**：
-- `:empty` 选中页面中无子元素的标签
-- `:root` 选择 HTML 根标签
-- `:not()` 参数为一般选择器
-- `:target` 被锚点选中的目标元素
-- `:lang()` 选中语言值为某类特殊值的元素
+- `:empty` 选中页面中无子元素的标签  IE9+
+- `:root` 选择 HTML 根标签  IE9+
+- `:not()` 参数为一般选择器 IE9+
+- `:target` 被锚点选中的目标元素 IE9+
+- `:lang()` 选中语言值为某类特殊值的元素 IE7+
 
 NOTE：请在使用时查找文档
 
@@ -421,18 +421,18 @@ NOTE：请在使用时查找文档
 
 注意与伪类学则器的区分。
 
-- `::first-letter`
-- `::first-line`
-- `::before{content: "before"}` 需与 `content` 一同使用
-- `::after{content: "after"}` 需与 `content` 一同使用
-- `::selection` 被用户选中的内容（鼠标选择高亮属性）
+- `::first-letter` IE6+
+- `::first-line` IE6+
+- `::before{content: "before"}` 需与 `content` 一同使用 IE8+
+- `::after{content: "after"}` 需与 `content` 一同使用 IE8+
+- `::selection` 被用户选中的内容（鼠标选择高亮属性）IE9+ Firefox需用 `-moz` 前缀
 
 ##### 组合选择器
 
-- 后代选择器 `.main h2 {...}`，使用` `表示
-- 子选择器 `.main>h2 {...}`，使用`>`表示
-- 兄弟选择器 `h2+p {...}`，使用`+`表示
-    - `h2~p {...}`，使用`~`表示（此标签无需紧邻）
+- 后代选择器 `.main h2 {...}`，使用` `表示 IE6+
+- 子选择器 `.main>h2 {...}`，使用`>`表示 IE7+
+- 兄弟选择器 `h2+p {...}`，使用`+`表示 IE7+
+    - `h2~p {...}`，使用`~`表示（此标签无需紧邻）IE7+
 
 ##### 选择器分组
 
