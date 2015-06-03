@@ -434,7 +434,7 @@ img中套用map以及area可以实现点击某部分图片进入一个链接，�
     <area shap="circle" coords="75,75,25" href="" alt="">
 </map>
 ```
-### 表单
+### 表格以及Input
 
 ```html
 <form action="WebCreation_submit" method="get" accept-charset="utf-8">
@@ -458,7 +458,8 @@ img中套用map以及area可以实现点击某部分图片进入一个链接，�
 </form>
 ```
 
-#### input 类型支持值列表
+#### 表格
+学会使用*rowspan*来进行跨行显示
 
 <table class="reference notranslate">
   <tbody><tr>
