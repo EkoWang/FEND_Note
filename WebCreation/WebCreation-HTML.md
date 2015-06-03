@@ -8,14 +8,15 @@
   - [HTML 语法](#html-%E8%AF%AD%E6%B3%95)
     - [全局属性](#%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7)
   - [HTML 标签](#html-%E6%A0%87%E7%AD%BE)
-  - [文本标签](#%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE)
-  - [组合内容标签](#%E7%BB%84%E5%90%88%E5%86%85%E5%AE%B9%E6%A0%87%E7%AD%BE)
-  - [嵌入](#%E5%B5%8C%E5%85%A5)
-  - [嵌入资源](#%E5%B5%8C%E5%85%A5%E8%B5%84%E6%BA%90)
-    - [图标签](#%E5%9B%BE%E6%A0%87%E7%AD%BE)
-    - [热点区域标签](#%E7%83%AD%E7%82%B9%E5%8C%BA%E5%9F%9F%E6%A0%87%E7%AD%BE)
+    - [文本标签](#%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE)
+    - [组合内容标签](#%E7%BB%84%E5%90%88%E5%86%85%E5%AE%B9%E6%A0%87%E7%AD%BE)
+    - [嵌入](#%E5%B5%8C%E5%85%A5)
+    - [资源标签](#%E8%B5%84%E6%BA%90%E6%A0%87%E7%AD%BE)
+      - [图标签](#%E5%9B%BE%E6%A0%87%E7%AD%BE)
+      - [热点区域标签](#%E7%83%AD%E7%82%B9%E5%8C%BA%E5%9F%9F%E6%A0%87%E7%AD%BE)
+    - [表格](#%E8%A1%A8%E6%A0%BC)
     - [表单](#%E8%A1%A8%E5%8D%95)
-  - [语义化](#%E8%AF%AD%E4%B9%89%E5%8C%96)
+    - [语义化](#%E8%AF%AD%E4%B9%89%E5%8C%96)
   - [实体字符](#%E5%AE%9E%E4%BD%93%E5%AD%97%E7%AC%A6)
   - [浏览器兼容](#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9)
 
@@ -65,10 +66,11 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
 ![](../img/H/html-elements.jpg)
 
-页面通常结构
+**页面通常结构**
+
 ![Web Structure](../img/S/structure.gif)
 
-### 文本标签
+#### 文本标签
 
 ```html
 <!-- 默认超链接  -->
@@ -96,7 +98,7 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 <a href="tel:99999999" title="Phone">Ring Us</a>
 ```
 
-### 组合内容标签
+#### 组合内容标签
 
 - `<div>`
 - `<p>`
@@ -127,7 +129,7 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
 </blockquote>
 ```
 
-### 嵌入
+#### 嵌入
 
 ```html
 <iframe src=""></iframe> 页面操作可以不影响到iframe的内容
@@ -145,11 +147,12 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
   <track kind="subtitles" src="video.vtt" srclang="cn" label="cn">
 </video>
 ```
-### 嵌入资源
-#### 图标签
+#### 资源标签
+
+##### 图标签
 `canvas` 基于像素，性能要求比较高，可用于实时数据展示。`svg` 为矢量图形图像。
 
-#### 热点区域标签
+##### 热点区域标签
 
 `img`中套用`map`以及`area`可以实现点击某部分图片触发一个链接，点击另一部分触发另一个链接
 
@@ -160,6 +163,28 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
     <area shap="circle" coords="75,75,25" href="" alt="">
 </map>
 ```
+
+#### 表格
+
+**表格代码示例**
+
+```html
+<table>
+  <caption>table title and/or explanatory text</caption>
+  <thead>
+    <tr>
+      <th>header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>data</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+使用 `colspan=val` 进行跨列，使用 `rowspan=val` 进行跨行。
 
 #### 表单
 
@@ -293,7 +318,7 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
     </tbody>
 </table>
 
-### 语义化
+#### 语义化
 
 语义化（Semantic Tag）是指用合适的标签标识适当的内容，它可以起到搜索引擎优化（Search Engine Optimization），提高可访问性（例如盲人使用的屏幕阅读器），与此同时还可以提高代码的可读性。
 
