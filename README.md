@@ -14,11 +14,9 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# NetEase Front-end Nanodegree Note
+## 知识体系内容记录
 
 ![](img/C/career-path.jpg)
-
-## 知识体系内容记录
 
 ### Javascript 程序设计
 
