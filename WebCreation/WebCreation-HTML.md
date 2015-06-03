@@ -27,11 +27,11 @@
 
 HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
-![](img/H/html-history.png)
+![](../img/H/html-history.png)
 
 ### HTML 简介
 
-![](img/H/html-overview.png)
+![](../img/H/html-overview.png)
 
 注意事项：
 
@@ -44,7 +44,7 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
 ### HTML 语法
 
-![](img/H/html-syntax.png)
+![](../img/H/html-syntax.png)
 
 **书写规范**：
 
@@ -63,13 +63,13 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 
 **[HTML5 标签集合](http://www.html5star.com/manual/html5label-meaning)**
 
-![](img/H/html-elements.jpg)
+![](../img/H/html-elements.jpg)
 
 title的作用，还可以在用户鼠标移上去的时候，出现一朵云解释
 
 
 页面通常结构
-![Web Structure](/Users/Des/Documents/Coding/notes/WebPage-Notes/img/S/structure.png)
+![Web Structure](/Users/Des/Documents/Coding/notes/WebPage-Notes/../img/S/structure.png)
 
 
 ### 文本标签
@@ -210,23 +210,23 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
     <td>Defines a checkbox</td>
   </tr>
   <tr>
-  <td class="html5badge"><img src="img/H/html5_badge20.png">color</td>
+  <td class="html5badge"><img src="../img/H/html5_badge20.png">color</td>
     <td>Defines a color picker</td>
   </tr>
   <tr>
-  <td class="html5badge"><img src="img/H/html5_badge20.png">date</td>
+  <td class="html5badge"><img src="../img/H/html5_badge20.png">date</td>
     <td>Defines a date control (year, month and day (no time))</td>
   </tr>
   <tr>
-  <td class="html5badge"><img src="img/H/html5_badge20.png">datetime</td>
+  <td class="html5badge"><img src="../img/H/html5_badge20.png">datetime</td>
     <td>The input type datetime has been removed from the HTML standard. Use datetime-local instead.</td>
     </tr>
     <tr>
-    <td class="html5badge"><img src="img/H/html5_badge20.png">datetime-local</td>
+    <td class="html5badge"><img src="../img/H/html5_badge20.png">datetime-local</td>
       <td>Defines a date and time control (year, month, day, hour, minute, second, and fraction of a second (no time zone)</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/H/html5_badge20.png">email</td>
+      <td class="html5badge"><img src="../img/H/html5_badge20.png">email</td>
         <td>Defines a field for an e-mail address</td>
       </tr>
       <tr>
@@ -242,11 +242,11 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
         <td>Defines an image as the submit button</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/H/html5_badge20.png">month</td>
+      <td class="html5badge"><img src="../img/H/html5_badge20.png">month</td>
         <td>Defines a month and year control (no time zone)</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/H/html5_badge20.png">number</td>
+      <td class="html5badge"><img src="../img/H/html5_badge20.png">number</td>
         <td>Defines a field for entering a number</td>
       </tr>
       <tr>
@@ -258,7 +258,7 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
         <td>Defines a radio button</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/H/html5_badge20.png">range</td>
+      <td class="html5badge"><img src="../img/H/html5_badge20.png">range</td>
         <td>Defines a control for entering a number whose exact value is not important (like a slider control)</td>
       </tr>
       <tr>
@@ -266,7 +266,7 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
         <td>Defines a reset button (resets all form values to default values)</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/H/html5_badge20.png">search</td>
+      <td class="html5badge"><img src="../img/H/html5_badge20.png">search</td>
         <td>Defines a text field for entering a search string</td>
       </tr>
       <tr>
@@ -274,7 +274,7 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
         <td>Defines a submit button</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/H/html5_badge20.png">tel</td>
+      <td class="html5badge"><img src="../img/H/html5_badge20.png">tel</td>
         <td>Defines a field for entering a telephone number</td>
       </tr>
       <tr>
@@ -282,15 +282,15 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
         <td>Default. Defines a single-line text field (default width is 20 characters)</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/H/html5_badge20.png">time</td>
+      <td class="html5badge"><img src="../img/H/html5_badge20.png">time</td>
         <td>Defines a control for entering a time (no time zone)</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/H/html5_badge20.png">url</td>
+      <td class="html5badge"><img src="../img/H/html5_badge20.png">url</td>
         <td>Defines a field for entering a URL</td>
       </tr>
       <tr>
-      <td class="html5badge"><img src="img/H/html5_badge20.png">week</td>
+      <td class="html5badge"><img src="../img/H/html5_badge20.png">week</td>
         <td>Defines a week and year control (no time zone)</td>
       </tr>
     </tbody>

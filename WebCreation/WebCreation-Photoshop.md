@@ -21,10 +21,10 @@
 ```html
 // 设计稿 (*.psd) -> 产出物 (*png, *.jpg)
 
-<img src="img/avatar.jpg" alt="desc">
+<img src="../img/avatar.jpg" alt="desc">
 
 <style type="text/css" media="screen">
-  background-image: url(../img/sprite.png);
+  background-image: url(../../img/sprite.png);
   background-position: 0 0;
 </style>
 ```
@@ -33,19 +33,19 @@
 
 在全局设置下将单位修改为像素，因其在 CSS 中运用最广。设置工作区布局为切图及图片编辑做准备（所需窗口为信息窗口，图层窗口以及历史记录窗口）。
 
-![](img/P/photoshop-mainWindow.png)
+![](../img/P/photoshop-mainWindow.png)
 
 **切图常用工具**
 
 |工具名|示意图|注释|
 |------|:----:|----|
-|移动工具| ![](img/H/hwa_03.png)||
-|矩形选框工具| ![](img/H/hwa_01.png)||
-|魔棒工具|![](img/H/hwa_05.png)|（容差 Tolerance 越小选择的范围就越小）|
-|剪裁工具| ![](img/H/hwa_06.png) ||
-|切片工具| ![](img/H/hwa_07.png)||
-|缩放工具| ![](img/H/hwa_34.png)||
-|取色器| ![](img/H/hwa_31.png)||
+|移动工具| ![](../img/H/hwa_03.png)||
+|矩形选框工具| ![](../img/H/hwa_01.png)||
+|魔棒工具|![](../img/H/hwa_05.png)|（容差 Tolerance 越小选择的范围就越小）|
+|剪裁工具| ![](../img/H/hwa_06.png) ||
+|切片工具| ![](../img/H/hwa_07.png)||
+|缩放工具| ![](../img/H/hwa_34.png)||
+|取色器| ![](../img/H/hwa_31.png)||
 
 图层（单层元素）与组（类似于文件夹）的区别。
 
@@ -55,11 +55,11 @@
 - 标尺，<kbd>Command</kbd> + <kbd>R</kbd>
 - 参考线，<kbd>Command</kbd> + <kbd>;</kbd>
 
-![](img/P/photoshop-menu.png)
+![](../img/P/photoshop-menu.png)
 
 NOTE: 所有工具及快捷键如下。
 
-![](img/T/ToolsPanelOverview.png)
+![](../img/T/ToolsPanelOverview.png)
 
 ### 测量及取色
 
@@ -75,11 +75,11 @@ NOTE: 所有工具及快捷键如下。
 
 NOTE: 测量时尽可能放大画布以减少误差。量取文字是为了减少误差尽量选取尺寸大的文字进行测量。
 
-![](img/P/photoshop-measure&colorSelection.png)
+![](../img/P/photoshop-measure&colorSelection.png)
 
 **选框工具的多用途**，增（Shift）减（Alt）以及交叉选择（Shift + Alt）。左右（或上下）使用分离选框选择可以得到整两个分离边框的距离总值。
 
-![](img/T/rect-selection-tool.gif)
+![](../img/T/rect-selection-tool.gif)
 
 所有能接受颜色的属性都需要取色。
 
@@ -95,7 +95,7 @@ NOTE: 使用魔棒工具可以迅速识别背景色是否没*线性*渐变的方
 
 **隐藏文字**，方法一，直接在图层中隐藏文字图层。方法二（两种，分别应对于纯色和有背景需要隐藏文本的情况）如下图所示，使用自由变换。
 
-![](img/B/btn-remove-text.gif)
+![](../img/B/btn-remove-text.gif)
 
 **PNG24**切图方法
 - 移动工具选中所需图层（<kbd>Ctrl</kbd> 多选）
@@ -128,7 +128,7 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
 **图片与背景合并**的切图方法如下
 
-![](img/S/save-image.gif)
+![](../img/S/save-image.gif)
 
 #### 保存格式的选择
 
@@ -136,7 +136,7 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
 保存类型二：图片色彩不丰富，不伦透明与否一律保存为 `PNG8` 格式（256颜色，需特殊设置如下图）。
 
-![](img/P/photoshop-saveFormat.png)
+![](../img/P/photoshop-saveFormat.png)
 
 保存类型三：图片有半透明的要求，保存为 `PNG24` 格式（不对图片进行压缩）。
 
@@ -146,19 +146,19 @@ NOTE: X 轴平铺需要占满图片的宽，Y 轴平铺需要占满图片的高�
 
 维护与修改之一：**更改画布**大小以便增加新素材。
 
-![](img/R/resize-canvas.gif)
+![](../img/R/resize-canvas.gif)
 
 维护与修改之二：移动图标分两种，独立图层（移动工具拖动），于非独立图层（选取工具选中分离后移动工具拖动）。
 
-![](img/M/move-layer.gif)
+![](../img/M/move-layer.gif)
 
 维护与修改之三：**裁剪画布**的方法有两种，(1)用选取工具选取后图片裁取，(2)直接用裁剪工具裁剪画布。
 
-![](img/C/crop-canvas.gif)
+![](../img/C/crop-canvas.gif)
 
 **注意事项**：为了可维护性的考虑因适当的留出适当的空白区域以便修改所用和提高容错性。`PNG8`需更改图片颜色模式为 RGB 颜色（默认为索引颜色模式，颜色信息会被丢失）。
 
-![](img/P/png8-color-mode.gif)
+![](../img/P/png8-color-mode.gif)
 
 ### 图片优化与合并
 

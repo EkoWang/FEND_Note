@@ -61,7 +61,7 @@
 
 CSS (Cascading Stylesheet) 它用于设置页面的表现。CSS3 并不是一个完整的独立版本而是将不同的功能拆分成独立模块（例如，选择器模块，盒模型模块），这有利于不同功能的及时更新与发布也利于浏览器厂商的实习。
 
-![](img/C/css3-history.png)
+![](../img/C/css3-history.png)
 
 **CSS 引入方法**
 ```html
@@ -195,7 +195,7 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 
 **CSS 规则示例**
 
-![](img/C/css-value-rule.png)
+![](../img/C/css-value-rule.png)
 
 #### @规则语法
 
@@ -434,7 +434,7 @@ h1, h2, h3 {color: red;}
 
 子元素继承父元素的样式，但并不是所有属性都是默认继承的。通过文档中的 `inherited: yes` 来判断属性是否可以自动继承。
 
-![](img/C/css-inherit-doc.png)
+![](../img/C/css-inherit-doc.png)
 
 自动继承属性：
 - color
@@ -675,7 +675,7 @@ NOTE：`break-all` 单词中的任意字母间都可以换行。
 
 **Gecko Reflow Visualisation**
 
-![](img/G/gecko-reflow-visualisation.gif)
+![](../img/G/gecko-reflow-visualisation.gif)
 
 ### 变形
 
