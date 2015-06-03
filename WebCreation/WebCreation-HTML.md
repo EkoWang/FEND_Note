@@ -66,7 +66,7 @@ HTML (Hyper Text Markup Language)，用于标记页面中的内容。
 ![](../img/H/html-elements.jpg)
 
 页面通常结构
-![Web Structure](../img/S/structure.png)
+![Web Structure](../img/S/structure.gif)
 
 ### 文本标签
 
