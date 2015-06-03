@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Javascript程序设计 16/23](#javascript%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-1623)
+- [页面制作 25/41](#%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C-2541)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Javascript程序设计 16/23
 
 |章节|课题|状态|时间戳|

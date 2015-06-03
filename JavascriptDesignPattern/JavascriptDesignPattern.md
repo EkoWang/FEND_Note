@@ -1,5 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [JavaScript 程序设计](#javascript-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
   - [JavaScript 介绍](#javascript-%E4%BB%8B%E7%BB%8D)
