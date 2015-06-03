@@ -572,12 +572,13 @@ img中套用map以及area可以实现点击某部分图片进入一个链接，�
 
 ### 语义化
 
-语义化（Semantic Tag）是指用合适的标签标识适当的内容，它可以起到搜索引擎优化，提高可访问性（例如盲人使用的屏幕阅读器），与此同时还可以提高代码的可读性。
+语义化（Semantic Tag）是指用合适的标签标识适当的内容，它可以起到搜索引擎优化（Search Engine Optimization），提高可访问性（例如盲人使用的屏幕阅读器），与此同时还可以提高代码的可读性。
 
 ### 实体字符
 
 实体字符（ASCII Encoding Reference）是用来在代码中以实体代替与HTML语法相同的字符，避免浏览解析错误。它的两种表示方式，第一种为 `&` 外加实体字符名称，例如 `&nbsp;`，第二种为 `&` 加实体字符序号，例如 `&#160;`。
 
+```html
 <table>
     <caption>常用HTML字符实体（建议使用实体）：</caption>
     <thead>
@@ -713,8 +714,15 @@ img中套用map以及area可以实现点击某部分图片进入一个链接，�
         </tr>
     </tbody>
 </table>
-
+```
 NOTE：具体所需可在使用时查询，无需记忆。
+
+###浏览器兼容
+主流浏览器都兼容HTML5的新标签，对于 IE8 及以下版本不认识 HTML5的新元素，可以使用 JavaScript 创建一个没用的元素来解决，例如：
+```javascript
+<script>document.createElement("header");</script>
+```
+也可以使用shiv来解决兼容性问题，详情可参考HTML5 Shiv[https://github.com/afarkas/html5shiv]
 
 ## CSS
 
