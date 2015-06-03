@@ -722,7 +722,7 @@ NOTE：具体所需可在使用时查询，无需记忆。
 ```javascript
 <script>document.createElement("header");</script>
 ```
-也可以使用shiv来解决兼容性问题，详情可参考HTML5 Shiv[https://github.com/afarkas/html5shiv]
+也可以使用shiv来解决兼容性问题，详情可参考[HTML5 Shiv](https://github.com/afarkas/html5shiv)
 
 ## CSS
 
