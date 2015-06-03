@@ -192,6 +192,7 @@ NOTE: `<dl>` 为自定义列表，其中包含一个或多个 `<dt>` 及 一个�
 - `select` 与 `option` （下拉菜单可多选）
 
 <table>
+  <caption>input 类型支持值列表</caption>
   <tbody>
   <tr>
     <th style="width:22%">Value</th>
