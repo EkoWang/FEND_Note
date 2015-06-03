@@ -46,7 +46,12 @@
       - [保留空格格式](#%E4%BF%9D%E7%95%99%E7%A9%BA%E6%A0%BC%E6%A0%BC%E5%BC%8F)
       - [文字换行](#%E6%96%87%E5%AD%97%E6%8D%A2%E8%A1%8C)
     - [文本装饰](#%E6%96%87%E6%9C%AC%E8%A3%85%E9%A5%B0)
+      - [文字阴影](#%E6%96%87%E5%AD%97%E9%98%B4%E5%BD%B1)
+      - [文本装饰（下划线等）](#%E6%96%87%E6%9C%AC%E8%A3%85%E9%A5%B0%EF%BC%88%E4%B8%8B%E5%88%92%E7%BA%BF%E7%AD%89%EF%BC%89)
     - [高级设置](#%E9%AB%98%E7%BA%A7%E8%AE%BE%E7%BD%AE)
+      - [省略字符](#%E7%9C%81%E7%95%A5%E5%AD%97%E7%AC%A6)
+      - [更换鼠标形状](#%E6%9B%B4%E6%8D%A2%E9%BC%A0%E6%A0%87%E5%BD%A2%E7%8A%B6)
+      - [强制继承](#%E5%BC%BA%E5%88%B6%E7%BB%A7%E6%89%BF)
   - [盒模型](#%E7%9B%92%E6%A8%A1%E5%9E%8B)
   - [背景](#%E8%83%8C%E6%99%AF)
   - [布局](#%E5%B8%83%E5%B1%80)
@@ -665,7 +670,97 @@ NOTE：`break-all` 单词中的任意字母间都可以换行。
 
 #### 文本装饰
 
+##### 文字阴影
+
+`text-shadow:none | <shadow-t>#` 或 `text-shadow:none | [<length>{2,3}&&<color>?]#`
+
+```css
+p {
+  text-shadow: 1px 1px 1px #000,
+               3px 3px 5px blue;
+}
+```
+
+1. value = The X-coordinate X 轴偏移像素
+2. value = The Y-coordinate Y 轴偏移像素
+3. value = The blur radius  阴影模糊半径
+4. value = The color of the shadow 阴影颜色（默认为文字颜色）
+
+##### 文本装饰（下划线等）
+
+`text-decoration: <'text-decoration-line'> || <'text-decoration-style'> || <'text-decoration-color'>`
+
+```css
+h1.under {
+    text-decoration: underline;
+}
+h1.over {
+    text-decoration: overline;
+}
+p.line {
+    text-decoration: line-through;
+}
+p.blink {
+    text-decoration: blink;
+}
+a.none {
+    text-decoration: none;
+}
+p.underover {
+    text-decoration: underline overline;
+}
+```
+
 #### 高级设置
+
+##### 省略字符
+
+`text-overflow: [ clip | ellipsis | <string> ]{1,2}`
+
+```css
+/* 常用配合 */
+text-overflow: ellipsis;
+overflow: hidden; /* 溢出截取 */
+white-space: nowrap; /* 禁止换行 */
+```
+
+##### 更换鼠标形状
+
+`cursor: [[<funciri>,]* [ auto | crosshair | default | pointer | move | e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize | s-resize | w-resize| text | wait | help ]] | inherit`
+
+**常用属性**
+
+`cursor: [<uri>,]*[auto | default | none | help | pointer | zoom-in | zoom-out | move]`
+
+- `<uri>` 图片资源地址代替鼠标默认形状
+- `<default>` 默认光标
+- `<none>` 隐藏光标
+- `<pointer>` 手型光标
+- `<zoom-in>`
+- `<zoom-out>`
+- `<move>`
+
+```css
+cursor: pointer;
+cursor: url(image-name.cur), pointer;
+/* 当 uri 失效时或者则会起作用 */
+```
+
+##### 强制继承
+
+`inherit` 会强制继承父元素的属性值。
+
+```css
+font-size: inherit;
+font-family: inherit;
+font-weight: inherit;
+...
+word-wrap: inherit;
+work-break: inherit
+text-showdow: inherit
+```
+
+NOTE：具体在使用时可查询文档
 
 ### 盒模型
 

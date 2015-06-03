@@ -3,7 +3,7 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Javascript程序设计 16/23](#javascript%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-1623)
-- [页面制作 25/41](#%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C-2541)
+- [页面制作 29/41](#%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C-2941)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -35,7 +35,7 @@
 |面向对象|原型|||
 |面向对象|JS面向对象|||
 
-# 页面制作 25/41
+# 页面制作 29/41
 
 |章节|课题|状态|时间戳|
 |----|----|----|------|
@@ -65,9 +65,9 @@
 |CSS|继承, 优先, 层级|★|1506011814|
 |CSS|字体|★|1506011856|
 |CSS|对齐方式|★|1506012147|
-|CSS|格式处理|||
-|CSS|文本修饰|||
-|CSS|高级选项|||
+|CSS|格式处理|★|1506031421|
+|CSS|文本修饰|★|1506031435|
+|CSS|高级选项|★|1506031436|
 |CSS|盒子模型 I|||
 |CSS|盒子模型 II|||
 |CSS|背景 I|||
