@@ -332,17 +332,17 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 
 ##### 属性选择器
 
-`[attr]` 或 `[attr=val]` 来选择相应的元素。`#nav{...}` 既等同于 `[id=nav]{...}`。 IE7+
+`[attr]` 或 `[attr=val]` 来选择相应的元素。`#nav{...}` 既等同于 `[id=nav]{...}`。IE7+
 
-`[attr~=val]` 可选用与选择包含 `val` 属性值的元素，像`class="title sports"` 与 `class="sports"`。`.sports{...}` 既等同于 `[class~=sports]{...}`  IE7+
+`[attr~=val]` 可选用与选择包含 `val` 属性值的元素，像`class="title sports"` 与 `class="sports"`。`.sports{...}` 既等同于 `[class~=sports]{...}` IE7+
 
-`[attr|=val]` 可以选择`val`开头及开头紧接`-`的属性值。  IE7+
+`[attr|=val]` 可以选择`val`开头及开头紧接`-`的属性值。IE7+
 
-`[attr^=val]` 可选择以`val`开头的属性值对应的元素，如果值为符号或空格则需要使用引号 `""`。  IE7+
+`[attr^=val]` 可选择以`val`开头的属性值对应的元素，如果值为符号或空格则需要使用引号 `""`。IE7+
 
-`[attr$=val]` 可选择以`val`结尾的属性值对应的元素。 IE7+
+`[attr$=val]` 可选择以`val`结尾的属性值对应的元素。IE7+
 
-`[attr*=val]` 可选择以包含`val`属性值对应的元素。  IE7+
+`[attr*=val]` 可选择以包含`val`属性值对应的元素。IE7+
 
 ```html
 <div>
@@ -372,20 +372,20 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 - `:enabled` IE9+
 - `:disabled` IE9+
 - `:checked` IE9+
-- `:first-child`  IE8+
-- `:last-child`  IE9+
-- `:nth-child(even)` 可为 `odd` `even` 或数字  IE9+
-- `:nth-last-child(n)` `n`从 0 开始计算  IE9+
-- `:only-child` 仅选择唯一的元素  IE9+
-- `:only-of-type`  IE9+
+- `:first-child` IE8+
+- `:last-child` IE9+
+- `:nth-child(even)` 可为 `odd` `even` 或数字 IE9+
+- `:nth-last-child(n)` `n`从 0 开始计算 IE9+
+- `:only-child` 仅选择唯一的元素 IE9+
+- `:only-of-type` IE9+
 - `:first-of-type` IE9+
 - `:last-of-type` IE9+
-- `:nth-of-type(even)`  IE9+
-- `:nth-last-of-type(2n)`  IE9+
+- `:nth-of-type(even)` IE9+
+- `:nth-last-of-type(2n)` IE9+
 
 **不常用伪类选择器**：
-- `:empty` 选中页面中无子元素的标签  IE9+
-- `:root` 选择 HTML 根标签  IE9+
+- `:empty` 选中页面中无子元素的标签 IE9+
+- `:root` 选择 HTML 根标签 IE9+
 - `:not()` 参数为一般选择器 IE9+
 - `:target` 被锚点选中的目标元素 IE9+
 - `:lang()` 选中语言值为某类特殊值的元素 IE7+
@@ -926,6 +926,89 @@ padding: 20px 10px 30px 10px;
 ```
 
 ### 背景
+
+#### background-color
+
+```
+background-color: <color>
+background-color: #f00;
+background-color: rgba(255, 0, 0, 0.5);
+background-color: transparent; /* 默认值 */
+```
+
+#### background-image
+
+```
+background-image: <bg-image>[, <bg-image>]*
+/* <bg-image> = <image> | none */
+background-image: url("../image/pic.png");
+background-image: url("../image/pic.png0"), url("../image/pic1.png");
+/* 多张背景图时，先引入的图片在上一层后引入则在下一层 */
+```
+
+NOTE：当`background-color` 与 `background-image` 共存时，背景颜色永远在最底层（于背景图片之下）。
+
+#### background-repeat
+
+`background-repeat` 需与背景图片数量一致。
+
+```
+background-repeat: <repeat-style>[, <repeat-style]*
+<repeat-style> = repeat-x | repeat-y | [repeat | space | round | no-repeat]{1,2}
+
+/*                   X 轴     Y 轴 */
+background-repeat: no-repeat repeat;
+```
+
+- `space` 平铺并在水平和垂直留有空隙，空隙的大小为图片均匀分布后完整覆盖显示区域的宽高
+- `round` 不留空隙平铺且覆盖显示区域，图标会被缩放以达到覆盖效果（缩放不一定等比）
+
+#### background-attachment
+
+当页面内容超过显示区域时，使用 `local` 使背景图片同页面内容一同滚动。
+
+```
+background-attachment: <attachment>[, <attachment>]*
+<attachment> = scroll | fixed | local
+```
+
+#### background-position
+
+```
+background-position: <position>[, <position>]*
+<position> = [left|center|right|top|bottom|<percentage>|<length>]|[left|center|right|top|bottom|<percentage>|<length>] [left|center|right|top|bottom|<percentage>|<length>] | [center |[left|right][<percentage>|<length>]?]&&[center |[left|right][<percentage>|<length>]?]
+
+/* 默认位置为 */
+background-position: 0 0;
+
+/* percentage 是容器与图片的百分比重合之处*/
+background-position: 20% 50%;
+
+/* 等同效果 */
+background-position: 50% 50%;
+background-position: center center;
+
+background-position: 0 0;
+background-position: left top;
+
+background-position: 100% 100%;
+background-position: right bottom;
+
+/* 四个值时方向只为参照物 */
+background-position: right 10px top 20px;
+```
+
+![](../img/B/background-position.jpg)
+
+##### Sprite 的使用
+
+```html
+background-image: url(sprite.png)
+background-repeat: no-repeat;
+background-positon: 0 -100px
+```
+
+使用位置为负值将图片偏移使需要的图片位置上移并显示正确的图案。
 
 ### 布局
 
