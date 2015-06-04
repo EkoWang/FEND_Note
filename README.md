@@ -1,77 +1,46 @@
-# Javascript程序设计
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-![](http://progressed.io/bar/1?title=Progress) [详情](#)
+- [知识体系内容记录](#%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E5%86%85%E5%AE%B9%E8%AE%B0%E5%BD%95)
+  - [Javascript 程序设计](#javascript-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
+  - [页面制作](#%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C)
+  - [DOM 编程](#dom-%E7%BC%96%E7%A8%8B)
+  - [页面架构](#%E9%A1%B5%E9%9D%A2%E6%9E%B6%E6%9E%84)
+  - [产品前端架构](#%E4%BA%A7%E5%93%81%E5%89%8D%E7%AB%AF%E6%9E%B6%E6%9E%84)
+- [相关资源](#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90)
+- [相关链接](#%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5)
 
-|章节|课题|状态|时间戳|
-|----|----|----|------|
-|JS介绍|JS介绍|||
-|调试器|调试器|||
-|基本语法|基本语法|||
-|类型系统|基本类型|||
-|类型系统|类型识别|||
-|内置对象|简介|||
-|内置对象|Object|||
-|内置对象|String|||
-|内置对象|Number|||
-|内置对象|Boolean|||
-|内置对象|String, Number, Boolean|||
-|内置对象|Array|||
-|内置对象|Function|||
-|内置对象|RegExp, Date, Error|||
-|内置对象|Math, JSON|||
-|内置对象|全局对象|||
-|表达式, 运算符|表达式, 运算符|||
-|语句|语句|||
-|变量作用域|变量作用域|||
-|闭包|闭包|||
-|面向对象|简介|||
-|面向对象|原型|||
-|面向对象|JS面向对象|||
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# 页面制作
+## 知识体系内容记录
 
-![](http://progressed.io/bar/13?title=Progress) [详情](WebCreation.md)
+![](img/C/career-path.jpg)
 
-|章节|课题|状态|时间戳|
-|----|----|----|------|
-|Photoshop|工具, 面板, 视图|★|1505251953|
-|Photoshop|测量, 取色|★|1505251953|
-|Photoshop|切图|★| 1505252051|
-|Photoshop|保存|||
-|Photoshop|修改维护|||
-|Photoshop|图片优化与合并|||
-|开发调试|开发工具|★| 1505251248|
-|开发调试|调试工具|★| 1505251248|
-|HTML|概念|||
-|HTML|HTML 文档|||
-|HTML|语法|||
-|HTML|章节标签|||
-|HTML|文本标签|||
-|HTML|组标签|||
-|HTML|资源标签|||
-|HTML|表格标签|||
-|HTML|表单标签|||
-|HTML|语义化|||
-|HTML|实体字符|||
-|CSS|简介|||
-|CSS|语法|||
-|CSS|简单选择器|||
-|CSS|其他选择器|||
-|CSS|继承, 优先, 层级|||
-|CSS|字体|||
-|CSS|对齐方式|||
-|CSS|格式处理|||
-|CSS|文本修饰|||
-|CSS|高级选项|||
-|CSS|盒子模型 I|||
-|CSS|盒子模型 II|||
-|CSS|背景 I|||
-|CSS|背景 II|||
-|CSS|布局 display|||
-|CSS|布局 position|||
-|CSS|布局 float|||
-|CSS|布局 flex|||
-|CSS|变形 2D|||
-|CSS|变形 3D|||
-|CSS|动画 transition|||
-|CSS|动画 animation|||
+### Javascript 程序设计
+
+![](http://progressed.io/bar/70?title=Progress) [详情](JavascriptDesignPattern/JavascriptDesignPattern.md)
+
+### 页面制作
+
+![](http://progressed.io/bar/71?title=Progress) [详情](WebCreation/WebCreation.md)
+
+### DOM 编程
+
+![](http://progressed.io/bar/0?title=Progress) [详情](#)
+
+### 页面架构
+
+![](http://progressed.io/bar/0?title=Progress) [详情](#)
+
+### 产品前端架构
+
+![](http://progressed.io/bar/0?title=Progress) [详情](#)
+
+## 相关资源
+
+- [书单](Booklist.md)
+
+## 相关链接
+
+- [NEC](http://nec.netease.com/) {N: nice, E: easy, C: css;}
