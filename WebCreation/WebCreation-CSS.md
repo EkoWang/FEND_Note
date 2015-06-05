@@ -1262,6 +1262,54 @@ NOTE：宽高的100%的参照依然为视窗（例：网页遮罩效果）
 
 其可实现块级元素同行显示并存在于文档流之中。
 
+```
+float: left | right | none | inherit
+```
+
+- 默认宽度为内容宽度
+- 脱离文档流（会被父元素边界阻挡与`position`脱离文档流的方式不同）
+- 指的方向一直移动
+
+![](../img/F/float-right.png)
+
+**float 元素在同一文档流中**，当同时进行 `float` 时它们会按照文档流中的顺序排列。(当所有父元素中的所有元素脱离文档流之后，父元素将失去原有默认的内容高度)
+
+![](../img/F/float-right-all.jpg)
+
+**float 元素是半脱离文档流的**，对元素是脱离文档流，但对于内容则是在文档流之中的（既元素重叠但内容不重叠）。
+
+![](../img/F/float-half-off.png)
+
+##### clear
+
+```
+clear: both | left | right | none | inherit
+```
+
+- 应用于后续元素
+- 应用于块级元素（block）
+
+**使用方法**：
+
+1. 浮动后续空白元素 `.emptyDiv {clear: both}`
+1. clearfix 于父元素
+
+```
+/* clearfix */
+.clearfix:after {
+   content: "."; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+.clearfix {zoom: 1;} /* 针对 IE 不支持 :after */
+```
+
+#### flex
+
+可用于多行自适应，多列自适应，间距自适应和任意对齐。
+
 ### 变形
 
 ### 动画
