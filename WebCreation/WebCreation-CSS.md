@@ -1151,9 +1151,103 @@ background: url(red.png) 0 0/20px 20px no-repeat, url(blue.png) 50% 50%/contain 
 
 ### 布局
 
-**Gecko Reflow Visualisation**
+Firefox 布局可视化 **Gecko Reflow Visualisation**，布局是指浏览器将元素以正确的大小摆放在正确的位置上。
+
+#### display
+
+设置元素的显示方式
+
+|display|默认宽度|可设置宽高|起始位置|
+|-------|--------|----------|--------|
+|block|父元素宽度|是|换行|
+|inline|内容宽度|否|同行|
+|inline-block|内容宽度|是|同行|
+
+##### display:block
+
+- 默认宽高为父元素宽高
+- 可设置宽高
+- 换行显示
+
+##### display:inline
+
+- 默认宽度为内容宽度
+- 不可设置宽高
+- 同行显示（元素内部可换行）
+
+##### display:inline-block
+
+- 默认宽度为内容宽度
+- 可设置宽高
+- 同行显示
+- 整块换行
+
+##### display:none
+
+- 设置元素不显示
+
+`display:none` 与 `visibility:hidden` 的区别为 `display:none` 不显示且不占位，但 `visibility:hidden` 不显示但占位。
 
 ![](../img/G/gecko-reflow-visualisation.gif)
+
+#### position
+
+`position` 用于设置定位的方式与`top` `right` `bottom` `left` `z-index` 则用于设置参照物位置（必须配合定位一同使用）。
+
+```
+position: static | relative | absolute | fixed
+/* 默认值为 static */
+
+```
+
+##### position:relative
+
+- 相对定位的元素仍在文档流之中，并按照文档流中的顺序进行排列。
+- 参照物为元素本身的位置。
+
+NOTE：最常用的目的为改变元素层级和设置为绝对定位的参照物。
+
+![](../img/P/position-relative.png)
+
+##### position:absolute
+
+- 默认宽度为内容宽度
+- 脱离文档流
+- 参照物为第一个定位祖先或根元素（HTML 元素）
+
+![](../img/P/position-absolute.png)
+
+##### position:fixed
+
+- 默认宽度为内容宽度
+- 脱离文档流
+- 参照物为视窗
+
+NOTE：宽高的100%的参照依然为视窗（例：网页遮罩效果）
+
+![](../img/P/position-fixed.png)
+
+##### top/right/bottom/left
+
+![](../img/L/layout-position.png)
+
+其用于设置元素边缘与参照物边缘的距离，且设置的值可为负值。在同时设置相对方向时，元素将被拉伸。
+
+##### z-index
+
+其用于设置 Z 轴上得排序，默认值为 0 但可设置为负值。（如不做设置，则按照文档流的顺序排列。后面的元素将置于前面的元素之上）
+
+![](../img/L/layouy-position-zindex.png)
+
+###### z-index 栈
+
+父类容器的 `z-index` 优于子类 `z-index` 如图
+
+![](../img/L/layout-position-zindex-stack.jpg)
+
+#### float
+
+其可实现块级元素同行显示并存在于文档流之中。
 
 ### 变形
 
