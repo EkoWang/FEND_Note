@@ -95,6 +95,8 @@
       - [z-index](#z-index)
         - [z-index 栈](#z-index-%E6%A0%88)
     - [float](#float)
+      - [clear](#clear)
+    - [flex](#flex)
   - [变形](#%E5%8F%98%E5%BD%A2)
   - [动画](#%E5%8A%A8%E7%94%BB)
 
