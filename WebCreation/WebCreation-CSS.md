@@ -1440,7 +1440,7 @@ justify-content: flex-start | flex-end | center | space-between | space-around
 <!-- 默认值为 flex-start -->
 ```
 
-![](../img/F/flex-justify-content.svg)
+![](../img/F/flex-justify-content.png)
 
 ###### align-items
 
@@ -1451,7 +1451,7 @@ align-items: flex-start | flex-end | center | baseline | stretch
 <!-- 默认值为 stretch -->
 ```
 
-![](../img/F/flex-align-items.svg)
+![](../img/F/flex-align-items.png)
 
 ###### align-self
 
@@ -1462,7 +1462,7 @@ align-self: auto | flex-start | flex-end | center | baseline | stretch
 <!-- 默认值为 auto -->
 ```
 
-![](../img/F/flex-align-self.svg)
+![](../img/F/flex-align-self.png)
 
 ###### align-content
 
@@ -1473,7 +1473,7 @@ align-content:flex-start | flex-end | center | space-between | space-around | st
 <!-- 默认为 stretch -->
 ```
 
-![](../img/F/flex-align-content.svg)
+![](../img/F/flex-align-content.png)
 
 ### 变形
 
