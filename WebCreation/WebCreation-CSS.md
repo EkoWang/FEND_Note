@@ -1310,7 +1310,170 @@ clear: both | left | right | none | inherit
 
 #### flex
 
-可用于多行自适应，多列自适应，间距自适应和任意对齐。
+![](../img/F/flex-container-and-item.jpg)
+
+弹性布局可用于多行自适应，多列自适应，间距自适应和任意对齐。
+
+**创建 flex container**
+
+```
+display: flex
+/* 弹性容器内的均为弹性元素*/
+```
+
+**flex item**
+
+只有弹性容器在文档流中的子元素才属于弹性元素。
+
+```
+<div style="display: flex;">
+  <div>Block Element</div>
+  <!-- flex item: YES-->
+  <span>Inline Element</span>
+  <!-- flex item: YES-->
+  <div style="position:absolute;">Absolute Block Element</div>
+  <!-- flex item: YES-->
+</div>
+```
+
+##### flex 方向
+
+###### flex-direction
+
+```
+<!-- 默认值为 row -->
+flex-direction: row | row-reverse | column | column-reverse
+```
+
+![](../img/F/flex-direciton.png)
+
+###### flex-wrap
+
+```
+<!-- 默认值为 nowrap -->
+flex-wrap: nowrap | wrap | wrap-reverse
+```
+
+![](../img/F/flex-wrap.png)
+
+###### flex-flow
+
+`flex-flow` 为 `flex-wrap` 与 `flex-direction` 的简写，建议使用此属性（避免同时使用两个属性来修改）。
+
+```
+flex-flow: <'flex-direction'> || <'flex-wrap'>
+```
+
+![](../img/F/flex-flow.png)
+
+###### order
+
+`order` 的值为相对的（同被设置和未被设置的值相比较），当均为设置时默认值为 0 则按照文档流中的顺序排列。
+
+```
+order: <integer>
+<!-- 默认为 0 -->
+```
+
+![](../img/F/flex-order0.png)
+![](../img/F/flex-order1.png)
+
+##### flex 弹性
+
+###### flex-basis
+
+其用于设置 `flex-item` 的初始宽高（并作为弹性的基础）。如果 `flex-direction` 是以 `row` 排列则设置**宽**，如以 `column` 排列则设置**高**。
+
+```
+flex-basis: main-size | <width>
+```
+
+###### flex-grow
+
+伸展因子，其为弹性布局中最重要的元素之一，`flex-grow` 设置元素可用空余空间的比例。`flex-container` 先安装宽度（`flex-basis`）进行布局，如果有空余空间就按照 `flex-grow` 中的比例进行分配。
+
+**Width/Height = flex-basis + flex-grow/sum(flow-grow) * remain**
+
+```
+flex-grow: <number>
+initial: 0
+<!-- 默认值为 0 -->
+```
+
+![](../img/F/flex-grow0.png)
+![](../img/F/flex-grow1.png)
+![](../img/F/flex-grow2.png)
+
+###### flex-shrink
+
+收缩因子，用于分配超出的负空间如何从可用空间中进行缩减。
+
+```
+flex-shrink: <number>
+initial: 1
+<!-- 默认值为 1 -->
+```
+
+**Width/Height = flex-basis + flow-shrink/sum(flow-shrink) * remain**
+
+remain 为负值，既超出的区域。
+
+![](../img/F/flex-shrink.png)
+
+###### flex
+
+其为 `flex-grow` `flex-shrink` `flex-basis` 的值缩写。
+
+```
+flex: <'flex-grow'> || <'flex-shrink'> || <'flex-basis'>
+initial: 0 1 main-size
+```
+
+##### flex 对齐
+
+###### justify-content
+
+其用于设置主轴（main-axis）上的对其方式。弹性元素根据主轴（横向和纵向均可）定位所以不可使用 `left` 与 `right` 因为位置为相对的。（行为相似的属性有 `text-align`）
+
+```
+justify-content: flex-start | flex-end | center | space-between | space-around
+<!-- 默认值为 flex-start -->
+```
+
+![](../img/F/flex-justify-content.svg)
+
+###### align-items
+
+其用于设置副轴（cross-axis）上的对其方式。（行为相似的属性有 `vertical-align`）
+
+```
+align-items: flex-start | flex-end | center | baseline | stretch
+<!-- 默认值为 stretch -->
+```
+
+![](../img/F/flex-align-items.svg)
+
+###### align-self
+
+其用于设置单个 `flex-item` 在 cross-axis 方向上的对其方式。
+
+```
+align-self: auto | flex-start | flex-end | center | baseline | stretch
+<!-- 默认值为 auto -->
+```
+
+![](../img/F/flex-align-self.svg)
+
+###### align-content
+
+其用于设置 cross-axis 方向上的对其方式。
+
+```
+align-content:flex-start | flex-end | center | space-between | space-around | stretch
+<!-- 默认为 stretch -->
+```
+
+![](../img/F/flex-align-content.svg)
 
 ### 变形
 
