@@ -130,6 +130,21 @@
       - [transform-style](#transform-style)
       - [backface-visibility](#backface-visibility)
   - [动画](#%E5%8A%A8%E7%94%BB)
+    - [transition](#transition)
+      - [transition-property](#transition-property)
+      - [transition-duration](#transition-duration)
+      - [transition-delay](#transition-delay)
+      - [transition-timing-function](#transition-timing-function)
+    - [animation](#animation)
+      - [animation-name](#animation-name)
+      - [animation-duration](#animation-duration)
+      - [animation-timing-function](#animation-timing-function)
+      - [animation-iteration-count](#animation-iteration-count)
+      - [animation-direction](#animation-direction)
+      - [animation-play-state](#animation-play-state)
+      - [animation-delay](#animation-delay)
+      - [animation-fill-mode](#animation-fill-mode)
+      - [@keyframes](#@keyframes)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
