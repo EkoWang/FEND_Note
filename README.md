@@ -23,7 +23,7 @@
 
 ### 页面制作
 
-![](http://progressed.io/bar/90?title=Progress) [详情](WebCreation/WebCreation.md)
+![](http://progressed.io/bar/95?title=Progress) [详情](WebCreation/WebCreation.md)
 
 ### DOM 编程
 
