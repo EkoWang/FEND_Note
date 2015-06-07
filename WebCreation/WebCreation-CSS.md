@@ -323,6 +323,9 @@ margin: [ <length> | <percentage> | auto ]{1,4}
 
 ### 选择器
 
+<p data-height="268" data-theme-id="15197" data-slug-hash="mJmwdK" data-default-tab="result" data-user="li-xinyang" class='codepen'>See the Pen <a href='http://codepen.io/li-xinyang/pen/mJmwdK/'>FEND_Selectors</a> by Li Xinyang (<a href='http://codepen.io/li-xinyang'>@li-xinyang</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
 选择器可被看做表达式，通过它可以选择相应的元素并应用不同的样式。
 
 - 简单选择器
