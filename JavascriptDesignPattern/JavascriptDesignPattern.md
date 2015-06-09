@@ -1770,7 +1770,75 @@ with(frame[1].document.[0]) {
 
 ## 闭包
 
-## 面向对象
+- 闭包有函数和与其相关的引用环境的组合而成
+- 闭包允许函数访问其引用环境中的变量（又称自由变量）
+- 广义上来说，所有 JavaScript 的函数都可以成为闭包，因为 JavaScript 函数在创建时保存了当前的词法环境。
 
+```
+function add() {
+  var i = 0;
+  return function() {
+    alert(i++);
+  }
+}
+var f = add();
+f();
+f();
+```
+
+### 闭包的应用
+
+#### 保存变量现场
+
+```javascript
+
+// 错误方法
+var addHandlers = function(nodes) {
+  for (var i = 0, len = nodes.length; i < len; i++) {
+    nodes[i].onclick = function(){
+      alert(i);
+    }
+  }
+}
+
+// 正确方法
+var addHandlers = function(nodes) {
+  var helper = function(i) {
+    return function() {
+      alert(i);
+    }
+  }
+
+  var (var i = 0, len = nodes.length; i < len; i++) {
+    nodes[i].onclick = helper(i);
+  }
+}
+```
+
+#### 封装
+
+```javascript
+
+// 将 observerList 封装在 observer 中
+var observer = (function(){
+  var observerList = [];
+  return {
+    add: function(obj) {
+      observerList.push(obj);
+    },
+    empty: function() {
+      observerList = [];
+    },
+    getCount: function() {
+      return observerList.length;
+    },
+    get: function() {
+      return observerList;
+    }
+  };
+})();
+```
+
+## 面向对象
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="li-xinyang.com" property="cc:attributionName" rel="cc:attributionURL">Li Xinyang</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
