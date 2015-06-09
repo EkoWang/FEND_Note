@@ -86,6 +86,9 @@
     - [异常处理语句](#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%AF%AD%E5%8F%A5)
     - [with 语句](#with-%E8%AF%AD%E5%8F%A5-1)
   - [闭包](#%E9%97%AD%E5%8C%85)
+    - [闭包的应用](#%E9%97%AD%E5%8C%85%E7%9A%84%E5%BA%94%E7%94%A8)
+      - [保存变量现场](#%E4%BF%9D%E5%AD%98%E5%8F%98%E9%87%8F%E7%8E%B0%E5%9C%BA)
+      - [封装](#%E5%B0%81%E8%A3%85)
   - [面向对象](#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
