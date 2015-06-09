@@ -56,10 +56,39 @@
         - [parseInt](#parseint)
         - [eval](#eval)
         - [encodedURIComponent](#encodeduricomponent)
-  - [表达式与运算符](#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6)
-  - [语句](#%E8%AF%AD%E5%8F%A5)
   - [变量作用域](#%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F)
+    - [作用域介绍](#%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%BB%8B%E7%BB%8D)
+      - [静态作用域](#%E9%9D%99%E6%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F)
+      - [动态作用域](#%E5%8A%A8%E6%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F)
+    - [JavaScript 变量作用域](#javascript-%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F)
+      - [词法环境](#%E8%AF%8D%E6%B3%95%E7%8E%AF%E5%A2%83)
+        - [组成](#%E7%BB%84%E6%88%90)
+        - [创建](#%E5%88%9B%E5%BB%BA)
+        - [结构](#%E7%BB%93%E6%9E%84)
+      - [关于词法环境的问题](#%E5%85%B3%E4%BA%8E%E8%AF%8D%E6%B3%95%E7%8E%AF%E5%A2%83%E7%9A%84%E9%97%AE%E9%A2%98)
+      - [with 语句](#with-%E8%AF%AD%E5%8F%A5)
+      - [try-catch 句法](#try-catch-%E5%8F%A5%E6%B3%95)
+      - [带名称的函数表达式](#%E5%B8%A6%E5%90%8D%E7%A7%B0%E7%9A%84%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+  - [表达式与运算符](#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6)
+    - [表达式](#%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+    - [运算符](#%E8%BF%90%E7%AE%97%E7%AC%A6)
+      - [===](#)
+      - [==](#)
+        - [例外规则](#%E4%BE%8B%E5%A4%96%E8%A7%84%E5%88%99)
+      - [!](#)
+      - [&&](#&&)
+      - [||](#%7C%7C)
+    - [元算符优先级（Operator Precedence）](#%E5%85%83%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E7%BA%A7%EF%BC%88operator-precedence%EF%BC%89)
+  - [语句](#%E8%AF%AD%E5%8F%A5)
+    - [条件控制语句](#%E6%9D%A1%E4%BB%B6%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5)
+    - [循环控制语句](#%E5%BE%AA%E7%8E%AF%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5)
+      - [for-in](#for-in)
+    - [异常处理语句](#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%AF%AD%E5%8F%A5)
+    - [with 语句](#with-%E8%AF%AD%E5%8F%A5-1)
   - [闭包](#%E9%97%AD%E5%8C%85)
+    - [闭包的应用](#%E9%97%AD%E5%8C%85%E7%9A%84%E5%BA%94%E7%94%A8)
+      - [保存变量现场](#%E4%BF%9D%E5%AD%98%E5%8F%98%E9%87%8F%E7%8E%B0%E5%9C%BA)
+      - [封装](#%E5%B0%81%E8%A3%85)
   - [面向对象](#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -1000,15 +1029,819 @@ var res = encodeURIComponent(uri);
 // http%3A%2F%2Fw3schools.com%2Fmy%20test.asp%3Fname%3Dst%C3%A5le%26car%3Dsaab
 ```
 
+## 变量作用域
+
+变量的作用域值的是变量的生命周期和作用范围（全局与局部作用域的区别）。
+
+### 作用域介绍
+
+#### 静态作用域
+
+静态作用域有称为词法作用域，即指其在编译的阶段就可以决定变量的引用。**静态作用域**只更变量定义的位置有关与代码执行的顺序无关。
+
+```javascript
+var x = 0;
+function foo() {
+  alert(x);
+}
+
+function bar() {
+  var x = 20;
+  foo();
+}
+
+foo();
+```
+
+![](../img/S/scope-lexical-scope.png)
+
+#### 动态作用域
+
+动态作用域的变量引用只可在程序运行时刻决定（其通常通过动态栈来进行管理）。
+
+```javascript
+var x = 0;
+function foo() {
+  alert(x);
+}
+
+function bar() {
+  var x = 20;
+  foo();
+}
+
+foo();
+```
+
+![](../img/S/scope-dynamic-scope.gif)
+
+### JavaScript 变量作用域
+
+JavaScript （1）使用静态作用域，（2）其没有块级作用域（只有函数作用域，就是只有 function 用于可以定义作用域），（3）在 ES5 之作使用词法环境来管理作用域。
+
+#### 词法环境
+
+##### 组成
+
+用来描述静态作用域的数据结构。
+
+- 环境记录（record）（指形参，变量，函数等）
+- 外部词法环境的引用（outer）
+
+##### 创建
+
+在一段代码执行之前，先初始化词法环境。会被初始化的有：
+
+- 形参
+- 函数定义（创建函数对象，会保存当前作用域。见下图）
+- 变量定义（所有初始化值均为 `undefined`）
+
+![](../img/S/scope-function-init.png)
+
+##### 结构
+
+```javascript
+var x = 10;
+function foo(y) {
+  var z = 30;
+  function bar(q) {
+    return x + y + z + q;
+  }
+  return bar;
+}
+var bar = foo(20);
+bar(40);
+```
+
+**全局词法作用域（初始化状态）**
+
+![](../img/S/scope-global-init.png)
+
+**函数词法作用域**
+
+![](../img/S/scope-structure.jpg)
+
+#### 关于词法环境的问题
+
+**命名冲突**
+
+形参，函数定义，变量名称命名冲突。其中的优先级的排序如下：
+
+```
+函数定义 > 形参 > 变量
+```
+
+**`arguments` 的使用**
+
+ 为函数中定义好的变量。
+
+**函数表达式与函数定义的区别**
+
+- 函数表达式是在执行时才创建函数对象。
+- 函数定义为在代码执行之前就进行创建的。
+
+#### with 语句
+
+`with` 会创造一个临时作用域。
+
+```javascript
+var foo = 'abc';
+with({
+  foo: 'bar';
+}) {
+  function f() {
+    alert(foo);
+  };
+  (function() {
+    alert(foo);
+  })();
+  f();
+}
+```
+
+#### try-catch 句法
+
+```
+try {
+  var e = 10;
+  throw new Error();
+} catch (e) {
+  function f() {
+    alert(e);
+  }
+  (function() {
+    alert(e);
+  })();
+  f();
+}
+```
+
+#### 带名称的函数表达式
+
+**下面例子为不常规的写法**
+
+```
+(function A(){
+  A = 1;
+  alert(A);
+})();
+```
+
+![](../img/S/scope-function-with-name.png)
+
 ## 表达式与运算符
+
+### 表达式
+
+表达式为 JavaScript 的短语可执行并生成值。
+
+```javascript
+1.7 // 字面量
+"1.7"
+var a = 1;
+var b = '2';
+var c = (1.7 + a) * '3' - b
+```
+
+### 运算符
+
+- 算数运算符 （`+` `-` `*` `/` `%`）
+- 关系运算符 （`>` `<` `==` `!=` `>=` `<=` `===` `!==`)
+- 逻辑运算符 （`!` `&&` `||`）
+- 位运算符   （`&` `|` `^` `~` `<<` `>>`）
+- 负值运算符 （`=`）
+- 条件运算符 （`?:`）
+- 逗号运算符 （`,`）
+- 对象运算符 （`new` `delete` `.` `[]` `instanceof`）
+
+#### ===
+
+全等运算符用于盘对左右两边的对象或值是否类型相同且值相等。
+
+**伪代码拆解**
+
+```javascript
+function totalEqual(a, b) {
+  if (a 和 b 类型相同) {
+    if (a 和 b 是引用类型) {
+      if (a 和 b 是同一引用)
+        return true;
+      else
+        return false;
+    } else { // 值类型
+      if (a 和 b 值相等)
+        return true;
+      else
+        return false;
+    }
+  } else {
+    return false;
+  }
+}
+```
+
+**例子**
+
+```javascript
+var a = "123";
+var b = "123";
+var c = "4";
+var aObj = new String("123");
+var bObj = new String("123");
+var cObj = aObj;
+
+a === aObj // false
+aObj === bObj // false
+aObj === cObj // true
+a === b // true
+a === c // false
+```
+
+#### ==
+
+`==` 用于判断操作符两边的对象或值是否相等。
+
+**伪代码拆解**
+
+```javascript
+function equal(a, b) {
+  if (a 和 b 类型相同) {
+    return a === b;
+  } else { // 类型不同
+    return Number(a) === Number(b); // 优先转换数值类型
+  }
+}
+```
+
+**例子**
+
+```javascript
+"99" == 99; // true
+new String("99") == 99; // true
+true == 1; // true
+false == 0; // true
+'\n\n\n' == // true
+```
+
+##### 例外规则
+
+- `null == undefined` 结果为真 `true`
+- 在有 `null`/`undefined` 参与的 `==` 运算是不进行隐式转换。
+
+```javascript
+0 == null; // false
+null == false; // false
+"undefined" == undefined; // false
+```
+
+#### !
+
+`!x` 用于表达 x 表达式的运行结果转换成布尔值（Boolean）之后取反的结果。`!!x` 则表示取 x 表达式的运行结果的布尔值。
+
+```javascript
+var obj = {};
+var a = !obj // false;
+var a = !!obj // true;
+```
+
+#### &&
+
+`x && y` 如果 x 表达式的运行交过转换成 Boolean 值为 false 则不运行表达式 y 而直接返回 x 表达式的运行结果。**相反**，如果 x 表达式的运行交过转换成 Boolean 值为 true 则运行表达式 y 并返回 y 表达式的运行结果。
+
+**伪代码拆解**
+
+```javascript
+var ret = null;
+if (!!(ret = x)) {
+  return y;
+} else {
+  return ret;
+}
+```
+
+**例子**
+
+```javascript
+var a = 0 && (function(){return 1 + 1;})(); // 0
+var b = 1 && (function(){return 1 + 1;})(); // 2
+```
+
+#### ||
+
+`x || y` 如果 x 表达式的运行结果转换为 Boolean 值为 true，则不运行 表达式 y 而直接返回表达式 x 的运算结果。（与 `&&` 方式相反）
+
+**伪代码拆解**
+
+```javascript
+var ret = null;
+if (!!(ret = x)) {
+  return ret;
+} else {
+  return y;
+}
+```
+
+**例子**
+
+```javascript
+var a = 0 || (function(){return 1 + 1;})(); // 2
+var b = 1 || (function(){return 1 + 1;})(); // 1
+```
+
+### 元算符优先级（Operator Precedence）
+
+- `+` `-` `*` `/` 高于 `&&`
+- `*` `/` 高于 `+` `-`
+- `&&` 高于 `?:`
+- `()` 内优先级高于之外
+
+NOTE：和数学上的算术优先级类似，同级从**左到右**计算。如有疑问加上 `()` 既可解决优先级问题。
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Precedence</th>
+   <th>Operator type</th>
+   <th>Associativity</th>
+   <th>Individual operators</th>
+  </tr>
+  <tr>
+   <td>19</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Grouping">Grouping</a></td>
+   <td>n/a</td>
+   <td><code>( … )</code></td>
+  </tr>
+  <tr>
+   <td rowspan="3">18</td>
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation">Member Access</a></td>
+   <td>left-to-right</td>
+   <td><code>… . …</code></td>
+  </tr>
+  <tr>
+   <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Dot_notation">Computed Member Access</a></td>
+   <td>left-to-right</td>
+   <td><code>… [ … ]</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/JavaScript/Reference/Operators/Special/new" title="JavaScript/Reference/Operators/Special_Operators/new_Operator">new</a> (with argument list)</td>
+   <td>n/a</td>
+   <td><code>new … ( … )</code></td>
+  </tr>
+  <tr>
+   <td rowspan="2">17</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Guide/Functions" title="JavaScript/Reference/Operators/Special_Operators/function_call">Function Call</a></td>
+   <td>left-to-right</td>
+   <td><code>… (&nbsp;<var>…&nbsp;</var>)</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/new" title="JavaScript/Reference/Operators/Special_Operators/new_Operator">new</a>&nbsp;(without argument list)</td>
+   <td>right-to-left</td>
+   <td><code>new …</code></td>
+  </tr>
+  <tr>
+   <td rowspan="2">16</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment" title="JavaScript/Reference/Operators/Arithmetic_Operators">Postfix Increment</a></td>
+   <td>n/a</td>
+   <td><code>… ++</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement" title="JavaScript/Reference/Operators/Arithmetic_Operators">Postfix Decrement</a></td>
+   <td>n/a</td>
+   <td><code>… --</code></td>
+  </tr>
+  <tr>
+   <td rowspan="9">15</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT" title="JavaScript/Reference/Operators/Logical_Operators">Logical NOT</a></td>
+   <td>right-to-left</td>
+   <td><code>! …</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise NOT</a></td>
+   <td>right-to-left</td>
+   <td><code>~ …</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus" title="JavaScript/Reference/Operators/Arithmetic_Operators">Unary Plus</a></td>
+   <td>right-to-left</td>
+   <td><code>+ …</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation" title="JavaScript/Reference/Operators/Arithmetic_Operators">Unary Negation</a></td>
+   <td>right-to-left</td>
+   <td><code>- …</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment" title="JavaScript/Reference/Operators/Arithmetic_Operators">Prefix Increment</a></td>
+   <td>right-to-left</td>
+   <td><code>++ …</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement" title="JavaScript/Reference/Operators/Arithmetic_Operators">Prefix Decrement</a></td>
+   <td>right-to-left</td>
+   <td><code>-- …</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof" title="JavaScript/Reference/Operators/Special_Operators/typeof_Operator">typeof</a></td>
+   <td>right-to-left</td>
+   <td><code>typeof …</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/void" title="JavaScript/Reference/Operators/Special_Operators/void_Operator">void</a></td>
+   <td>right-to-left</td>
+   <td><code>void …</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="JavaScript/Reference/Operators/Special_Operators/delete_Operator">delete</a></td>
+   <td>right-to-left</td>
+   <td><code>delete …</code></td>
+  </tr>
+  <tr>
+   <td rowspan="3">14</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Multiplication" title="JavaScript/Reference/Operators/Arithmetic_Operators">Multiplication</a></td>
+   <td>left-to-right</td>
+   <td><code>… *&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division" title="JavaScript/Reference/Operators/Arithmetic_Operators">Division</a></td>
+   <td>left-to-right</td>
+   <td><code>… /&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder" title="JavaScript/Reference/Operators/Arithmetic_Operators">Remainder</a></td>
+   <td>left-to-right</td>
+   <td><code>… %&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td rowspan="2">13</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition" title="JavaScript/Reference/Operators/Arithmetic_Operators">Addition</a></td>
+   <td>left-to-right</td>
+   <td><code>… +&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Subtraction" title="JavaScript/Reference/Operators/Arithmetic_Operators">Subtraction</a></td>
+   <td>left-to-right</td>
+   <td><code>… -&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td rowspan="3">12</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise Left Shift</a></td>
+   <td>left-to-right</td>
+   <td><code>… &lt;&lt;&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise Right Shift</a></td>
+   <td>left-to-right</td>
+   <td><code>… &gt;&gt;&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise Unsigned Right Shift</a></td>
+   <td>left-to-right</td>
+   <td><code>… &gt;&gt;&gt;&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td rowspan="6">11</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator" title="JavaScript/Reference/Operators/Comparison_Operators">Less Than</a></td>
+   <td>left-to-right</td>
+   <td><code>… &lt;&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than__or_equal_operator" title="JavaScript/Reference/Operators/Comparison_Operators">Less Than Or Equal</a></td>
+   <td>left-to-right</td>
+   <td><code>… &lt;=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator" title="JavaScript/Reference/Operators/Comparison_Operators">Greater Than</a></td>
+   <td>left-to-right</td>
+   <td><code>… &gt;&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator" title="JavaScript/Reference/Operators/Comparison_Operators">Greater Than Or Equal</a></td>
+   <td>left-to-right</td>
+   <td><code>… &gt;=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/in" title="JavaScript/Reference/Operators/Special_Operators/in_Operator">in</a></td>
+   <td>left-to-right</td>
+   <td><code>… in&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof" title="JavaScript/Reference/Operators/Special_Operators/instanceof_Operator">instanceof</a></td>
+   <td>left-to-right</td>
+   <td><code>… instanceof&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td rowspan="4">10</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality" title="JavaScript/Reference/Operators/Comparison_Operators">Equality</a></td>
+   <td>left-to-right</td>
+   <td><code>… ==&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality" title="JavaScript/Reference/Operators/Comparison_Operators">Inequality</a></td>
+   <td>left-to-right</td>
+   <td><code>… !=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity" title="JavaScript/Reference/Operators/Comparison_Operators">Strict Equality</a></td>
+   <td>left-to-right</td>
+   <td><code>… ===&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity" title="JavaScript/Reference/Operators/Comparison_Operators">Strict Inequality</a></td>
+   <td>left-to-right</td>
+   <td><code>… !==&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td>9</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise AND</a></td>
+   <td>left-to-right</td>
+   <td><code>… &amp;&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td>8</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise XOR</a></td>
+   <td>left-to-right</td>
+   <td><code>… ^&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td>7</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR" title="JavaScript/Reference/Operators/Bitwise_Operators">Bitwise OR</a></td>
+   <td>left-to-right</td>
+   <td><code>… |&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td>6</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND" title="JavaScript/Reference/Operators/Logical_Operators">Logical AND</a></td>
+   <td>left-to-right</td>
+   <td><code>… &amp;&amp;&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td>5</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR" title="JavaScript/Reference/Operators/Logical_Operators">Logical OR</a></td>
+   <td>left-to-right</td>
+   <td><code>… ||&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td>4</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator" title="JavaScript/Reference/Operators/Special_Operators/Conditional_Operator">Conditional</a></td>
+   <td>right-to-left</td>
+   <td><code>… ? … : …</code></td>
+  </tr>
+  <tr>
+   <td rowspan="12">3</td>
+   <td rowspan="12"><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators" title="JavaScript/Reference/Operators/Assignment_Operators">Assignment</a></td>
+   <td rowspan="12">right-to-left</td>
+   <td><code>… =&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><code>… +=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><code>… -=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><code>… *=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><code>… /=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><code>… %=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><code>… &lt;&lt;=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><code>… &gt;&gt;=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><code>… &gt;&gt;&gt;=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><code>… &amp;=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><code>… ^=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td><code>… |=&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td>2</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield" title="JavaScript/Reference/Operators/yield">yield</a></td>
+   <td>right-to-left</td>
+   <td><code>yield&nbsp;…</code></td>
+  </tr>
+  <tr>
+   <td>1</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator" title="JavaScript/Reference/Operators/Spread_operator">Spread</a></td>
+   <td>n/a</td>
+   <td><code>...</code>&nbsp;…</td>
+  </tr>
+  <tr>
+   <td>0</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator" title="JavaScript/Reference/Operators/Comma_Operator">Comma / Sequence</a></td>
+   <td>left-to-right</td>
+   <td><code>… ,&nbsp;…</code></td>
+  </tr>
+ </tbody>
+</table>
 
 ## 语句
 
-## 变量作用域
+### 条件控制语句
+
+```javascript
+if (expression) {statement}
+else if (expression) {statement1}
+else {statement2}
+
+// JavaScript 中的 case 可以使用整型，字符串，甚至表达式
+switch(persion.type) {
+  case "teacher":
+    statement1
+    break;
+  case "student":
+    statement2
+    break;
+  default:
+    statement3
+    break;
+}
+```
+
+### 循环控制语句
+
+```javascript
+while(expression) {statement}
+
+// 至少执行一次
+do {statement} while(expression);
+
+for (initialise; test_expresiion; increment) {statement}
+
+// 跳过下面代码并进入下一轮循环
+continue;
+
+// 退出当前循环
+break;
+```
+
+#### for-in
+
+用于遍历对象的**全部**属性。
+
+```javascript
+function Car(id, type, color) {
+  this.type = type;
+  this.color = color;
+  this.id = id;
+}
+
+var benz = new Car('benz', 'black', 'red');
+Car.prototype.start = function(){
+    console.log(this.type + ' start');
+}
+
+for (var key in benz) {
+  console.log(key + ':' benz[key]);
+}
+
+// 输出结果
+type:black
+color:red
+id:benz
+start:function (){
+    console.log(this.type + ' start');
+}
+
+// -----------
+
+// 如不需原型对象上的属性可以使用 hasOwnProperty
+for (var key in benz) {
+  if (benz.hasOwnProperty(key)) {
+    console.log(key + ':' benz[key]);
+  }
+}
+
+// 输出结果
+type:black
+color:red
+id:benz
+```
+
+### 异常处理语句
+
+```javascript
+try/catch/finally
+throw
+```
+
+### with 语句
+
+`with` 语句是 JavaScript 中特有的语句形式，其用于缩短特定情况下必须书写的代码量。它可以暂时改变变量的作用域，将`with`语句中的对象添加至作用域链的头部。**缺点**就是导致 JavaScript 语句的可执行性下降，所以通常情况下因尽可能的避免使用。
+
+```javascript
+// 使用 with 之前
+(function(){
+  var x = Math.cos(3 * Math.PI) + Math.sin(Math.LN10);
+  var y = Math.tan(14 * Math.E);
+})();
+
+// 使用 with
+(function(){
+  with(Math) {
+    var x = cos(3 * PI) + sin(LN10);
+    var y = tan(14 * E);
+  }
+})();
+```
+
+![](../img/W/with-scope.png)
+
+```javascript
+frame[1].document.forms[0].name.value = "";
+frame[1].document.forms[0].address.value = "";
+frame[1].document.forms[0].email.value = "";
+
+with(frame[1].document.[0]) {
+  name.value = "";
+  address.value = ""
+  email.value = "";
+}
+
+```
 
 ## 闭包
 
-## 面向对象
+- 闭包有函数和与其相关的引用环境的组合而成
+- 闭包允许函数访问其引用环境中的变量（又称自由变量）
+- 广义上来说，所有 JavaScript 的函数都可以成为闭包，因为 JavaScript 函数在创建时保存了当前的词法环境。
 
+```
+function add() {
+  var i = 0;
+  return function() {
+    alert(i++);
+  }
+}
+var f = add();
+f();
+f();
+```
+
+### 闭包的应用
+
+#### 保存变量现场
+
+```javascript
+
+// 错误方法
+var addHandlers = function(nodes) {
+  for (var i = 0, len = nodes.length; i < len; i++) {
+    nodes[i].onclick = function(){
+      alert(i);
+    }
+  }
+}
+
+// 正确方法
+var addHandlers = function(nodes) {
+  var helper = function(i) {
+    return function() {
+      alert(i);
+    }
+  }
+
+  var (var i = 0, len = nodes.length; i < len; i++) {
+    nodes[i].onclick = helper(i);
+  }
+}
+```
+
+#### 封装
+
+```javascript
+
+// 将 observerList 封装在 observer 中
+var observer = (function(){
+  var observerList = [];
+  return {
+    add: function(obj) {
+      observerList.push(obj);
+    },
+    empty: function() {
+      observerList = [];
+    },
+    getCount: function() {
+      return observerList.length;
+    },
+    get: function() {
+      return observerList;
+    }
+  };
+})();
+```
+
+## 面向对象
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="li-xinyang.com" property="cc:attributionName" rel="cc:attributionURL">Li Xinyang</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
