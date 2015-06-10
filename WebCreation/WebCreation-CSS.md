@@ -1241,14 +1241,14 @@ Firefox 布局可视化 **Gecko Reflow Visualisation**，布局是指浏览器�
 - 默认宽高为父元素宽高
 - 可设置宽高
 - 换行显示
-- 默认为block的元素：<div>, <p>, <h1> ~ <h6>, <ul>, <form>
+- 默认为block的元素：`<div>`, `<p>`, `<h1>` 至 `<h6>`, `<ul>`, `<form>`
 
 ##### display:inline
 
 - 默认宽度为内容宽度
 - 不可设置宽高
 - 同行显示（元素内部可换行）
-- 默认为inline的元素：<span>, <a>, <label>, <cite>, <em>
+- 默认为inline的元素：`<span>`, `<a>`, `<label>`, `<cite>`, `<em>`
 
 ##### display:inline-block
 
@@ -1256,7 +1256,7 @@ Firefox 布局可视化 **Gecko Reflow Visualisation**，布局是指浏览器�
 - 可设置宽高
 - 同行显示
 - 整块换行
-- 默认为inline-block的元素：<input>, <textarea>, <select>, <button>
+- 默认为inline-block的元素：`<input>`, `<textarea>`, `<select>`, `<button>`
 
 ##### display:none
 
@@ -2005,6 +2005,8 @@ animation: flash 0.5s both;
 animaiton: abc 0.5s both, flash 0.5s both;
 ```
 
+
 ![](../img/A/animation-sample.gif)
+
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="li-xinyang.com" property="cc:attributionName" rel="cc:attributionURL">Li Xinyang</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
