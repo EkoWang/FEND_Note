@@ -1,5 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [JavaScript 程序设计](#javascript-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1)
   - [JavaScript 介绍](#javascript-%E4%BB%8B%E7%BB%8D)
@@ -69,9 +70,9 @@
 
 前端开发三要素，`HTML`（描述网页内容），`CSS`（描述样式），`JavaScript`（控制网页行为）。JavaScript 为解释型编程语言，运行环境也很广泛。
 
-![](img/J/javascript-history.png)
+![](../img/J/javascript-history.png)
 
-![](img/J/javascript-env.png)
+![](../img/J/javascript-env.png)
 
 **JavaScript**的引入方法如下：
 
@@ -163,7 +164,7 @@ JavaScript 在语言定义中保留的字段，这些字段在语言使用中存
 
 ## 类型系统
 
-![](img/J/javascript-variable-type.jpg)
+![](../img/J/javascript-variable-type.jpg)
 
 ### 标准类型
 
@@ -301,7 +302,7 @@ p.move(2,2);
 
 **构造器对象与普通对象的区别**
 
-![](img/O/object-with-constructor-and-regular-object.png)
+![](../img/O/object-with-constructor-and-regular-object.png)
 
 1. 构造器对象原型链中的 `__proto__` 是一个 `Function.prototype` 对象的引用，因此可以调用 `Function.prototype`的属性及方法
 1. 构造器对象本身有一个 `prototype` 属性，用该构造器实例化对象时该 `prototype` 会被实例对象的 `__proto__` 所引用
@@ -648,7 +649,7 @@ var circle = {x: 1, y: 1, r: 1};
 var circleMoveRef = p.move.bind(circle, 2, 1);
 setTimeout(circleMoveRef, 1000); // {x: 3, y: 2, r: 1}
 
-// 之间使用 circleMoveRef() 效果等同于 apply()
+// 直接使用 circleMoveRef() 效果等同于 apply()
 circleMoveRef();
 ```
 
@@ -679,7 +680,7 @@ c.area();
 #### 函数参数
 
 - 形参个数不一定等于实参个数
-- 值专递
+- 值传递
 - 通过参数类型检查实现函数重载
 
 ##### arguments
@@ -709,7 +710,7 @@ function max(a, b) {
 
 函数参数的值专递是参数复制都是栈内存中的复制。
 
-![](img/M/memory-management.jpg)
+![](../img/M/memory-management.jpg)
 
 ```javascript
 // 原始类型
@@ -1009,3 +1010,5 @@ var res = encodeURIComponent(uri);
 
 ## 面向对象
 
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="li-xinyang.com" property="cc:attributionName" rel="cc:attributionURL">Li Xinyang</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

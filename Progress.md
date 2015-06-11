@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Javascript程序设计 16/23](#javascript%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-1623)
+- [页面制作 39/41](#%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C-3941)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Javascript程序设计 16/23
 
 |章节|课题|状态|时间戳|
@@ -26,7 +35,7 @@
 |面向对象|原型|||
 |面向对象|JS面向对象|||
 
-# 页面制作 25/41
+# 页面制作 39/41
 
 |章节|课题|状态|时间戳|
 |----|----|----|------|
@@ -56,18 +65,20 @@
 |CSS|继承, 优先, 层级|★|1506011814|
 |CSS|字体|★|1506011856|
 |CSS|对齐方式|★|1506012147|
-|CSS|格式处理|||
-|CSS|文本修饰|||
-|CSS|高级选项|||
-|CSS|盒子模型 I|||
-|CSS|盒子模型 II|||
-|CSS|背景 I|||
-|CSS|背景 II|||
-|CSS|布局 display|||
-|CSS|布局 position|||
-|CSS|布局 float|||
-|CSS|布局 flex|||
-|CSS|变形 2D|||
-|CSS|变形 3D|||
-|CSS|动画 transition|||
-|CSS|动画 animation|||
+|CSS|格式处理|★|1506031421|
+|CSS|文本修饰|★|1506031435|
+|CSS|高级选项|★|1506031436|
+|CSS|盒子模型 I|★|1506031530|
+|CSS|盒子模型 II|★|1506031531|
+|CSS|背景 I|★|1506042223|
+|CSS|背景 II|★|1506042223|
+|CSS|布局 display|★|1506051313|
+|CSS|布局 position|★|1506051313|
+|CSS|布局 float|★|1506051723
+|CSS|布局 flex|★|1506062334|
+|CSS|变形 2D|★|1506071407|
+|CSS|变形 3D|★|1506071407|
+|CSS|动画 transition|★|1506071626|
+|CSS|动画 animation|★|1506071626|
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="li-xinyang.com" property="cc:attributionName" rel="cc:attributionURL">Li Xinyang</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
