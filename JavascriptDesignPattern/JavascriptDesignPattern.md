@@ -706,9 +706,9 @@ function max(a, b) {
 }
 ```
 
-##### 值专递
+##### 值传递
 
-函数参数的值专递是参数复制都是栈内存中的复制。
+函数参数的值传递是参数复制都是栈内存中的复制。
 
 ![](../img/M/memory-management.jpg)
 
@@ -947,9 +947,9 @@ JSON.parse(jsonStr); // {name: 'X'}
 - Math
 - JSON
 
-##### NaA
+##### NaN
 
-非数字值：表示错误或无意义的运算结果，NaN 参与运算仍会返回 NaA，且 NaN 不等于任何值，包括它本身。可以使用 `isNaN()` 判断运算结果的类型是否为 NaN。
+非数字值：表示错误或无意义的运算结果，NaN 参与运算仍会返回 NaN，且 NaN 不等于任何值，包括它本身。可以使用 `isNaN()` 判断运算结果的类型是否为 NaN。
 
 ```javascript
 isNaN(NaN); // true
