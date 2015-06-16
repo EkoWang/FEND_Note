@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>表单</title>
+  <style type="text/css" media="screen">
+    body {
+      margin: 30px;
+    }
+  </style>
+</head>
+<body>
+  <form action="/" method="get" accept-charset="utf-8">
+    <div>
+      <label for="avatar">头像</label>
+      <input type="file" name="avatar" id="avatar">
+    </div>
+    <div>
+      <label for="user-name">昵称</label>
+      <input type="text" name="user-name" id="user-name">
+    </div>
+    <div>
+      <label for="education">学历</label>
+      <select name="education" id="education">
+        <option value="0">专科</option>
+        <option value="1">本科</option>
+      </select>
+    </div>
+    <div>
+      <label for="gender">性别</label>
+      <input type="radio" name="gender" id="gender-male" value="male">
+      <label for="gender-male">Male</label>
+      <input type="radio" name="gender" id="gender-female" value="female">
+      <label for="gender-female">Female</label>
+    </div>
+    <div>
+      <label for="interests">爱好</label>
+      <label><input type="checkbox" name="interests" value="interests-movie">电影</label>
+      <label><input type="checkbox" name="interests" value="interests-photo">摄影</label>
+      <label><input type="checkbox" name="interests" value="interests-music">音乐</label>
+      <label><input type="checkbox" name="interests" value="interests- reading">阅读</label>
+    </div>
+    <div>
+      <label for="note">签名</label>
+      <textarea name="note" id="note"></textarea>
+    </div>
+    <button type="submit">保存</button>
+  </form>
+</body>
+</html>

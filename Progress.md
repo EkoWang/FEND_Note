@@ -2,40 +2,12 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 - [Javascript程序设计 20/23](#javascript%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-2023)
-=======
-<<<<<<< HEAD
->>>>>>> li-xinyang/master
-- [Javascript程序设计 16/23](#javascript%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-1623)
-=======
-- [Javascript程序设计 20/23](#javascript%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-2023)
->>>>>>> li-xinyang/master
-<<<<<<< HEAD
-=======
->>>>>>> Note
->>>>>>> li-xinyang/master
 - [页面制作 39/41](#%E9%A1%B5%E9%9D%A2%E5%88%B6%E4%BD%9C-3941)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 # Javascript程序设计 20/23
-=======
-<<<<<<< HEAD
->>>>>>> li-xinyang/master
-# Javascript程序设计 16/23
-=======
-# Javascript程序设计 20/23
->>>>>>> li-xinyang/master
-<<<<<<< HEAD
-=======
->>>>>>> Note
->>>>>>> li-xinyang/master
 
 |章节|课题|状态|时间戳|
 |----|----|----|------|
@@ -61,7 +33,7 @@
 |闭包|闭包|★|1506091529|
 |面向对象|简介|||
 |面向对象|原型|||
-|面向对象|JS面向对象|||
+|面向对象|JS面向对象||||
 
 # 页面制作 39/41
 

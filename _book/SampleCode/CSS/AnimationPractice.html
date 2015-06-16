@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animation Practice</title>
+    <style type="text/css">
+    body {
+        margin: 30px;
+        text-align: center;
+        font-family: monospace;
+    }
+
+    .container {
+        line-height: 300px;
+        position: relative;
+        width: 1px;
+        top: 50%;
+        left: 50%;
+        margin-top: 200px;
+        font-size: 3rem;
+        perspective: 1000px;
+        perspective-origin: 0 150px;
+    }
+
+    .side {
+        height: 300px;
+        width: 300px;
+        border: 5px solid rgba(0, 0, 0, .3);
+        position: absolute;
+        left: -150px;
+        top: 50%;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>3D 正方体组合旋转</h1>
+    <div class="container">
+        <div class="back side">back</div>
+        <div class="front side">front</div>
+        <div class="side right">right</div>
+        <div class="side left">left</div>
+        <div class="side bottom">botto </div>
+        <div class="side top">top </div>
+    </div>
+    <style type="text/css">
+    .top {
+        animation: placeTop 1s linear both;
+        /*animation-name: placeTop, rotateTop;
+        animation-timing-function: linear;
+        animation-duration: 2s;
+        animation-delay: 0s, 12s;
+        animation-iteration-count: 1, infinite;
+        animation-fill-mode: both;*/
+    }
+
+    .bottom {
+        animation: placeBottom 1s 1s linear both;
+    }
+
+    .left {
+        animation: placeLeft 1s 2s linear both;
+    }
+
+    .right {
+        animation: placeRight 1s 3s linear both;
+    }
+
+    .back {
+        animation: placeBack 1s 4s linear both;
+    }
+
+    .front {
+        animation: placeFront 1s 5s linear both;
+    }
+
+    @keyframes placeTop {
+        100% {
+            transform: translateY(-150px) rotateX(90deg);
+        }
+    }
+
+    @keyframes placeBottom {
+        100% {
+            transform: translateY(150px) rotateX(90deg);
+        }
+    }
+
+    @keyframes placeLeft {
+        100% {
+            transform: translateX(-150px) rotateY(90deg);
+        }
+    }
+
+    @keyframes placeRight {
+        100% {
+            transform: translateX(150px) rotateY(90deg);
+        }
+    }
+
+    @keyframes placeBack {
+        100% {
+            transform: translateZ(-150px) rotateY(180deg);
+        }
+    }
+
+    @keyframes placeFront {
+        100% {
+            transform: translateZ(150px);
+        }
+    }
+    </style>
+</body>
+
+</html>

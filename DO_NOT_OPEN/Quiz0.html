@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>图书畅销榜</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css" media="screen">
+    body {
+        margin: 30px;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    ol {
+        border-top: 3px solid rgba(224, 224, 224, 1);
+        padding-left: 20px;
+    }
+
+    ol li {
+      border-bottom: 1px dashed rgba(224, 224, 224, 1);
+      padding: 10px 0;
+    }
+
+    ol li:nth-child(-n+3) > a {
+      color: RED;
+    }
+
+    ol li a {
+        text-decoration: none;
+        color: BLACK;
+        margin: 10px 0;
+    }
+
+    ol li a:hover {
+        color: ORANGE;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="booklist">
+        <h3>图书畅销榜</h3>
+        <ol>
+            <li><a href="#" title="当我足够好，才能遇见你">当我足够好，才能遇见你</a></li>
+            <li><a href="#" title="皮囊">皮囊</a></li>
+            <li><a href="#" title="李光耀论中国与世界">李光耀论中国与世界</a></li>
+            <li><a href="#" title="乖，摸摸头">乖，摸摸头</a></li>
+            <li><a href="#" title="男女内参">男女内参</a></li>
+        </ol>
+    </div>
+</body>
+
+</html>
