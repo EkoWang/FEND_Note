@@ -54,8 +54,16 @@ Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 ## CSS
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [阅读更多](WebCreation-CSS.md)
 =======
+=======
+=======
+<<<<<<< HEAD
+[阅读更多](WebCreation-CSS.md)
+=======
+>>>>>>> Note
+>>>>>>> li-xinyang/master
 [阅读第一部分](WebCreation-CSS-0.md)
 
 - 简介
@@ -73,6 +81,13 @@ Web 1.0 -> Web 2.0（基于 Ajax） -> Web 3.0 （基于 HTML5）
 - 布局
 - 变形
 - 动画
+<<<<<<< HEAD
+>>>>>>> li-xinyang/master
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> li-xinyang/master
+>>>>>>> Note
 >>>>>>> li-xinyang/master
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="li-xinyang.com" property="cc:attributionName" rel="cc:attributionURL">Li Xinyang</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.

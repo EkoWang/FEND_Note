@@ -20,9 +20,19 @@
 ### Javascript 程序设计
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+![](http://progressed.io/bar/87?title=Progress) [详情](JavascriptDesignPattern/JavascriptDesignPattern.md)
+=======
+<<<<<<< HEAD
+>>>>>>> li-xinyang/master
 ![](http://progressed.io/bar/70?title=Progress) [详情](JavascriptDesignPattern/JavascriptDesignPattern.md)
 =======
 ![](http://progressed.io/bar/87?title=Progress) [详情](JavascriptDesignPattern/JavascriptDesignPattern.md)
+>>>>>>> li-xinyang/master
+<<<<<<< HEAD
+=======
+>>>>>>> Note
 >>>>>>> li-xinyang/master
 
 ### 页面制作
